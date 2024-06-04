@@ -1,18 +1,20 @@
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD_Presentation_layer.exe.config
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD_Presentation_layer.exe
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD_Presentation_layer.pdb
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD Business Layer.dll
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\Guna.UI2.dll
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD Database Layer.dll
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD_Presentation_layer.exe.config
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD_Presentation_layer.pdb
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD Business Layer.pdb
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD Database Layer.pdb
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.csproj.AssemblyReference.cache
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.frmMain.resources
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.People.frmAdd_EditPerson.resources
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.People.frmMangePeople.resources
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.People.ucAdd_EditPerson.resources
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.People.ucManagePeople.resources
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.Properties.Resources.resources
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.csproj.GenerateResource.cache
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.csproj.CoreCompileInputs.cache
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Pre.28A2D839.Up2Date
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.exe
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.pdb
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\Guna.UI2.dll
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.frmMain.resources
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.People.frmMangePeople.resources
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.People.ucManagePeople.resources
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD Database Layer.dll
-D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\bin\Debug\DVLD Database Layer.pdb

@@ -18,6 +18,7 @@ namespace DVLD_Presentation_layer.People
             InitializeComponent();
         }
 
+       
 
         private void ucManagePeople_Load(object sender, EventArgs e)
         {
@@ -31,5 +32,11 @@ namespace DVLD_Presentation_layer.People
             lbRecords.Text = GetPeople.Rows.Count.ToString();
         }
 
+        private void btnAddNewPerson_Click(object sender, EventArgs e)
+        {
+            frmAdd_EditPerson frmAdd = new frmAdd_EditPerson();
+            frmAdd.ShowDialog();
+            GetAllpeople();
+        }
     }
 }

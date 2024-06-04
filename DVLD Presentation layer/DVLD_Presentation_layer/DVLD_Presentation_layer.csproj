@@ -59,11 +59,23 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\frmAdd-EditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAdd-EditPerson.Designer.cs">
+      <DependentUpon>frmAdd-EditPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\frmMangePeople.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="People\frmMangePeople.Designer.cs">
       <DependentUpon>frmMangePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\ucAdd-EditPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\ucAdd-EditPerson.Designer.cs">
+      <DependentUpon>ucAdd-EditPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="People\ucMangePeople.cs">
       <SubType>UserControl</SubType>
@@ -76,8 +88,14 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAdd-EditPerson.resx">
+      <DependentUpon>frmAdd-EditPerson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\frmMangePeople.resx">
       <DependentUpon>frmMangePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ucAdd-EditPerson.resx">
+      <DependentUpon>ucAdd-EditPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\ucMangePeople.resx">
       <DependentUpon>ucMangePeople.cs</DependentUpon>
@@ -106,12 +124,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DVLD Business Layer\DVLD Business Layer.csproj">
-      <Project>{9918210f-ee3f-4c32-97b4-509b35d7e087}</Project>
-      <Name>DVLD Business Layer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="icons\hands_3410350.png" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +143,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DVLD Business Layer\DVLD Business Layer.csproj">
+      <Project>{9918210f-ee3f-4c32-97b4-509b35d7e087}</Project>
+      <Name>DVLD Business Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\card.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
