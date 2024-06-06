@@ -97,7 +97,7 @@
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Signika", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbTitle.Location = new System.Drawing.Point(386, 28);
+            this.lbTitle.Location = new System.Drawing.Point(369, 28);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(282, 46);
@@ -146,7 +146,7 @@
             this.lkAddPic.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lkAddPic.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.lkAddPic.LinkColor = System.Drawing.Color.Black;
-            this.lkAddPic.Location = new System.Drawing.Point(484, 227);
+            this.lkAddPic.Location = new System.Drawing.Point(467, 227);
             this.lkAddPic.Name = "lkAddPic";
             this.lkAddPic.Size = new System.Drawing.Size(87, 18);
             this.lkAddPic.TabIndex = 9;
@@ -160,7 +160,7 @@
             this.lkRemovePic.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lkRemovePic.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
             this.lkRemovePic.LinkColor = System.Drawing.Color.Black;
-            this.lkRemovePic.Location = new System.Drawing.Point(468, 255);
+            this.lkRemovePic.Location = new System.Drawing.Point(451, 255);
             this.lkRemovePic.Name = "lkRemovePic";
             this.lkRemovePic.Size = new System.Drawing.Size(119, 18);
             this.lkRemovePic.TabIndex = 10;
@@ -688,7 +688,7 @@
             this.picPersonPic.ErrorImage = global::DVLD_Presentation_layer.Properties.Resources.card;
             this.picPersonPic.Image = ((System.Drawing.Image)(resources.GetObject("picPersonPic.Image")));
             this.picPersonPic.ImageRotate = 0F;
-            this.picPersonPic.Location = new System.Drawing.Point(417, 77);
+            this.picPersonPic.Location = new System.Drawing.Point(400, 77);
             this.picPersonPic.Name = "picPersonPic";
             this.picPersonPic.Size = new System.Drawing.Size(221, 147);
             this.picPersonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

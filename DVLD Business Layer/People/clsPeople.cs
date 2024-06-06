@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,7 +33,7 @@ namespace DVLD_Business_Layer.People
 
         public Mode enMode { get; set; }
 
-        public clsPeople(int personID, string nationalNo, string firstName, string secondName,
+        private clsPeople(int personID, string nationalNo, string firstName, string secondName,
             string thirdName, string lastName, DateTime dateOfBirth, int gendor, string address, string phone,
             string email, int nationalityCountryID, string imagePath)
         {
@@ -49,6 +50,7 @@ namespace DVLD_Business_Layer.People
             Email = email;
             NationalityCountryID = nationalityCountryID;
             ImagePath = imagePath;
+            enMode = Mode.Update;
         }
 
         public clsPeople()
@@ -82,10 +84,36 @@ namespace DVLD_Business_Layer.People
         private bool AddNewPerson()
         {
             this.PersonID = clsPeopleDB.AddNewPerson(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName,
-                this.LastName,this.DateOfBirth,this.Gendor,this.Address,this.Phone,this.Email,
-                this.NationalityCountryID,this.ImagePath);
+                this.LastName, this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
+                this.NationalityCountryID, this.ImagePath);
 
             return this.PersonID != -1;
+        }
+        private bool UpdatePerson()
+        {
+            return clsPeopleDB.UpdatePerson(this.PersonID, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName,
+                this.LastName, this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
+                this.NationalityCountryID, this.ImagePath);
+        }
+        public static clsPeople GetPersonByID(int PersonID)
+        {
+
+            string nationalNo = ""; string firstName = ""; string secondName = "";
+            string thirdName = ""; string lastName = ""; DateTime dateOfBirth = DateTime.Now; int gendor = 0; string address = ""; string phone = "";
+            string email = ""; int nationalityCountryID = -1; string imagePath = "";
+
+            if (clsPeopleDB.GetPersonByID(PersonID, ref nationalNo, ref firstName, ref secondName,
+           ref thirdName, ref lastName, ref dateOfBirth, ref gendor, ref address, ref phone,
+           ref email, ref nationalityCountryID, ref imagePath))
+            {
+                return new clsPeople(PersonID, nationalNo, firstName, secondName,
+            thirdName, lastName, dateOfBirth, gendor, address, phone,
+            email, nationalityCountryID, imagePath);
+            }
+            else
+            {
+                return null;
+            }
         }
         public bool Save()
         {
@@ -93,9 +121,9 @@ namespace DVLD_Business_Layer.People
             {
                 case Mode.Add:
                     enMode = Mode.Update;
-                   return AddNewPerson();
+                    return AddNewPerson();
                 case Mode.Update:
-                    return false;
+                    return UpdatePerson();
                 default:
                     return false;
             }

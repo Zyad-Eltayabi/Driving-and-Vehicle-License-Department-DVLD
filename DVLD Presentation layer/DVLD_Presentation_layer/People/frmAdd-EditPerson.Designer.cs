@@ -28,31 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucAdd_EditPerson1 = new DVLD_Presentation_layer.People.ucAdd_EditPerson();
             this.SuspendLayout();
-            // 
-            // ucAdd_EditPerson1
-            // 
-            this.ucAdd_EditPerson1.Location = new System.Drawing.Point(-7, -13);
-            this.ucAdd_EditPerson1.Name = "ucAdd_EditPerson1";
-            this.ucAdd_EditPerson1.Size = new System.Drawing.Size(1020, 778);
-            this.ucAdd_EditPerson1.TabIndex = 0;
             // 
             // frmAdd_EditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 753);
-            this.Controls.Add(this.ucAdd_EditPerson1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAdd_EditPerson";
             this.Text = "frmAdd_EditPerson";
+            this.Load += new System.EventHandler(this.frmAdd_EditPerson_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ucAdd_EditPerson ucAdd_EditPerson1;
     }
 }

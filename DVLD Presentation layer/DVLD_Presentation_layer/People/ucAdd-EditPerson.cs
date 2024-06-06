@@ -16,13 +16,87 @@ namespace DVLD_Presentation_layer.People
 {
     public partial class ucAdd_EditPerson : UserControl
     {
+        clsPeople addNewPerson { get; set; }
+        int personID = -1;
+        private bool validNationalNumber = false;
+        private bool validEmail = true;
+
         public ucAdd_EditPerson()
         {
             InitializeComponent();
+            addNewPerson = new clsPeople();
         }
 
-        private bool validNationalNumber = false;
-        private bool validEmail = true;
+        public ucAdd_EditPerson(int PersonID)
+        {
+            InitializeComponent();
+            this.personID = PersonID;
+            validEmail = true;
+            validNationalNumber = true;
+        }
+
+        private void ucAdd_EditPerson_Load(object sender, EventArgs e)
+        {
+            ValidateDate();
+            SetCountriesInCountriesComboBox();
+            if (this.personID != -1)
+            {
+                addNewPerson = clsPeople.GetPersonByID(personID);
+                SetPersonDataInForm();
+            }
+        }
+
+        private void SetImage(string ImageName)
+        {
+            if (string.IsNullOrEmpty(ImageName))
+            {
+                picPersonPic.Image = Properties.Resources.card;
+                lkRemovePic.Visible = false;
+            }
+            else
+            {
+                if (File.Exists($@"C:\DVLD-People-Images\{ImageName}"))
+                {
+                    using (var stream = File.Open($@"C:\DVLD-People-Images\{ImageName}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                    {
+                        // Create a new Bitmap from the stream
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            stream.CopyTo(memoryStream);
+                            memoryStream.Seek(0, SeekOrigin.Begin);
+                            picPersonPic.Image = new Bitmap(memoryStream);
+                        }
+                    }
+                    lkRemovePic.Visible = true;
+                }
+                else
+                {
+                    picPersonPic.Image = Properties.Resources.card;
+                    lkRemovePic.Visible = false;
+                }
+            }
+            picPersonPic.Tag = ImageName;
+        }
+        private void SetPersonDataInForm()
+        {
+            lbTitle.Text = "Edit Person";
+            lbID.Text = addNewPerson.PersonID.ToString();
+            tbFirst.Text = addNewPerson.FirstName.ToString();
+            tbSecond.Text = addNewPerson.SecondName.ToString();
+            tbThird.Text = addNewPerson.ThirdName.ToString();
+            tbLast.Text = addNewPerson.LastName.ToString();
+            tbAddress.Text = addNewPerson.Address.ToString();
+            tbNational.Text = addNewPerson.NationalNo.ToString();
+            tbEmail.Text = addNewPerson.Email.ToString();
+            tbPhone.Text = addNewPerson.Phone.ToString();
+            cbCountry.SelectedIndex = addNewPerson.NationalityCountryID - 1;
+            if (addNewPerson.Gendor == 0)
+                rbMale.Checked = true;
+            else
+                rbFemale.Checked = true;
+            dtpDateOfBirth.Value = addNewPerson.DateOfBirth;
+            SetImage(addNewPerson.ImagePath);
+        }
 
         // VALIDATE TEXT BOXES IN FORM
         private void ValidateTextBox(ref Guna.UI2.WinForms.Guna2TextBox textBox)
@@ -64,7 +138,7 @@ namespace DVLD_Presentation_layer.People
             ValidateTextBox(ref tbThird);
         }
 
-        private void tbNational_Validating(object sender, CancelEventArgs e)
+        private void ValidateNationalNo()
         {
             if (clsPeople.IsNationalityNumberExists(tbNational.Text.ToString()))
             {
@@ -76,6 +150,24 @@ namespace DVLD_Presentation_layer.People
                 errorProvider1.SetError(tbNational, null);
                 validNationalNumber = true;
             }
+        }
+        private void tbNational_Validating(object sender, CancelEventArgs e)
+        {
+            if (addNewPerson.enMode == clsPeople.Mode.Add)
+            {
+                ValidateNationalNo();
+                return;
+            }
+            else
+            {
+                if (tbNational.Text.ToString() != addNewPerson.NationalNo)
+                {
+                    ValidateNationalNo();
+                    return;
+                }
+            }
+            errorProvider1.SetError(tbNational, null);
+            validNationalNumber = true;
         }
 
         // Validate Email
@@ -106,11 +198,6 @@ namespace DVLD_Presentation_layer.People
             dtpDateOfBirth.MaxDate = dateTime;
         }
 
-        private void ucAdd_EditPerson_Load(object sender, EventArgs e)
-        {
-            ValidateDate();
-            SetCountriesInCountriesComboBox();
-        }
 
         // Get All Countries
         private void SetCountriesInCountriesComboBox()
@@ -137,6 +224,7 @@ namespace DVLD_Presentation_layer.People
 
         private void DeleteOldImage(string imageName)
         {
+
             if (File.Exists($@"C:\DVLD-People-Images\{imageName}"))
                 File.Delete($@"C:\DVLD-People-Images\{imageName}");
         }
@@ -170,11 +258,11 @@ namespace DVLD_Presentation_layer.People
 
         private void lkRemovePic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            picPersonPic.Image.Dispose();
+            picPersonPic.Image = new Bitmap(Properties.Resources.card);
             DeleteOldImage(picPersonPic.Tag.ToString());
             picPersonPic.Tag = null;
             lkRemovePic.Visible = false;
-            Bitmap pic = new Bitmap(Properties.Resources.card);
-            picPersonPic.Image = pic;
         }
 
         private bool ValidateTextBox()
@@ -223,9 +311,9 @@ namespace DVLD_Presentation_layer.People
             tbEmail.Text = tbEmail.Text.Trim();
         }
 
-        private void AssignValues(ref clsPeople addNewPerson)
+        private void AssignValues(clsPeople addNewPerson)
         {
-            if(lbID.Text.ToString() != "ID")
+            if (lbID.Text.ToString() != "ID")
                 addNewPerson.enMode = clsPeople.Mode.Update;
             addNewPerson.NationalNo = tbNational.Text.ToString();
             addNewPerson.FirstName = tbFirst.Text.ToString();
@@ -243,13 +331,13 @@ namespace DVLD_Presentation_layer.People
         private void SaveNewPerson()
         {
             TrimUserInputs();
-            clsPeople addNewPerson = new clsPeople();
-            AssignValues(ref addNewPerson);
+            AssignValues(addNewPerson);
             if (addNewPerson.Save())
             {
-                MessageBox.Show("Info", "Successful operation", MessageBoxButtons.OK, MessageBoxIcon.Information,
+                MessageBox.Show("Successful operation", "info", MessageBoxButtons.OK, MessageBoxIcon.Information,
                     MessageBoxDefaultButton.Button1);
                 lbID.Text = addNewPerson.PersonID.ToString();
+                lbTitle.Text = "Edit Person";
             }
         }
 
@@ -259,5 +347,7 @@ namespace DVLD_Presentation_layer.People
                 return;
             SaveNewPerson();
         }
+
+
     }
 }

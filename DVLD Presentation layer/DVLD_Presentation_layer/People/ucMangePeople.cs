@@ -18,7 +18,7 @@ namespace DVLD_Presentation_layer.People
             InitializeComponent();
         }
 
-       
+
 
         private void ucManagePeople_Load(object sender, EventArgs e)
         {
@@ -37,6 +37,18 @@ namespace DVLD_Presentation_layer.People
             frmAdd_EditPerson frmAdd = new frmAdd_EditPerson();
             frmAdd.ShowDialog();
             GetAllpeople();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdd_EditPerson frmAdd = new frmAdd_EditPerson(int.Parse(dgvPeople.SelectedRows[0].Cells[0].Value.ToString()));
+            frmAdd.ShowDialog();
+            GetAllpeople();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
