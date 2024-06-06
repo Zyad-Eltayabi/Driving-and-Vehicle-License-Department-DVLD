@@ -210,7 +210,7 @@ namespace DVLD_Database_Layer.People
                                   ,[NationalityCountryID] = @NationalityCountryID
                                   ,[ImagePath] = @ImagePath
                              WHERE PersonID = @PersonID";
-                           
+
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             sqlCommand.Parameters.AddWithValue("@NationalNo", nationalNo);
             sqlCommand.Parameters.AddWithValue("@FirstName", firstName);
@@ -256,6 +256,29 @@ namespace DVLD_Database_Layer.People
                 sqlConnection.Close();
             }
 
+            return rowsAffected != -1;
+        }
+
+        public static bool DeletePerson(int personID)
+        {
+            int rowsAffected = -1;
+            SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString);
+            string query = @"delete from People where PersonID = @PersonID";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@PersonID", personID);
+            try
+            {
+                sqlConnection.Open();
+                rowsAffected = (int)sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            finally { 
+                sqlConnection.Close();
+            }
             return rowsAffected != -1;
         }
     }

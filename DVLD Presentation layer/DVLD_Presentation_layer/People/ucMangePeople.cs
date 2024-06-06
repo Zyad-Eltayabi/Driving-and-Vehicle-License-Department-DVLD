@@ -48,7 +48,20 @@ namespace DVLD_Presentation_layer.People
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int personID = int.Parse(dgvPeople.SelectedRows[0].Cells[0].Value.ToString());
 
+            if (MessageBox.Show($"Are you sure to delete this person where ID = {personID}", "Info", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                if (clsPeople.DeletePerson(personID))
+                    MessageBox.Show($"Deleted successfully", "Info", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+                else
+                    MessageBox.Show($"you can not delete this person because he has a data linked to him", "Info", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+
+                GetAllpeople();
+            }
         }
     }
 }

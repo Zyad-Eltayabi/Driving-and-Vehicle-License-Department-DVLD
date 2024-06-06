@@ -115,6 +115,11 @@ namespace DVLD_Business_Layer.People
                 return null;
             }
         }
+
+        public static bool DeletePerson(int personID)
+        {
+            return clsPeopleDB.DeletePerson(personID);
+        }
         public bool Save()
         {
             switch (enMode)
