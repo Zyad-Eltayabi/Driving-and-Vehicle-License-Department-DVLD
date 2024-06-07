@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,18 @@ namespace DVLD_Presentation_layer.People
             GetAllpeople();
         }
 
+        void DeleteImage()
+        {
+            string imageName = dgvPeople.SelectedRows[0].Cells[12].Value.ToString();
+
+            var filePath = $@"C:\DVLD-People-Images\{imageName}";
+
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+        }
+
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int personID = int.Parse(dgvPeople.SelectedRows[0].Cells[0].Value.ToString());
@@ -52,8 +65,12 @@ namespace DVLD_Presentation_layer.People
                 MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 if (clsPeople.DeletePerson(personID))
+                {
                     MessageBox.Show($"Deleted successfully", "Info", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                            MessageBoxIcon.Information);
+
+                    DeleteImage();
+                }
                 else
                     MessageBox.Show($"you can not delete this person because he has a data linked to him", "Info", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
