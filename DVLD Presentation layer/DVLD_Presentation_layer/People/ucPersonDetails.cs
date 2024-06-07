@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Drawing; 
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,18 +15,14 @@ namespace DVLD_Presentation_layer.People
 
     public partial class ucPersonDetails : UserControl
     {
-        private int personID { get; set; }
         private DataTable person = new DataTable();
-        public ucPersonDetails(int personID)
-        {
-            InitializeComponent();
-            this.personID = personID;
-        }
+       
         public ucPersonDetails()
         {
-                
+            InitializeComponent();
         }
-        private void ucPersonDetails_Load(object sender, EventArgs e)
+
+        public void LoadPersonDetails(int personID)
         {
             person = clsPeople.GetPersonDetails(personID);
             SetPersonInformation();
@@ -50,7 +46,7 @@ namespace DVLD_Presentation_layer.People
         {
             string imageName = person.Rows[0][12].ToString();
 
-            if(string.IsNullOrEmpty(imageName))
+            if (string.IsNullOrEmpty(imageName))
             {
                 picPersonPic.Image = Properties.Resources.card;
                 return;
@@ -59,7 +55,7 @@ namespace DVLD_Presentation_layer.People
             {
                 using (var stream = File.Open($@"C:\DVLD-People-Images\{imageName}", FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite))
                 {
-                    if(stream != null)
+                    if (stream != null)
                     {
                         picPersonPic.Image = new Bitmap(stream);
                     }

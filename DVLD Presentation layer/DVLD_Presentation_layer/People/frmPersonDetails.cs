@@ -16,14 +16,12 @@ namespace DVLD_Presentation_layer.People
         public frmPersonDetails(int personID)
         {
             InitializeComponent();
-            this.personID = personID;   
+            this.personID = personID;
         }
 
         private void frmPersonDetails_Load(object sender, EventArgs e)
         {
-            ucPersonDetails personDetails = new ucPersonDetails(personID);
-            this.Controls.Add(personDetails);
-            personDetails.Location = new Point(0, 0);
+            ucPersonDetails1.LoadPersonDetails(personID);
         }
     }
 }
