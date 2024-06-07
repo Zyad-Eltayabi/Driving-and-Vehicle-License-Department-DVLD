@@ -211,64 +211,67 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(169, 158);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(215, 186);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(211, 6);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(211, 6);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(211, 6);
             // 
             // phoneToolStripMenuItem
             // 
             this.phoneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("phoneToolStripMenuItem.Image")));
             this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.phoneToolStripMenuItem.Text = "Phone";
+            this.phoneToolStripMenuItem.Click += new System.EventHandler(this.phoneToolStripMenuItem_Click);
             // 
             // btnAddNewPerson
             // 

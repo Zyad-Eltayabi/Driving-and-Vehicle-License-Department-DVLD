@@ -18,8 +18,6 @@ namespace DVLD_Presentation_layer.People
             InitializeComponent();
         }
 
-
-
         private void ucManagePeople_Load(object sender, EventArgs e)
         {
             GetAllpeople();
@@ -62,6 +60,28 @@ namespace DVLD_Presentation_layer.People
 
                 GetAllpeople();
             }
+        }
+
+        public void PrintMessageAboutFeature()
+        {
+            MessageBox.Show($"This feature is not implemented yet.", "Not Ready Yet!", MessageBoxButtons.OK,
+               MessageBoxIcon.Warning);
+        }
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintMessageAboutFeature();
+        }
+
+        private void phoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintMessageAboutFeature();
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personID = int.Parse(dgvPeople.SelectedRows[0].Cells[0].Value.ToString());
+            frmPersonDetails frmPerson = new frmPersonDetails(personID);
+            frmPerson.ShowDialog();
         }
     }
 }

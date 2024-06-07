@@ -71,6 +71,12 @@
     <Compile Include="People\frmMangePeople.Designer.cs">
       <DependentUpon>frmMangePeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\frmPersonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPersonDetails.Designer.cs">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\ucAdd-EditPerson.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="People\ucMangePeople.Designer.cs">
       <DependentUpon>ucMangePeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\ucPersonDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\ucPersonDetails.Designer.cs">
+      <DependentUpon>ucPersonDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
@@ -94,11 +106,17 @@
     <EmbeddedResource Include="People\frmMangePeople.resx">
       <DependentUpon>frmMangePeople.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPersonDetails.resx">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\ucAdd-EditPerson.resx">
       <DependentUpon>ucAdd-EditPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\ucMangePeople.resx">
       <DependentUpon>ucMangePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ucPersonDetails.resx">
+      <DependentUpon>ucPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

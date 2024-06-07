@@ -274,12 +274,63 @@ namespace DVLD_Database_Layer.People
             catch (Exception)
             {
 
-                
+
             }
-            finally { 
+            finally
+            {
                 sqlConnection.Close();
             }
             return rowsAffected != -1;
+        }
+
+        public static DataTable GetPersonDetails(int personID)
+        {
+            SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString);
+            string query = @"select * from People where PersonID = @PersonID";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@PersonID", personID);
+            DataTable person = new DataTable();
+            try
+            {
+                sqlConnection.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                person.Load(reader);
+                reader.Close();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+            return person;
+        }
+        public static string GetCountryName(int countryID)
+        {
+            string name = "";
+            SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString);
+            string query = @"select Countries.CountryName from Countries where CountryID = @CountryID";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("CountryID", countryID);
+            try
+            {
+                sqlConnection.Open();
+                object countryName = sqlCommand.ExecuteScalar();
+                if (countryName != null)
+                    name = countryName.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+            return name;
         }
     }
 }

@@ -120,6 +120,16 @@ namespace DVLD_Business_Layer.People
         {
             return clsPeopleDB.DeletePerson(personID);
         }
+
+        public static DataTable GetPersonDetails(int personID)
+        {
+            return clsPeopleDB.GetPersonDetails(personID);
+        }
+
+        public static string GetCountryName(int countryID)
+        {
+            return clsPeopleDB.GetCountryName(countryID);
+        }
         public bool Save()
         {
             switch (enMode)
