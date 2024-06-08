@@ -27,6 +27,8 @@ namespace DVLD_Presentation_layer
         {
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+            btnPeople.PerformClick();
+            this.Close();
         }
 
         private void btnPeople_Click(object sender, EventArgs e)
