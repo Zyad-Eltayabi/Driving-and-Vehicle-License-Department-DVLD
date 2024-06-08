@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing; 
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,7 @@ namespace DVLD_Presentation_layer.People
     public partial class ucPersonDetails : UserControl
     {
         private DataTable person = new DataTable();
-       
+
         public ucPersonDetails()
         {
             InitializeComponent();

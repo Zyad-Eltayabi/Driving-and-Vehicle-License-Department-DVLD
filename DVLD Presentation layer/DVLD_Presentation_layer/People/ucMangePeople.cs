@@ -100,5 +100,115 @@ namespace DVLD_Presentation_layer.People
             frmPersonDetails frmPerson = new frmPersonDetails(personID);
             frmPerson.ShowDialog();
         }
+
+
+        // <=== Handle Filter ===>
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbFilter.Text = string.Empty;
+
+            if (cbFilter.SelectedIndex == 0)
+                tbFilter.Visible = false;
+            else
+                tbFilter.Visible = true;
+
+        }
+
+        private void tbFilter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbFilter.SelectedIndex == 1)
+            {
+                if (!char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            else if (cbFilter.SelectedIndex == 10) // handle Email 
+            {
+                if (e.KeyChar == '@' || e.KeyChar == '.')
+                {
+                    e.Handled = false;
+                    return;
+                }
+
+                if (!char.IsLetterOrDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            else
+            {
+                if (!char.IsLetterOrDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+        }
+
+        private void ShowClearTextButton()
+        {
+            if (string.IsNullOrEmpty(tbFilter.Text.ToString()))
+                btnClearTxt.Visible = false;
+            else
+                btnClearTxt.Visible = true;
+
+            btnClearTxt.BringToFront();
+
+            tbFilter.Focus();
+        }
+
+        private void SetFilter(string colName, string colValue)
+        {
+            DataTable people = clsPeople.GetAllPeople();
+            DataView dv = new DataView();
+            dv = people.DefaultView;
+            dv.RowFilter = string.Format("CONVERT({0},System.String) LIKE '{1}%'", colName, colValue);
+            dgvPeople.DataSource = dv;
+        }
+
+        private void FilterDataGridTable()
+        {
+            switch (cbFilter.SelectedIndex)
+            {
+                case 1:
+                    SetFilter("PersonID", tbFilter.Text.ToString());
+                    break;
+                case 2:
+                    SetFilter("NationalNo", tbFilter.Text.ToString());
+                    break;
+                case 3:
+                    SetFilter("FirstName", tbFilter.Text.ToString());
+                    break;
+                case 4:
+                    SetFilter("SecondName", tbFilter.Text.ToString());
+                    break;
+                case 5:
+                    SetFilter("ThirdName", tbFilter.Text.ToString());
+                    break;
+                case 6:
+                    SetFilter("LastName", tbFilter.Text.ToString());
+                    break;
+                case 7:
+                    SetFilter("CountryName", tbFilter.Text.ToString());
+                    break;
+                case 8:
+                    SetFilter("Gendor", tbFilter.Text.ToString());
+                    break;
+                case 9:
+                    SetFilter("Phone", tbFilter.Text.ToString());
+                    break;
+                case 10:
+                    SetFilter("Email", tbFilter.Text.ToString());
+                    break;
+                default:
+                    dgvPeople.DataSource = clsPeople.GetAllPeople();
+                    break;
+            }
+        }
+
+        private void tbFilter_TextChanged(object sender, EventArgs e)
+        {
+            ShowClearTextButton();
+            FilterDataGridTable();
+        }
+
+        private void btnClearTxt_Click(object sender, EventArgs e)
+        {
+            tbFilter.Text = string.Empty;
+        }
     }
 }
