@@ -330,7 +330,7 @@
             // 
             this.picPersonPic.BackColor = System.Drawing.Color.White;
             this.picPersonPic.ImageRotate = 0F;
-            this.picPersonPic.Location = new System.Drawing.Point(886, 111);
+            this.picPersonPic.Location = new System.Drawing.Point(886, 138);
             this.picPersonPic.Name = "picPersonPic";
             this.picPersonPic.Size = new System.Drawing.Size(187, 174);
             this.picPersonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -15,24 +15,46 @@ namespace DVLD_Database_Layer.People
     {
         public static DataTable GetAllPeople()
         {
-            SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString);
-            string query = @"select * from People";
-            SqlCommand cmd = new SqlCommand(query, sqlConnection);
             DataTable People = new DataTable();
+            string query = @"SELECT 
+                            People.PersonID, 
+                            People.NationalNo, 
+                            People.FirstName, 
+                            People.SecondName, 
+                            People.ThirdName, 
+                            People.LastName, 
+                            People.DateOfBirth, 
+                            CASE 
+                                WHEN People.Gendor = 0 THEN 'Male'
+                                WHEN People.Gendor = 1 THEN 'Female'
+                            END AS Gendor, 
+                            People.Address, 
+                            People.Phone, 
+                            People.Email, 
+                            Countries.CountryName, 
+                            People.ImagePath
+                        FROM People 
+                        INNER JOIN Countries 
+                        ON People.NationalityCountryID = Countries.CountryID;";
+
             try
             {
-                sqlConnection.Open();
-                SqlDataReader sqlDataAdapter = cmd.ExecuteReader();
-                People.Load(sqlDataAdapter);
-                sqlDataAdapter.Close();
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, sqlConnection))
+                    {
+                        using (SqlDataReader sqlDataReader = cmd.ExecuteReader())
+                        {
+                            People.Load(sqlDataReader);
+                        }
+                    }
+                }
             }
             catch (Exception)
             {
 
-            }
-            finally
-            {
-                sqlConnection.Close();
+                throw;
             }
             return People;
         }
