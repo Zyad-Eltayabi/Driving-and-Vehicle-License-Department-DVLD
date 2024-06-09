@@ -50,8 +50,9 @@
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1214, 59);
+            this.guna2Panel1.Size = new System.Drawing.Size(1416, 73);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel2
@@ -63,9 +64,10 @@
             this.guna2Panel2.Controls.Add(this.btnPeople);
             this.guna2Panel2.Controls.Add(this.btnApplication);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 59);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 73);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1214, 48);
+            this.guna2Panel2.Size = new System.Drawing.Size(1416, 59);
             this.guna2Panel2.TabIndex = 1;
             // 
             // btnSettings
@@ -79,9 +81,10 @@
             this.btnSettings.ForeColor = System.Drawing.Color.Black;
             this.btnSettings.Image = global::DVLD_Presentation_layer.Properties.Resources.settings;
             this.btnSettings.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSettings.Location = new System.Drawing.Point(947, 0);
+            this.btnSettings.Location = new System.Drawing.Point(1105, 0);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(255, 45);
+            this.btnSettings.Size = new System.Drawing.Size(298, 55);
             this.btnSettings.TabIndex = 4;
             this.btnSettings.Text = "Account Settings";
             // 
@@ -96,9 +99,10 @@
             this.btnAdmins.ForeColor = System.Drawing.Color.Black;
             this.btnAdmins.Image = global::DVLD_Presentation_layer.Properties.Resources.admin;
             this.btnAdmins.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAdmins.Location = new System.Drawing.Point(696, 0);
+            this.btnAdmins.Location = new System.Drawing.Point(812, 0);
+            this.btnAdmins.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdmins.Name = "btnAdmins";
-            this.btnAdmins.Size = new System.Drawing.Size(231, 45);
+            this.btnAdmins.Size = new System.Drawing.Size(270, 55);
             this.btnAdmins.TabIndex = 3;
             this.btnAdmins.Text = "Admins";
             // 
@@ -113,9 +117,10 @@
             this.btnDrivers.ForeColor = System.Drawing.Color.Black;
             this.btnDrivers.Image = global::DVLD_Presentation_layer.Properties.Resources.taxi_driver;
             this.btnDrivers.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnDrivers.Location = new System.Drawing.Point(465, 2);
+            this.btnDrivers.Location = new System.Drawing.Point(542, 2);
+            this.btnDrivers.Margin = new System.Windows.Forms.Padding(4);
             this.btnDrivers.Name = "btnDrivers";
-            this.btnDrivers.Size = new System.Drawing.Size(231, 45);
+            this.btnDrivers.Size = new System.Drawing.Size(270, 55);
             this.btnDrivers.TabIndex = 2;
             this.btnDrivers.Text = "Drivers";
             // 
@@ -130,9 +135,10 @@
             this.btnPeople.ForeColor = System.Drawing.Color.Black;
             this.btnPeople.Image = global::DVLD_Presentation_layer.Properties.Resources.group;
             this.btnPeople.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPeople.Location = new System.Drawing.Point(234, 3);
+            this.btnPeople.Location = new System.Drawing.Point(273, 4);
+            this.btnPeople.Margin = new System.Windows.Forms.Padding(4);
             this.btnPeople.Name = "btnPeople";
-            this.btnPeople.Size = new System.Drawing.Size(231, 45);
+            this.btnPeople.Size = new System.Drawing.Size(270, 55);
             this.btnPeople.TabIndex = 1;
             this.btnPeople.Text = "Peoples";
             this.btnPeople.Click += new System.EventHandler(this.btnPeople_Click);
@@ -148,9 +154,10 @@
             this.btnApplication.ForeColor = System.Drawing.Color.Black;
             this.btnApplication.Image = global::DVLD_Presentation_layer.Properties.Resources.dispatch_order;
             this.btnApplication.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnApplication.Location = new System.Drawing.Point(3, 0);
+            this.btnApplication.Location = new System.Drawing.Point(4, 0);
+            this.btnApplication.Margin = new System.Windows.Forms.Padding(4);
             this.btnApplication.Name = "btnApplication";
-            this.btnApplication.Size = new System.Drawing.Size(231, 45);
+            this.btnApplication.Size = new System.Drawing.Size(270, 55);
             this.btnApplication.TabIndex = 0;
             this.btnApplication.Text = "Applications";
             // 
@@ -166,9 +173,10 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::DVLD_Presentation_layer.Properties.Resources.close;
             this.btnClose.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnClose.Location = new System.Drawing.Point(1165, 0);
+            this.btnClose.Location = new System.Drawing.Point(1359, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(49, 59);
+            this.btnClose.Size = new System.Drawing.Size(57, 73);
             this.btnClose.TabIndex = 1;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -176,24 +184,26 @@
             // 
             this.guna2CirclePictureBox1.Image = global::DVLD_Presentation_layer.Properties.Resources.hands_3410350;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 59);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(75, 73);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1214, 645);
+            this.ClientSize = new System.Drawing.Size(1416, 794);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmMain_Load);
