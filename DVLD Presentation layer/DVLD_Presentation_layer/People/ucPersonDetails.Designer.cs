@@ -58,6 +58,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnEditPerson = new Guna.UI2.WinForms.Guna2Button();
             this.lkEditPerson.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -73,6 +74,7 @@
             // 
             // lkEditPerson
             // 
+            this.lkEditPerson.Controls.Add(this.btnEditPerson);
             this.lkEditPerson.Controls.Add(this.guna2PictureBox10);
             this.lkEditPerson.Controls.Add(this.guna2PictureBox9);
             this.lkEditPerson.Controls.Add(this.guna2PictureBox8);
@@ -445,6 +447,22 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Name";
             // 
+            // btnEditPerson
+            // 
+            this.btnEditPerson.BorderRadius = 15;
+            this.btnEditPerson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditPerson.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPerson.ForeColor = System.Drawing.Color.White;
+            this.btnEditPerson.Location = new System.Drawing.Point(923, 334);
+            this.btnEditPerson.Name = "btnEditPerson";
+            this.btnEditPerson.Size = new System.Drawing.Size(113, 45);
+            this.btnEditPerson.TabIndex = 21;
+            this.btnEditPerson.Text = "Edit";
+            this.btnEditPerson.Click += new System.EventHandler(this.btnEditPerson_Click);
+            // 
             // ucPersonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -499,5 +517,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button btnEditPerson;
     }
 }

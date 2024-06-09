@@ -141,10 +141,12 @@
             // cbRememberMe
             // 
             this.cbRememberMe.AutoSize = true;
+            this.cbRememberMe.Checked = true;
             this.cbRememberMe.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbRememberMe.CheckedState.BorderRadius = 1;
             this.cbRememberMe.CheckedState.BorderThickness = 0;
             this.cbRememberMe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbRememberMe.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbRememberMe.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Italic);
             this.cbRememberMe.Location = new System.Drawing.Point(696, 379);
             this.cbRememberMe.Name = "cbRememberMe";

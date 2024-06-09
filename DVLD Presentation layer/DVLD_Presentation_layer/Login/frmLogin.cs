@@ -30,7 +30,7 @@ namespace DVLD_Presentation_layer.Login
         {
             if (!clsLogin.IsExists(tbUserName.Text.ToString(), tbPassword.Text.ToString()))
             {
-                clsPuplicUtilities.ErrorMessage(@"Incorrect password/username");
+                clsPublicUtilities.ErrorMessage(@"Incorrect password/username");
                 return false;
             }
             return true;
@@ -40,25 +40,18 @@ namespace DVLD_Presentation_layer.Login
         {
             if (!clsLogin.IsActive(tbUserName.Text.ToString(), tbPassword.Text.ToString()))
             {
-                clsPuplicUtilities.ErrorMessage("The user is inactive, please contact the admin");
+                clsPublicUtilities.ErrorMessage("The user is inactive, please contact the admin");
                 return false;
             }
 
             return true;
         }
 
-        private DirectoryInfo GetParentDirectory()
-        {
-            string currentDirectory = Environment.CurrentDirectory.ToString();
-            var parentPath = Directory.GetParent(currentDirectory);
-            parentPath = Directory.GetParent(parentPath.ToString()); // now the parent path in DVLD_Presentation_layer
-            return parentPath;
-        }
 
         private void RememberMe()
         {
 
-            DirectoryInfo parentDirectory = GetParentDirectory();
+            DirectoryInfo parentDirectory =clsPublicUtilities.GetParentDirectory();
 
             string utilitiesFolderPath = $@"{parentDirectory}\Utilities";
 
@@ -86,6 +79,9 @@ namespace DVLD_Presentation_layer.Login
 
             RememberMe();
 
+            frmMain frmMain = new frmMain();
+            frmMain.ShowDialog();
+
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -95,7 +91,7 @@ namespace DVLD_Presentation_layer.Login
 
         private void LoadUserData()
         {
-            DirectoryInfo parentDirectory = GetParentDirectory();
+            DirectoryInfo parentDirectory = clsPublicUtilities.GetParentDirectory();
 
             string utilitiesFolderPath = $@"{parentDirectory}\Utilities";
             string rememberMeFile = $@"{utilitiesFolderPath}\RememberMe.txt";
@@ -111,5 +107,7 @@ namespace DVLD_Presentation_layer.Login
                 }
             }
         }
+
+
     }
 }

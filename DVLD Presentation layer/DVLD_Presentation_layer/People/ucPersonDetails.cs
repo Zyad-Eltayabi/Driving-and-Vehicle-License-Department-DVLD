@@ -64,5 +64,17 @@ namespace DVLD_Presentation_layer.People
                 }
             }
         }
+
+        private void btnEditPerson_Click(object sender, EventArgs e)
+        {
+            if (lbID.Text.ToString() == "???")
+                return;
+
+            frmAdd_EditPerson frmAdd_EditPerson = new frmAdd_EditPerson(int.Parse(lbID.Text));
+            frmAdd_EditPerson.ShowDialog();
+
+            LoadPersonDetails(int.Parse(lbID.Text));
+
+        }
     }
 }
