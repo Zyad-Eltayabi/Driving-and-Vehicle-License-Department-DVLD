@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,6 +33,11 @@ namespace DVLD_Presentation_layer.Utilities
             var parentPath = Directory.GetParent(currentDirectory);
             parentPath = Directory.GetParent(parentPath.ToString()); // now the parent path in DVLD_Presentation_layer
             return parentPath;
+        }
+
+        public static void CenterForm(Form form)
+        { 
+            form.StartPosition = FormStartPosition.CenterParent;
         }
     }
 }

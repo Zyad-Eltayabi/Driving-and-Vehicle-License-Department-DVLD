@@ -1,4 +1,5 @@
 ﻿using DVLD_Presentation_layer.People;
+using DVLD_Presentation_layer.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,12 +28,20 @@ namespace DVLD_Presentation_layer
         {
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+
+            btnAdmins.PerformClick();
         }
 
         private void btnPeople_Click(object sender, EventArgs e)
         {
             frmMangePeople frmMangePeople = new frmMangePeople();
             frmMangePeople.ShowDialog();
+        }
+
+        private void btnAdmins_Click(object sender, EventArgs e)
+        {
+            frmManageUsers frmManageUsers = new frmManageUsers();
+            frmManageUsers.ShowDialog();
         }
     }
 }

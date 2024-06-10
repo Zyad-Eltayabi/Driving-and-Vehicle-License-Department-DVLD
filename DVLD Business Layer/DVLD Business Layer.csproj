@@ -45,6 +45,7 @@
     <Compile Include="Login\clsLogin.cs" />
     <Compile Include="People\clsPeople.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\clsUsers.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DVLD Database Layer\DVLD Database Layer.csproj">
