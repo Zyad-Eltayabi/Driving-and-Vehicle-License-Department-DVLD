@@ -157,5 +157,12 @@ namespace DVLD_Presentation_layer.Users
             frmAddNewUser.ShowDialog();
             GetAllUsers();
         }
+
+        private void ChangePasswordStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int userID = int.Parse(dgvUsers.SelectedRows[0].Cells[0].Value.ToString());
+            frmChangePassword frmChangePassword = new frmChangePassword(userID);
+            frmChangePassword.ShowDialog();
+        }
     }
 }
