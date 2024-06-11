@@ -130,6 +130,11 @@ namespace DVLD_Business_Layer.People
         {
             return clsPeopleDB.GetCountryName(countryID);
         }
+
+        public static int GetPersonID(string columnName, string value)
+        {
+            return clsPeopleDB.GetPersonID(columnName, value);
+        }
         public bool Save()
         {
             switch (enMode)

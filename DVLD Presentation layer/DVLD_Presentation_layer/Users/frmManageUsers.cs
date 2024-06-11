@@ -142,5 +142,12 @@ namespace DVLD_Presentation_layer.Users
         {
             IsActiveFilter();
         }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            frmAddNewUser frmAddNewUser = new frmAddNewUser();
+            frmAddNewUser.ShowDialog();
+            GetAllUsers();
+        }
     }
 }

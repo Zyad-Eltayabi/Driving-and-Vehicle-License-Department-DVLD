@@ -354,5 +354,34 @@ namespace DVLD_Database_Layer.People
             }
             return name;
         }
+
+        public static int GetPersonID(string columnName,string value)
+        {
+            int personID = -1;
+            string query = $@"select * from People where {columnName} = @Value";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Value", value);
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            personID = int.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return personID;
+        }
     }
 }
