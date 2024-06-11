@@ -114,5 +114,74 @@ namespace DVLD_Database_Layer.Users
 
             return userID;
         }
+
+        public static bool UpdateUser(int userID, string userName, string password,bool isActive)
+        {
+            int rowsAffected = 0;
+            string query = @"USE [DVLD]
+                                        UPDATE [dbo].[Users]
+                                              SET [UserName] = @UserName
+                                              ,[Password] = @Password
+                                              ,[IsActive] = @IsActive
+                                         WHERE UserID = @UserID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("UserName", userName);
+                        sqlCommand.Parameters.AddWithValue("Password", password);
+                        sqlCommand.Parameters.AddWithValue("IsActive", isActive);
+                        sqlCommand.Parameters.AddWithValue("UserID", userID);
+
+                        rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return rowsAffected > 0;
+        }
+
+        public static bool GetUserByID(int userID,ref int personID, ref string userName,ref string password,ref bool isActive) 
+        { 
+            var isFound = false;
+            string query = @"select * from Users where UserID = @UserID";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query,sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@UserID", userID);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            if (sqlDataReader.Read())
+                            {
+                                isFound = true;
+                                personID = sqlDataReader.GetInt32(1);
+                                userName = sqlDataReader.GetString(2);
+                                password = sqlDataReader.GetString(3);
+                                isActive = sqlDataReader.GetBoolean(4);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return isFound;
+        }
     }
 }

@@ -86,5 +86,15 @@ namespace DVLD_Presentation_layer.People
         {
             tbFilter.Text = string.Empty;
         }
+
+        public void DisableFilterSearch()
+        {
+            gbFilter.Enabled = false;
+        }
+
+        public void LoadPersonData(int personID)
+        {
+            ucPersonDetails1.LoadPersonDetails(personID);
+        }
     }
 }

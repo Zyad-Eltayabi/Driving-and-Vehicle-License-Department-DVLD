@@ -21,7 +21,17 @@ namespace DVLD_Presentation_layer.Users
             clsPublicUtilities.CenterForm(this);
         }
 
+        public frmAddNewUser(int userID)
+        {
+            InitializeComponent();
+            clsPublicUtilities.CenterForm(this);
+            editMode = true;
+            this.userID = userID;
+        }
+
         private clsUsers user = new clsUsers();
+        private int userID;
+        private bool editMode = false;
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -29,6 +39,7 @@ namespace DVLD_Presentation_layer.Users
                 return;
 
             ClearLoginInformation();
+
             tbForm.SelectedTab = tbForm.TabPages[1];
         }
 
@@ -44,7 +55,8 @@ namespace DVLD_Presentation_layer.Users
 
         private void ClearLoginInformation()
         {
-            tbUserName.Text = tbPassword.Text = lbID.Text = string.Empty;
+            if (user.enMode == clsUsers.Mode.Add)
+                tbUserName.Text = tbPassword.Text = lbID.Text = string.Empty;
         }
         private bool FoundPerson()
         {
@@ -88,6 +100,39 @@ namespace DVLD_Presentation_layer.Users
         private void btnSave_Click(object sender, EventArgs e)
         {
             AddUser();
+        }
+
+        private void frmAddNewUser_Load(object sender, EventArgs e)
+        {
+            if (editMode)
+            {
+                user = clsUsers.GetUserByID(this.userID);
+
+                if (user == null)
+                {
+                    clsPublicUtilities.ErrorMessage("Failed to upload user data");
+                    return;
+                }
+
+                ucAddUserWithFilter.personID = user.PersonID;
+
+                // disable filter search option 
+                ucAddUserWithFilter1.DisableFilterSearch();
+
+                // load person data
+                ucAddUserWithFilter1.LoadPersonData(user.PersonID);
+
+                // load user data
+                LoadUserDate();
+            }
+        }
+
+        private void LoadUserDate()
+        {
+            lbID.Text = user.UserID.ToString();
+            tbUserName.Text = user.UserName.ToString();
+            tbPassword.Text = user.Password.ToString();
+            cbIsActive.Checked = user.IsActive;
         }
     }
 }

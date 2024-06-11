@@ -147,6 +147,14 @@ namespace DVLD_Presentation_layer.Users
         {
             frmAddNewUser frmAddNewUser = new frmAddNewUser();
             frmAddNewUser.ShowDialog();
+            GetAllUsers();  
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = int.Parse(dgvUsers.SelectedRows[0].Cells[0].Value.ToString());
+            frmAddNewUser frmAddNewUser = new frmAddNewUser(userID);
+            frmAddNewUser.ShowDialog();
             GetAllUsers();
         }
     }

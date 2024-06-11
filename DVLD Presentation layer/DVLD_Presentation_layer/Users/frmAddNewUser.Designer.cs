@@ -33,7 +33,6 @@
             this.tbForm = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.ucAddUserWithFilter1 = new DVLD_Presentation_layer.People.ucAddUserWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbIsActive = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.ucAddUserWithFilter1 = new DVLD_Presentation_layer.People.ucAddUserWithFilter();
             this.tbForm.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -123,13 +123,6 @@
             this.btnNext.TabIndex = 1;
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // ucAddUserWithFilter1
-            // 
-            this.ucAddUserWithFilter1.Location = new System.Drawing.Point(6, 41);
-            this.ucAddUserWithFilter1.Name = "ucAddUserWithFilter1";
-            this.ucAddUserWithFilter1.Size = new System.Drawing.Size(1104, 590);
-            this.ucAddUserWithFilter1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -318,6 +311,13 @@
             this.cbIsActive.UncheckedState.BorderThickness = 0;
             this.cbIsActive.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
+            // ucAddUserWithFilter1
+            // 
+            this.ucAddUserWithFilter1.Location = new System.Drawing.Point(6, 41);
+            this.ucAddUserWithFilter1.Name = "ucAddUserWithFilter1";
+            this.ucAddUserWithFilter1.Size = new System.Drawing.Size(1104, 590);
+            this.ucAddUserWithFilter1.TabIndex = 0;
+            // 
             // frmAddNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -328,6 +328,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddNewUser";
             this.Text = "Add New User";
+            this.Load += new System.EventHandler(this.frmAddNewUser_Load);
             this.tbForm.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

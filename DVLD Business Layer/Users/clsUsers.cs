@@ -15,9 +15,9 @@ namespace DVLD_Business_Layer.Users
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool IsActive { get; set; }
-        public enum Mode { Add , Update }
+        public enum Mode { Add, Update }
 
-        Mode enMode { get; set; }
+        public Mode enMode { get; set; }
 
         public clsUsers()
         {
@@ -26,7 +26,31 @@ namespace DVLD_Business_Layer.Users
             UserName = string.Empty;
             Password = string.Empty;
             IsActive = false;
-             enMode = Mode.Add;
+            enMode = Mode.Add;
+        }
+
+        private clsUsers(int userID, int personID, string userName, string password, bool isActive)
+        {
+            UserID = userID;
+            PersonID = personID;
+            UserName = userName;
+            Password = password;
+            IsActive = isActive;
+            this.enMode = Mode.Update;
+        }
+
+        public static clsUsers GetUserByID(int userID)
+        {
+            int personID = 0;
+            string userName = string.Empty;
+            string password = string.Empty;
+            bool isActive = false;
+
+            if (clsUsersDB.GetUserByID(userID, ref personID, ref userName, ref password, ref isActive))
+            {
+                return new clsUsers(userID, personID, userName, password, isActive);
+            }
+            return null;
         }
 
         private bool AddNewUser()
@@ -44,6 +68,11 @@ namespace DVLD_Business_Layer.Users
             return clsUsersDB.IsPersonAlreadyUser(personID);
         }
 
+        private bool UpdateUser()
+        {
+            return clsUsersDB.UpdateUser(this.UserID, this.UserName, this.Password, this.IsActive);
+        }
+
         public bool Save()
         {
             switch (enMode)
@@ -52,8 +81,8 @@ namespace DVLD_Business_Layer.Users
                     enMode = Mode.Update;
                     return this.AddNewUser();
                 case Mode.Update:
-                    return true;
-                 default:
+                    return UpdateUser();
+                default:
                     return false;
             }
 
