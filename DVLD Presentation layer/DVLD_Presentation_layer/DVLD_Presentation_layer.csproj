@@ -127,6 +127,12 @@
     <Compile Include="Users\frmManageUsers.Designer.cs">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\frmShowUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmShowUserDetails.Designer.cs">
+      <DependentUpon>frmShowUserDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\ucChangePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmManageUsers.resx">
       <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmShowUserDetails.resx">
+      <DependentUpon>frmShowUserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ucChangePassword.resx">
       <DependentUpon>ucChangePassword.cs</DependentUpon>

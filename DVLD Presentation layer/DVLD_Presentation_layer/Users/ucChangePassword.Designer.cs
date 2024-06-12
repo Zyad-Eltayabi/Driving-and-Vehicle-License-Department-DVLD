@@ -58,7 +58,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(3, 459);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1102, 160);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1102, 231);
             this.guna2GroupBox1.TabIndex = 1;
             this.guna2GroupBox1.Text = "User Information";
             // 
@@ -68,7 +68,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(809, 63);
+            this.label3.Location = new System.Drawing.Point(24, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 34);
             this.label3.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(389, 63);
+            this.label2.Location = new System.Drawing.Point(24, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(204, 34);
             this.label2.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.lbActive.BackColor = System.Drawing.Color.Transparent;
             this.lbActive.Font = new System.Drawing.Font("Arial Unicode MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbActive.ForeColor = System.Drawing.Color.Black;
-            this.lbActive.Location = new System.Drawing.Point(937, 63);
+            this.lbActive.Location = new System.Drawing.Point(152, 179);
             this.lbActive.Name = "lbActive";
             this.lbActive.Size = new System.Drawing.Size(34, 40);
             this.lbActive.TabIndex = 1;
@@ -104,7 +104,7 @@
             this.lbUserName.BackColor = System.Drawing.Color.Transparent;
             this.lbUserName.Font = new System.Drawing.Font("Arial Unicode MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserName.ForeColor = System.Drawing.Color.Black;
-            this.lbUserName.Location = new System.Drawing.Point(589, 63);
+            this.lbUserName.Location = new System.Drawing.Point(224, 118);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(34, 40);
             this.lbUserName.TabIndex = 1;
@@ -141,7 +141,7 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.ucPersonDetails1);
             this.Name = "ucChangePassword";
-            this.Size = new System.Drawing.Size(1105, 624);
+            this.Size = new System.Drawing.Size(1105, 694);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);

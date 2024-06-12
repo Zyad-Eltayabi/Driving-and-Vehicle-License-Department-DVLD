@@ -183,5 +183,31 @@ namespace DVLD_Database_Layer.Users
             }
             return isFound;
         }
+
+        public static bool DeleteUser(int userID)
+        {
+            string query = @"delete from Users where UserID = @UserID";
+            int rowsAffected = 0;
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@UserID", userID);
+                        rowsAffected = (int)sqlCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            return rowsAffected > 0;
+        }
+
     }
 }

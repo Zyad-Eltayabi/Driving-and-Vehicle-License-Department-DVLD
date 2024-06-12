@@ -34,26 +34,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageUsers));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUsers = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ChangePasswordStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.phoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbRecords = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.cbActive = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClearTxt = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewUser = new Guna.UI2.WinForms.Guna2Button();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChangePasswordStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
@@ -65,9 +65,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(515, 182);
+            this.label1.Location = new System.Drawing.Point(441, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 38);
+            this.label1.Size = new System.Drawing.Size(203, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage Users";
             // 
@@ -98,13 +98,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsers.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsers.Location = new System.Drawing.Point(27, 319);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUsers.Location = new System.Drawing.Point(23, 259);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
             this.dgvUsers.RowHeadersWidth = 51;
-            this.dgvUsers.Size = new System.Drawing.Size(1211, 369);
+            this.dgvUsers.Size = new System.Drawing.Size(1038, 300);
             this.dgvUsers.TabIndex = 12;
             this.dgvUsers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsers.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -127,100 +126,6 @@
             this.dgvUsers.ThemeStyle.RowsStyle.Height = 22;
             this.dgvUsers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // lbRecords
-            // 
-            this.lbRecords.AutoSize = true;
-            this.lbRecords.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRecords.ForeColor = System.Drawing.Color.Black;
-            this.lbRecords.Location = new System.Drawing.Point(144, 704);
-            this.lbRecords.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbRecords.Name = "lbRecords";
-            this.lbRecords.Size = new System.Drawing.Size(25, 28);
-            this.lbRecords.TabIndex = 11;
-            this.lbRecords.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(31, 704);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 28);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Records  : ";
-            // 
-            // cbFilter
-            // 
-            this.cbFilter.BackColor = System.Drawing.Color.Transparent;
-            this.cbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbFilter.ItemHeight = 30;
-            this.cbFilter.Items.AddRange(new object[] {
-            "None",
-            "User ID",
-            "Full Name",
-            "User Name",
-            "Person ID",
-            "Is Active"});
-            this.cbFilter.Location = new System.Drawing.Point(171, 251);
-            this.cbFilter.Margin = new System.Windows.Forms.Padding(4);
-            this.cbFilter.Name = "cbFilter";
-            this.cbFilter.Size = new System.Drawing.Size(222, 36);
-            this.cbFilter.StartIndex = 0;
-            this.cbFilter.TabIndex = 9;
-            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Signika", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(29, 252);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 35);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Filter By : ";
-            // 
-            // tbFilter
-            // 
-            this.tbFilter.Location = new System.Drawing.Point(425, 251);
-            this.tbFilter.Multiline = true;
-            this.tbFilter.Name = "tbFilter";
-            this.tbFilter.Size = new System.Drawing.Size(273, 36);
-            this.tbFilter.TabIndex = 14;
-            this.tbFilter.Visible = false;
-            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
-            this.tbFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFilter_KeyPress);
-            // 
-            // cbActive
-            // 
-            this.cbActive.BackColor = System.Drawing.Color.Transparent;
-            this.cbActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbActive.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbActive.ItemHeight = 30;
-            this.cbActive.Items.AddRange(new object[] {
-            "All",
-            "Yes",
-            "No"});
-            this.cbActive.Location = new System.Drawing.Point(425, 252);
-            this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(140, 36);
-            this.cbActive.StartIndex = 0;
-            this.cbActive.TabIndex = 16;
-            this.cbActive.Visible = false;
-            this.cbActive.SelectedIndexChanged += new System.EventHandler(this.cbActive_SelectedIndexChanged);
             // 
             // guna2ContextMenuStrip1
             // 
@@ -247,32 +152,172 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(215, 218);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(185, 212);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(181, 6);
             // 
-            // toolStripSeparator3
+            // ChangePasswordStripMenuItem1
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(211, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(211, 6);
+            this.ChangePasswordStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ChangePasswordStripMenuItem1.Image")));
+            this.ChangePasswordStripMenuItem1.Name = "ChangePasswordStripMenuItem1";
+            this.ChangePasswordStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.ChangePasswordStripMenuItem1.Text = "Change Password";
+            this.ChangePasswordStripMenuItem1.Click += new System.EventHandler(this.ChangePasswordStripMenuItem1_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(181, 6);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(181, 6);
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(181, 6);
+            // 
+            // phoneToolStripMenuItem
+            // 
+            this.phoneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("phoneToolStripMenuItem.Image")));
+            this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
+            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.phoneToolStripMenuItem.Text = "Phone";
+            this.phoneToolStripMenuItem.Click += new System.EventHandler(this.phoneToolStripMenuItem_Click);
+            // 
+            // lbRecords
+            // 
+            this.lbRecords.AutoSize = true;
+            this.lbRecords.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRecords.ForeColor = System.Drawing.Color.Black;
+            this.lbRecords.Location = new System.Drawing.Point(123, 572);
+            this.lbRecords.Name = "lbRecords";
+            this.lbRecords.Size = new System.Drawing.Size(20, 22);
+            this.lbRecords.TabIndex = 11;
+            this.lbRecords.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(27, 572);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 22);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Records  : ";
+            // 
+            // cbFilter
+            // 
+            this.cbFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFilter.ItemHeight = 30;
+            this.cbFilter.Items.AddRange(new object[] {
+            "None",
+            "User ID",
+            "Full Name",
+            "User Name",
+            "Person ID",
+            "Is Active"});
+            this.cbFilter.Location = new System.Drawing.Point(147, 204);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(191, 36);
+            this.cbFilter.StartIndex = 0;
+            this.cbFilter.TabIndex = 9;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Signika", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(25, 205);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 28);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Filter By : ";
+            // 
+            // tbFilter
+            // 
+            this.tbFilter.Location = new System.Drawing.Point(364, 204);
+            this.tbFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbFilter.Multiline = true;
+            this.tbFilter.Name = "tbFilter";
+            this.tbFilter.Size = new System.Drawing.Size(235, 30);
+            this.tbFilter.TabIndex = 14;
+            this.tbFilter.Visible = false;
+            this.tbFilter.TextChanged += new System.EventHandler(this.tbFilter_TextChanged);
+            this.tbFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFilter_KeyPress);
+            // 
+            // cbActive
+            // 
+            this.cbActive.BackColor = System.Drawing.Color.Transparent;
+            this.cbActive.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbActive.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbActive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbActive.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbActive.ItemHeight = 30;
+            this.cbActive.Items.AddRange(new object[] {
+            "All",
+            "Yes",
+            "No"});
+            this.cbActive.Location = new System.Drawing.Point(364, 205);
+            this.cbActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbActive.Name = "cbActive";
+            this.cbActive.Size = new System.Drawing.Size(121, 36);
+            this.cbActive.StartIndex = 0;
+            this.cbActive.TabIndex = 16;
+            this.cbActive.Visible = false;
+            this.cbActive.SelectedIndexChanged += new System.EventHandler(this.cbActive_SelectedIndexChanged);
             // 
             // btnClearTxt
             // 
@@ -285,9 +330,10 @@
             this.btnClearTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClearTxt.ForeColor = System.Drawing.Color.White;
             this.btnClearTxt.Image = ((System.Drawing.Image)(resources.GetObject("btnClearTxt.Image")));
-            this.btnClearTxt.Location = new System.Drawing.Point(678, 256);
+            this.btnClearTxt.Location = new System.Drawing.Point(581, 208);
+            this.btnClearTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearTxt.Name = "btnClearTxt";
-            this.btnClearTxt.Size = new System.Drawing.Size(20, 27);
+            this.btnClearTxt.Size = new System.Drawing.Size(17, 22);
             this.btnClearTxt.TabIndex = 15;
             this.btnClearTxt.UseTransparentBackground = true;
             this.btnClearTxt.Visible = false;
@@ -304,72 +350,30 @@
             this.btnAddNewUser.ForeColor = System.Drawing.Color.White;
             this.btnAddNewUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewUser.Image")));
             this.btnAddNewUser.ImageSize = new System.Drawing.Size(60, 50);
-            this.btnAddNewUser.Location = new System.Drawing.Point(1156, 239);
+            this.btnAddNewUser.Location = new System.Drawing.Point(991, 194);
+            this.btnAddNewUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Size = new System.Drawing.Size(82, 61);
+            this.btnAddNewUser.Size = new System.Drawing.Size(70, 50);
             this.btnAddNewUser.TabIndex = 13;
             this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // ChangePasswordStripMenuItem1
-            // 
-            this.ChangePasswordStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ChangePasswordStripMenuItem1.Image")));
-            this.ChangePasswordStripMenuItem1.Name = "ChangePasswordStripMenuItem1";
-            this.ChangePasswordStripMenuItem1.Size = new System.Drawing.Size(214, 26);
-            this.ChangePasswordStripMenuItem1.Text = "Change Password";
-            this.ChangePasswordStripMenuItem1.Click += new System.EventHandler(this.ChangePasswordStripMenuItem1_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
-            // 
-            // phoneToolStripMenuItem
-            // 
-            this.phoneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("phoneToolStripMenuItem.Image")));
-            this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.phoneToolStripMenuItem.Text = "Phone";
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::DVLD_Presentation_layer.Properties.Resources.admin;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(522, 38);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(447, 31);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(218, 131);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(187, 106);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
             // frmManageUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 753);
+            this.ClientSize = new System.Drawing.Size(1099, 612);
             this.Controls.Add(this.cbActive);
             this.Controls.Add(this.btnClearTxt);
             this.Controls.Add(this.tbFilter);
@@ -382,6 +386,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmManageUsers";
             this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.frmManageUsers_Load);

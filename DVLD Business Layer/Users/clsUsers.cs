@@ -73,6 +73,11 @@ namespace DVLD_Business_Layer.Users
             return clsUsersDB.UpdateUser(this.UserID, this.UserName, this.Password, this.IsActive);
         }
 
+        public static bool DeleteUser(int userID)
+        {
+            return clsUsersDB.DeleteUser(userID);
+        }
+
         public bool Save()
         {
             switch (enMode)

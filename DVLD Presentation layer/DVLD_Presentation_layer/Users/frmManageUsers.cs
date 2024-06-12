@@ -164,5 +164,42 @@ namespace DVLD_Presentation_layer.Users
             frmChangePassword frmChangePassword = new frmChangePassword(userID);
             frmChangePassword.ShowDialog();
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = int.Parse(dgvUsers.SelectedRows[0].Cells[0].Value.ToString());
+            frmShowUserDetails frmShowUserDetails = new frmShowUserDetails(userID);
+            frmShowUserDetails.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = int.Parse(dgvUsers.SelectedRows[0].Cells[0].Value.ToString());
+            DeleteUser(userID);
+            GetAllUsers();  
+        }
+
+        private void DeleteUser(int userID)
+        {
+            if (clsUsers.DeleteUser(userID))
+                clsPublicUtilities.InformationMessage("User has been deleted successfully");
+            else
+                clsPublicUtilities.ErrorMessage("You can not delete this person, please contact the admin");
+        }
+
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintMessageAboutFeature();
+        }
+
+        private void phoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintMessageAboutFeature();
+        }
+
+        public void PrintMessageAboutFeature()
+        {
+            clsPublicUtilities.WarningMessage("This feature is not implemented yet.");
+        }
     }
 }
