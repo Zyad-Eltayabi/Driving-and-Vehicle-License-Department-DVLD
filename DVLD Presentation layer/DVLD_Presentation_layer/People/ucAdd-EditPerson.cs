@@ -21,6 +21,9 @@ namespace DVLD_Presentation_layer.People
         private bool validNationalNumber = false;
         private bool validEmail = true;
 
+        public delegate void PersonID (int personID);
+        public event PersonID delegatePersonID;
+
         public ucAdd_EditPerson()
         {
             InitializeComponent();
@@ -338,6 +341,8 @@ namespace DVLD_Presentation_layer.People
                     MessageBoxDefaultButton.Button1);
                 lbID.Text = addNewPerson.PersonID.ToString();
                 lbTitle.Text = "Edit Person";
+
+                delegatePersonID?.Invoke(addNewPerson.PersonID);
             }
         }
 

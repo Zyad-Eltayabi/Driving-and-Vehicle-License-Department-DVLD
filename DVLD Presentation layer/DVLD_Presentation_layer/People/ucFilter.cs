@@ -95,6 +95,14 @@ namespace DVLD_Presentation_layer.People
         public void LoadPersonData(int personID)
         {
             ucPersonDetails1.LoadPersonDetails(personID);
+            ucAddUserWithFilter.personID = personID;
+        }
+
+        private void btnAddNewUser_Click(object sender, EventArgs e)
+        {
+            frmAdd_EditPerson frmAdd_EditPerson = new frmAdd_EditPerson();
+            frmAdd_EditPerson.ucAdd_EditPerson.delegatePersonID += LoadPersonData;
+            frmAdd_EditPerson.ShowDialog();
         }
     }
 }

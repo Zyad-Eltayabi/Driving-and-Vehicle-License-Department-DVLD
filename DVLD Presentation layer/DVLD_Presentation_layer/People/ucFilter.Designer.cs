@@ -96,6 +96,7 @@
             this.btnAddNewUser.Name = "btnAddNewUser";
             this.btnAddNewUser.Size = new System.Drawing.Size(36, 47);
             this.btnAddNewUser.TabIndex = 14;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
             // 
             // tbFilter
             // 
