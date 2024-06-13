@@ -1,6 +1,6 @@
-﻿namespace DVLD_Presentation_layer.Licenses.ApplicationTypes
+﻿namespace DVLD_Presentation_layer.Licenses.Tests
 {
-    partial class frmApplicationTypes
+    partial class frmTestType
     {
         /// <summary>
         /// Required designer variable.
@@ -31,42 +31,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApplicationTypes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTestType));
+            this.dgvTypes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lbRecords = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvTypes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypes)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbRecords
-            // 
-            this.lbRecords.AutoSize = true;
-            this.lbRecords.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRecords.ForeColor = System.Drawing.Color.Black;
-            this.lbRecords.Location = new System.Drawing.Point(141, 620);
-            this.lbRecords.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbRecords.Name = "lbRecords";
-            this.lbRecords.Size = new System.Drawing.Size(25, 28);
-            this.lbRecords.TabIndex = 13;
-            this.lbRecords.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(28, 620);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 28);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Records  : ";
             // 
             // dgvTypes
             // 
@@ -94,14 +70,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTypes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTypes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTypes.Location = new System.Drawing.Point(32, 289);
+            this.dgvTypes.Location = new System.Drawing.Point(56, 246);
             this.dgvTypes.Name = "dgvTypes";
             this.dgvTypes.ReadOnly = true;
             this.dgvTypes.RowHeadersVisible = false;
             this.dgvTypes.RowHeadersWidth = 51;
             this.dgvTypes.RowTemplate.Height = 26;
-            this.dgvTypes.Size = new System.Drawing.Size(792, 319);
-            this.dgvTypes.TabIndex = 14;
+            this.dgvTypes.Size = new System.Drawing.Size(792, 304);
+            this.dgvTypes.TabIndex = 17;
             this.dgvTypes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTypes.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvTypes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -123,6 +99,30 @@
             this.dgvTypes.ThemeStyle.RowsStyle.Height = 26;
             this.dgvTypes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTypes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // lbRecords
+            // 
+            this.lbRecords.AutoSize = true;
+            this.lbRecords.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRecords.ForeColor = System.Drawing.Color.Black;
+            this.lbRecords.Location = new System.Drawing.Point(164, 590);
+            this.lbRecords.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbRecords.Name = "lbRecords";
+            this.lbRecords.Size = new System.Drawing.Size(25, 28);
+            this.lbRecords.TabIndex = 16;
+            this.lbRecords.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Signika", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(51, 590);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 28);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Records  : ";
             // 
             // guna2ContextMenuStrip1
             // 
@@ -149,42 +149,42 @@
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(325, 22);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(245, 157);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 20;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(203, 192);
+            this.label1.Location = new System.Drawing.Point(280, 182);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 39);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Manage Application Types";
+            this.label1.Size = new System.Drawing.Size(334, 39);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Manage Test Types";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(306, 32);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(245, 157);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 17;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // frmApplicationTypes
+            // frmTestType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 657);
+            this.ClientSize = new System.Drawing.Size(894, 656);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTypes);
             this.Controls.Add(this.lbRecords);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmApplicationTypes";
-            this.Text = "Application Types";
-            this.Load += new System.EventHandler(this.frmApplicationTypes_Load);
+            this.Name = "frmTestType";
+            this.Text = "Test Types";
+            this.Load += new System.EventHandler(this.frmTestType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypes)).EndInit();
             this.guna2ContextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -194,12 +194,13 @@
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2DataGridView dgvTypes;
         private System.Windows.Forms.Label lbRecords;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvTypes;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

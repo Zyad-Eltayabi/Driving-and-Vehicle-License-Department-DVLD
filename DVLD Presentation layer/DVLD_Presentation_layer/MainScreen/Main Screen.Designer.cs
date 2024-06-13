@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainScreen));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tsApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.tsDrivingLicensesServices = new System.Windows.Forms.ToolStripMenuItem();
             this.tsManageApplications = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.menuStrip1.SuspendLayout();
@@ -71,6 +71,18 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.btnClose);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1417, 73);
+            this.guna2Panel1.TabIndex = 1;
+            // 
             // tsApplication
             // 
             this.tsApplication.AutoSize = false;
@@ -93,28 +105,28 @@
             // 
             this.tsDrivingLicensesServices.Image = ((System.Drawing.Image)(resources.GetObject("tsDrivingLicensesServices.Image")));
             this.tsDrivingLicensesServices.Name = "tsDrivingLicensesServices";
-            this.tsDrivingLicensesServices.Size = new System.Drawing.Size(399, 36);
+            this.tsDrivingLicensesServices.Size = new System.Drawing.Size(429, 56);
             this.tsDrivingLicensesServices.Text = "Driving Licenses Services";
             // 
             // tsManageApplications
             // 
             this.tsManageApplications.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplications.Image")));
             this.tsManageApplications.Name = "tsManageApplications";
-            this.tsManageApplications.Size = new System.Drawing.Size(399, 36);
+            this.tsManageApplications.Size = new System.Drawing.Size(429, 56);
             this.tsManageApplications.Text = "Manage Applications";
             // 
             // tsDetainLicenses
             // 
             this.tsDetainLicenses.Image = ((System.Drawing.Image)(resources.GetObject("tsDetainLicenses.Image")));
             this.tsDetainLicenses.Name = "tsDetainLicenses";
-            this.tsDetainLicenses.Size = new System.Drawing.Size(399, 36);
+            this.tsDetainLicenses.Size = new System.Drawing.Size(429, 56);
             this.tsDetainLicenses.Text = "Detain Licenses";
             // 
             // tsManageApplicationsTypes
             // 
             this.tsManageApplicationsTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplicationsTypes.Image")));
             this.tsManageApplicationsTypes.Name = "tsManageApplicationsTypes";
-            this.tsManageApplicationsTypes.Size = new System.Drawing.Size(399, 36);
+            this.tsManageApplicationsTypes.Size = new System.Drawing.Size(429, 56);
             this.tsManageApplicationsTypes.Text = "Manage Application Types";
             this.tsManageApplicationsTypes.Click += new System.EventHandler(this.tsManageApplicationsTypes_Click);
             // 
@@ -122,8 +134,9 @@
             // 
             this.tsManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageTestTypes.Image")));
             this.tsManageTestTypes.Name = "tsManageTestTypes";
-            this.tsManageTestTypes.Size = new System.Drawing.Size(399, 36);
+            this.tsManageTestTypes.Size = new System.Drawing.Size(429, 56);
             this.tsManageTestTypes.Text = "Manage Test Types";
+            this.tsManageTestTypes.Click += new System.EventHandler(this.tsManageTestTypes_Click);
             // 
             // tsPeople
             // 
@@ -202,18 +215,6 @@
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(308, 36);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.btnClose);
-            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1417, 73);
-            this.guna2Panel1.TabIndex = 1;
             // 
             // btnClose
             // 

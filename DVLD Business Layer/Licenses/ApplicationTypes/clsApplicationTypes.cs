@@ -17,7 +17,9 @@ namespace DVLD_Presentation_layer.Licenses.ApplicationTypes
 
         public clsApplicationTypes()
         {
-                
+             this.ApplicationTypeID = 0;
+            this.ApplicationTypeTitle = string.Empty;
+            this.ApplicationFees = 0;
         }
 
         private clsApplicationTypes(int applicationTypeID, string applicationTypeTitle, float applicationFees)

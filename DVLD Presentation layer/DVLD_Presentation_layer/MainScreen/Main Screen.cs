@@ -1,5 +1,6 @@
 ﻿using DVLD_Business_Layer.Login;
 using DVLD_Presentation_layer.Licenses.ApplicationTypes;
+using DVLD_Presentation_layer.Licenses.Tests;
 using DVLD_Presentation_layer.People;
 using DVLD_Presentation_layer.Users;
 using System;
@@ -64,6 +65,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmApplicationTypes frmApplicationTypes = new frmApplicationTypes();
             frmApplicationTypes.ShowDialog();
+        }
+
+        private void tsManageTestTypes_Click(object sender, EventArgs e)
+        {
+            frmTestType testTypes = new frmTestType();
+            testTypes.ShowDialog();
         }
     }
 }
