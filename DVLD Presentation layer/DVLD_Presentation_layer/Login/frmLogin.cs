@@ -1,4 +1,5 @@
 ﻿using DVLD_Business_Layer.Login;
+using DVLD_Presentation_layer.MainScreen;
 using DVLD_Presentation_layer.Utilities;
 using System;
 using System.Collections.Generic;
@@ -79,9 +80,8 @@ namespace DVLD_Presentation_layer.Login
 
             RememberMe();
 
-            frmMain frmMain = new frmMain();
-            frmMain.ShowDialog();
-
+           frmMainScreen frmMainScreen = new frmMainScreen();
+            frmMainScreen.ShowDialog();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

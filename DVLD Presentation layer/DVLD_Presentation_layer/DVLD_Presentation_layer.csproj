@@ -59,11 +59,11 @@
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScreen\frmMain.cs">
+    <Compile Include="MainScreen\Main Screen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainScreen\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="MainScreen\Main Screen.Designer.cs">
+      <DependentUpon>Main Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAdd-EditPerson.cs">
       <SubType>Form</SubType>
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScreen\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="MainScreen\Main Screen.resx">
+      <DependentUpon>Main Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAdd-EditPerson.resx">
       <DependentUpon>frmAdd-EditPerson.cs</DependentUpon>

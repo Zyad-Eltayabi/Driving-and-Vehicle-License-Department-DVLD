@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_Presentation_layer.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace DVLD_Presentation_layer.People
         public frmMangePeople()
         {
             InitializeComponent();
+            clsPublicUtilities.CenterForm(this);
         }
     }
 }
