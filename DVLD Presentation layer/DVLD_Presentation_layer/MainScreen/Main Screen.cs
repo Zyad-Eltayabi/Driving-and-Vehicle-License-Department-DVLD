@@ -1,4 +1,5 @@
 ﻿using DVLD_Business_Layer.Login;
+using DVLD_Presentation_layer.Licenses.ApplicationTypes;
 using DVLD_Presentation_layer.People;
 using DVLD_Presentation_layer.Users;
 using System;
@@ -59,9 +60,10 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Close();
         }
 
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        private void tsManageApplicationsTypes_Click(object sender, EventArgs e)
         {
-
+            frmApplicationTypes frmApplicationTypes = new frmApplicationTypes();
+            frmApplicationTypes.ShowDialog();
         }
     }
 }

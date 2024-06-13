@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="Connections\clsConnections.cs" />
     <Compile Include="Countries\clsCountriesDB.cs" />
+    <Compile Include="Licenses\ApplicationTypes\clsApplicationTypesDB.cs" />
     <Compile Include="Login\clsLoginDB.cs" />
     <Compile Include="People\clsPeopleDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\clsUsersDB.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

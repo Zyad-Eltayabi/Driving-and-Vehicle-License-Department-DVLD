@@ -32,20 +32,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.tsDrivingLicensesServices = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsManageApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsManageApplicationsTypes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsManageTestTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPeople = new System.Windows.Forms.ToolStripMenuItem();
             this.tsDrivers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsAccountSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsManageApplications = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsManageApplicationsTypes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsManageTestTypes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsDetainLicenses = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.menuStrip1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -85,7 +85,7 @@
             this.tsApplication.Image = ((System.Drawing.Image)(resources.GetObject("tsApplication.Image")));
             this.tsApplication.Margin = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.tsApplication.Name = "tsApplication";
-            this.tsApplication.Size = new System.Drawing.Size(280, 65);
+            this.tsApplication.Size = new System.Drawing.Size(250, 65);
             this.tsApplication.Text = "Applications";
             this.tsApplication.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -93,9 +93,37 @@
             // 
             this.tsDrivingLicensesServices.Image = ((System.Drawing.Image)(resources.GetObject("tsDrivingLicensesServices.Image")));
             this.tsDrivingLicensesServices.Name = "tsDrivingLicensesServices";
-            this.tsDrivingLicensesServices.Size = new System.Drawing.Size(429, 56);
+            this.tsDrivingLicensesServices.Size = new System.Drawing.Size(399, 36);
             this.tsDrivingLicensesServices.Text = "Driving Licenses Services";
-            this.tsDrivingLicensesServices.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            // 
+            // tsManageApplications
+            // 
+            this.tsManageApplications.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplications.Image")));
+            this.tsManageApplications.Name = "tsManageApplications";
+            this.tsManageApplications.Size = new System.Drawing.Size(399, 36);
+            this.tsManageApplications.Text = "Manage Applications";
+            // 
+            // tsDetainLicenses
+            // 
+            this.tsDetainLicenses.Image = ((System.Drawing.Image)(resources.GetObject("tsDetainLicenses.Image")));
+            this.tsDetainLicenses.Name = "tsDetainLicenses";
+            this.tsDetainLicenses.Size = new System.Drawing.Size(399, 36);
+            this.tsDetainLicenses.Text = "Detain Licenses";
+            // 
+            // tsManageApplicationsTypes
+            // 
+            this.tsManageApplicationsTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplicationsTypes.Image")));
+            this.tsManageApplicationsTypes.Name = "tsManageApplicationsTypes";
+            this.tsManageApplicationsTypes.Size = new System.Drawing.Size(399, 36);
+            this.tsManageApplicationsTypes.Text = "Manage Application Types";
+            this.tsManageApplicationsTypes.Click += new System.EventHandler(this.tsManageApplicationsTypes_Click);
+            // 
+            // tsManageTestTypes
+            // 
+            this.tsManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageTestTypes.Image")));
+            this.tsManageTestTypes.Name = "tsManageTestTypes";
+            this.tsManageTestTypes.Size = new System.Drawing.Size(399, 36);
+            this.tsManageTestTypes.Text = "Manage Test Types";
             // 
             // tsPeople
             // 
@@ -151,6 +179,30 @@
             this.tsAccountSettings.Text = "Account Settings";
             this.tsAccountSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(308, 36);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(308, 36);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // signOutToolStripMenuItem
+            // 
+            this.signOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("signOutToolStripMenuItem.Image")));
+            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(308, 36);
+            this.signOutToolStripMenuItem.Text = "Sign Out";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
@@ -195,65 +247,14 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(338, 56);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("changePasswordToolStripMenuItem.Image")));
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(338, 56);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
-            // signOutToolStripMenuItem
-            // 
-            this.signOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("signOutToolStripMenuItem.Image")));
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(338, 56);
-            this.signOutToolStripMenuItem.Text = "Sign Out";
-            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
-            // 
-            // tsManageApplications
-            // 
-            this.tsManageApplications.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplications.Image")));
-            this.tsManageApplications.Name = "tsManageApplications";
-            this.tsManageApplications.Size = new System.Drawing.Size(429, 56);
-            this.tsManageApplications.Text = "Manage Applications";
-            // 
-            // tsManageApplicationsTypes
-            // 
-            this.tsManageApplicationsTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplicationsTypes.Image")));
-            this.tsManageApplicationsTypes.Name = "tsManageApplicationsTypes";
-            this.tsManageApplicationsTypes.Size = new System.Drawing.Size(429, 56);
-            this.tsManageApplicationsTypes.Text = "Manage Application Types";
-            // 
-            // tsManageTestTypes
-            // 
-            this.tsManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageTestTypes.Image")));
-            this.tsManageTestTypes.Name = "tsManageTestTypes";
-            this.tsManageTestTypes.Size = new System.Drawing.Size(429, 56);
-            this.tsManageTestTypes.Text = "Manage Test Types";
-            // 
-            // tsDetainLicenses
-            // 
-            this.tsDetainLicenses.Image = ((System.Drawing.Image)(resources.GetObject("tsDetainLicenses.Image")));
-            this.tsDetainLicenses.Name = "tsDetainLicenses";
-            this.tsDetainLicenses.Size = new System.Drawing.Size(429, 56);
-            this.tsDetainLicenses.Text = "Detain Licenses";
-            // 
             // frmMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1417, 706);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -280,12 +281,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsManageApplications;
         private System.Windows.Forms.ToolStripMenuItem tsManageApplicationsTypes;
         private System.Windows.Forms.ToolStripMenuItem tsManageTestTypes;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsDetainLicenses;
     }
 }
