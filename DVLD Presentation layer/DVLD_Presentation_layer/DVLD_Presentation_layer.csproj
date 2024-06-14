@@ -65,16 +65,16 @@
     <Compile Include="Licenses\ApplicationTypes\frmUpdateApplicationType.Designer.cs">
       <DependentUpon>frmUpdateApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\Tests\frmTestType.cs">
+    <Compile Include="Licenses\Tests\TestTypes\frmTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\Tests\frmTestType.Designer.cs">
+    <Compile Include="Licenses\Tests\TestTypes\frmTestType.Designer.cs">
       <DependentUpon>frmTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\Tests\frmUpdateTestType.cs">
+    <Compile Include="Licenses\Tests\TestTypes\frmUpdateTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\Tests\frmUpdateTestType.Designer.cs">
+    <Compile Include="Licenses\Tests\TestTypes\frmUpdateTestType.Designer.cs">
       <DependentUpon>frmUpdateTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmLogin.cs">
@@ -170,10 +170,10 @@
     <EmbeddedResource Include="Licenses\ApplicationTypes\frmUpdateApplicationType.resx">
       <DependentUpon>frmUpdateApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\Tests\frmTestType.resx">
+    <EmbeddedResource Include="Licenses\Tests\TestTypes\frmTestType.resx">
       <DependentUpon>frmTestType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\Tests\frmUpdateTestType.resx">
+    <EmbeddedResource Include="Licenses\Tests\TestTypes\frmUpdateTestType.resx">
       <DependentUpon>frmUpdateTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">

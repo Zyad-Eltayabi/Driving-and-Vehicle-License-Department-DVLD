@@ -48,26 +48,12 @@ namespace DVLD_Presentation_layer.People
             return true;
         }
 
-        private bool IsPersonAlreadyUser()
-        {
-            if(clsUsers.IsPersonAlreadyUser(personID))
-            {
-                clsPublicUtilities.ErrorMessage("This person is already a user in system");
-                ucAddUserWithFilter.personID = -1;
-                return true;
-            }
-            return false;
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbFilter.Text))
                 return;
 
             if (!IsPersonExists())
-                return;
-
-            if (IsPersonAlreadyUser())
                 return;
 
             // now we sure that the person is found and he does not a user in system

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLD_Presentation_layer.People.ucAdd_EditPerson;
 
 namespace DVLD_Presentation_layer.Users
 {
@@ -97,9 +98,44 @@ namespace DVLD_Presentation_layer.Users
             user.PersonID = ucAddUserWithFilter.personID;
         }
 
+        private bool IsPersonAlreadyUser()
+        {
+            if (clsUsers.IsPersonAlreadyUser(ucAddUserWithFilter.personID))
+            {
+                clsPublicUtilities.ErrorMessage("This person is already a user in system,choose another one");
+                ucAddUserWithFilter.personID = -1;
+                return true;
+            }
+            return false;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(tbUserName.Text.Trim()) || string.IsNullOrEmpty(tbPassword.Text.ToString()))
+            {
+                clsPublicUtilities.WarningMessage("Fill the required field");
+                return; 
+            }
+
+            if(ValidatePerson())
+                return;
+
             AddUser();
+        }
+
+        private bool ValidatePerson()
+        {
+            if(ucAddUserWithFilter.personID == -1)
+            {
+                clsPublicUtilities.ErrorMessage("First choose the person");
+                return true;
+            }
+
+            if(!editMode)
+                if (IsPersonAlreadyUser())
+                    return true;
+
+            return false;
         }
 
         private void frmAddNewUser_Load(object sender, EventArgs e)
