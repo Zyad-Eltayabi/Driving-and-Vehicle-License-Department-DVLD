@@ -1,4 +1,5 @@
-﻿using DVLD_Database_Layer.Licenses.ApplicationTypes;
+﻿using DVLD_Business_Layer.Licenses.Applications;
+using DVLD_Database_Layer.Licenses.ApplicationTypes;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -50,5 +51,42 @@ namespace DVLD_Presentation_layer.Licenses.ApplicationTypes
             return null;
         }
 
+        public static float GetFees(clsApplications.ApplicationTypes applicationTypes)
+        {
+            string applicationTypetitle = GetApplicationTypeTitle(applicationTypes);
+            return clsApplicationTypesDB.GetFees(applicationTypetitle);
+        }
+
+        private static string GetApplicationTypeTitle(clsApplications.ApplicationTypes applicationTypes)
+        {
+            string title = "";
+            switch (applicationTypes)
+            {
+                case clsApplications.ApplicationTypes.NewLocalDrivingLicenseService:
+                    title = "New Local Driving License Service";
+                    break;
+                case clsApplications.ApplicationTypes.RenewDrivingLicenseService:
+                    title = "Renew Driving License Service";
+                    break;
+                case clsApplications.ApplicationTypes.ReplacementforaLostDrivingLicense:
+                    title = "Replacement for a Lost Driving License";
+                    break;
+                case clsApplications.ApplicationTypes.ReplacementforaDamagedDrivingLicens:
+                    title = "Replacement for a Damaged Driving License";
+                    break;
+                case clsApplications.ApplicationTypes.ReleaseDetainedDrivingLicsense:
+                    title = "Release Detained Driving Licsense";
+                    break;
+                case clsApplications.ApplicationTypes.NewInternationalLicense:
+                    title = "New International License";
+                    break;
+                case clsApplications.ApplicationTypes.RetakeTest:
+                    title = "Retake Test";
+                    break;
+                default:
+                    break;
+            }
+            return title;
+        }
     }
 }

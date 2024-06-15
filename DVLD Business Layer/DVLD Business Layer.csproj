@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Countries\clsCountries.cs" />
+    <Compile Include="Licenses\Applications\clsApplications.cs" />
     <Compile Include="Licenses\ApplicationTypes\clsApplicationTypes.cs" />
+    <Compile Include="Licenses\Local Licence\clsLocalLicense.cs" />
     <Compile Include="Login\clsLogin.cs" />
     <Compile Include="People\clsPeople.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

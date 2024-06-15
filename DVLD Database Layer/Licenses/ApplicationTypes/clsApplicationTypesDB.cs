@@ -55,7 +55,7 @@ namespace DVLD_Database_Layer.Licenses.ApplicationTypes
                     using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("ApplicationTypeTitle", applicationTypeTitle);
-                        sqlCommand.Parameters.AddWithValue("ApplicationFees",applicationFees);
+                        sqlCommand.Parameters.AddWithValue("ApplicationFees", applicationFees);
                         sqlCommand.Parameters.AddWithValue("ApplicationTypeID", applicationTypeID);
 
                         rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
@@ -70,7 +70,7 @@ namespace DVLD_Database_Layer.Licenses.ApplicationTypes
             return rowsAffected > 0;
         }
 
-        public static bool GetApplicationType(int applicationTypeID,ref string applicationTypeTitle,ref float applicationFees)
+        public static bool GetApplicationType(int applicationTypeID, ref string applicationTypeTitle, ref float applicationFees)
         {
             var isFound = false;
             string query = @"select * from ApplicationTypes where ApplicationTypes.ApplicationTypeID = @ApplicationTypeID";
@@ -103,6 +103,27 @@ namespace DVLD_Database_Layer.Licenses.ApplicationTypes
             return isFound;
         }
 
+        public static float GetFees(string applicationType)
+        {
+            float fees = 0;
+            string query = @"select ApplicationFees from ApplicationTypes where ApplicationTypeTitle =@ApplicationTypeTitle";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("ApplicationTypeTitle", applicationType);
 
+                        fees = float.Parse( sqlCommand.ExecuteScalar().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return fees;
+        }
     }
 }

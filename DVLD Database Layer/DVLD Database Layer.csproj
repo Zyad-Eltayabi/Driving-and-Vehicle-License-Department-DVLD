@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="Connections\clsConnections.cs" />
     <Compile Include="Countries\clsCountriesDB.cs" />
+    <Compile Include="Licenses\Applications\clsApplicationsDB.cs" />
     <Compile Include="Licenses\ApplicationTypes\clsApplicationTypesDB.cs" />
+    <Compile Include="Licenses\Local Licence\clsLocalLicenseDB.cs" />
     <Compile Include="Login\clsLoginDB.cs" />
     <Compile Include="People\clsPeopleDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
