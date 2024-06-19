@@ -1,6 +1,7 @@
 ﻿using DVLD_Database_Layer.Connections;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -111,5 +112,35 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             }
             return isFound;
         }
+
+        public static DataTable GetLocalDrivingLicenses()
+        {
+            DataTable localDrivingLicenses = new DataTable();
+
+            string query = @"select * from LocalDrivingLicensesFullInfo";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            localDrivingLicenses.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+             
+            }
+
+            return localDrivingLicenses;
+        }
+
     }
 }

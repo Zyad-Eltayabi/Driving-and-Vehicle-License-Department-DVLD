@@ -27,8 +27,8 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            frmLocalDrivingLicenseApplication frmLocalDrivingLicenseApplication = new frmLocalDrivingLicenseApplication();
-            frmLocalDrivingLicenseApplication.ShowDialog();
+            frmManageLocalDrivingLicenses frmListLocalDrivingLicenses = new frmManageLocalDrivingLicenses();
+            frmListLocalDrivingLicenses.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -83,6 +83,10 @@ namespace DVLD_Presentation_layer.MainScreen
             frmLocalDriving.ShowDialog();
         }
 
-        
+        private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageLocalDrivingLicenses frmListLocalDrivingLicenses = new frmManageLocalDrivingLicenses();
+            frmListLocalDrivingLicenses.ShowDialog();
+        }
     }
 }

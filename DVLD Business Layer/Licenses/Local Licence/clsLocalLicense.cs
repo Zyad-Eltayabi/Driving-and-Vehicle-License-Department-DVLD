@@ -2,6 +2,7 @@
 using DVLD_Database_Layer.Licenses.Local_Licence;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,6 +72,11 @@ namespace DVLD_Business_Layer.Licenses.Local_License
         public static bool VerifyAValidLicense(int applicantPersonID, int licenseClassID)
         {
             return clsLocalLicenseDB.VerifyAValidLicense(applicantPersonID, licenseClassID);
+        }
+
+        public static DataTable GetLocalDrivingLicenses()
+        {
+            return clsLocalLicenseDB.GetLocalDrivingLicenses();
         }
     }
 }
