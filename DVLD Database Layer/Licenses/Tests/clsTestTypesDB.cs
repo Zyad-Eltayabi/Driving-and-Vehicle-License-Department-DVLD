@@ -106,5 +106,28 @@ namespace DVLD_Database_Layer.Tests
             return isFound;
         }
 
+        public static float GetTestFees(int testTypeID)
+        {
+            float fees = 0;
+            string query = @"select TestTypes.TestTypeFees from TestTypes where TestTypes.TestTypeID = @TestTypeID";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("TestTypeID", testTypeID);
+
+                        fees = float.Parse(sqlCommand.ExecuteScalar().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return fees;
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DVLD_Business_Layer.Licenses.Local_License;
 using DVLD_Business_Layer.Users;
+using DVLD_Presentation_layer.Licenses.Tests.VisionTest;
 using DVLD_Presentation_layer.Utilities;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,11 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         private void frmListLocalDrivingLicenses_Load(object sender, EventArgs e)
         {
             GetLocalLicenses();
+            if (dgvLicenses.Rows.Count > 0)
+            {
+                dgvLicenses.Rows[0].Selected = false;
+                SetDefaultSettingsInContextMenu(false);
+            }
         }
 
         private void GetLocalLicenses()
@@ -41,9 +47,10 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         // <========= handle filter =========>
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbFilter.SelectedIndex == 0)
+            if (cbFilter.SelectedIndex == 0)
                 tbFilter.Visible = false;
-            else tbFilter.Visible = true;
+            else
+                tbFilter.Visible = true;
         }
 
         private void tbFilter_KeyPress(object sender, KeyPressEventArgs e)
@@ -102,8 +109,6 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             }
         }
 
-       
-
         private void tbFilter_TextChanged(object sender, EventArgs e)
         {
             ShowClearTextButton();
@@ -114,5 +119,101 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         {
             tbFilter.Text = string.Empty;
         }
+
+        // Handle Show licenses 
+        private void CheckPassedTest()
+        {
+            string TestResult = dgvLicenses.SelectedRows[0].Cells["PassedTests"].Value.ToString();
+            switch (TestResult)
+            {
+                case "0":
+                    visionTestToolStripMenuItem.Enabled = true;
+                    writtenTestToolStripMenuItem.Enabled = false;
+                    streetTestToolStripMenuItem.Enabled = false;
+                    break;
+                case "1":
+                    visionTestToolStripMenuItem.Enabled = false;
+                    writtenTestToolStripMenuItem.Enabled = true;
+                    streetTestToolStripMenuItem.Enabled = false;
+                    break;
+                case "2":
+                    visionTestToolStripMenuItem.Enabled = false;
+                    writtenTestToolStripMenuItem.Enabled = false;
+                    streetTestToolStripMenuItem.Enabled = true;
+                    break;
+                default:
+                    takeTestsToolStripMenuItem.Enabled = false;
+                    break;
+            }
+        }
+
+        private void CheckCompleted()
+        {
+            string status = dgvLicenses.SelectedRows[0].Cells["ApplicationStatus"].Value.ToString();
+            string TestResult = dgvLicenses.SelectedRows[0].Cells["PassedTests"].Value.ToString();
+
+            switch (status)
+            {
+                case "completed":
+                    issueToolStripMenuItem.Enabled = false;
+                    deleteToolStripMenuItem.Enabled = false;
+                    cancelToolStripMenuItem.Enabled = false;
+                    showLicenseToolStripMenuItem.Enabled = true;
+                    break;
+                case "new":
+                    showLicenseToolStripMenuItem.Enabled = false;
+                    deleteToolStripMenuItem.Enabled = true;
+                    cancelToolStripMenuItem.Enabled = true;
+
+                    if (TestResult == "3")
+                        issueToolStripMenuItem.Enabled = true;
+                    else
+                        issueToolStripMenuItem.Enabled = false;
+
+                    break;
+                default:
+                    SetDefaultSettingsInContextMenu(false);
+                    showDetailsToolStripMenuItem.Enabled = true;
+                    break;
+            }
+
+        }
+
+        private void SetDefaultSettingsInContextMenu(bool mode)
+        {
+            foreach (var item in guna2ContextMenuStrip1.Items)
+            {
+                try
+                {
+                    ToolStripMenuItem toolStripMenuItem = (ToolStripMenuItem)item;
+                    toolStripMenuItem.Enabled = mode;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
+        private void dgvLicenses_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dgvLicenses.SelectedRows.Count > 0)
+            {
+                SetDefaultSettingsInContextMenu(true);
+                CheckPassedTest();
+                CheckCompleted();
+                return;
+            }
+        }
+
+        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+
+            frmVisionTest visionTest = new frmVisionTest(localDrivingAppID, applicationID);
+            visionTest.ShowDialog();
+        }
     }
 }
+

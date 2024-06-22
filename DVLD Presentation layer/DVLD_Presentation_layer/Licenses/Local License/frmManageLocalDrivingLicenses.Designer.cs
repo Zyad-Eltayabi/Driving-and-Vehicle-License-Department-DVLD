@@ -28,56 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageLocalDrivingLicenses));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnClearTxt = new Guna.UI2.WinForms.Guna2Button();
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.lbRecords = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.phoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnAddNewLicense = new Guna.UI2.WinForms.Guna2Button();
-            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.ChangePasswordStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.dgvLicenses = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.btnClearTxt = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnAddNewLicense = new Guna.UI2.WinForms.Guna2Button();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.writtenTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.streetTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ContextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLicenses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnClearTxt
-            // 
-            this.btnClearTxt.BackColor = System.Drawing.Color.Transparent;
-            this.btnClearTxt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClearTxt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClearTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClearTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClearTxt.FillColor = System.Drawing.Color.Transparent;
-            this.btnClearTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClearTxt.ForeColor = System.Drawing.Color.White;
-            this.btnClearTxt.Image = ((System.Drawing.Image)(resources.GetObject("btnClearTxt.Image")));
-            this.btnClearTxt.Location = new System.Drawing.Point(687, 247);
-            this.btnClearTxt.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnClearTxt.Name = "btnClearTxt";
-            this.btnClearTxt.Size = new System.Drawing.Size(20, 27);
-            this.btnClearTxt.TabIndex = 26;
-            this.btnClearTxt.UseTransparentBackground = true;
-            this.btnClearTxt.Visible = false;
-            this.btnClearTxt.Click += new System.EventHandler(this.btnClearTxt_Click);
             // 
             // tbFilter
             // 
@@ -151,113 +136,34 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Filter By : ";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(531, 29);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(218, 130);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 17;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // phoneToolStripMenuItem
-            // 
-            this.phoneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("phoneToolStripMenuItem.Image")));
-            this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.phoneToolStripMenuItem.Text = "Phone";
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(194, 6);
-            // 
-            // btnAddNewLicense
-            // 
-            this.btnAddNewLicense.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewLicense.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewLicense.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewLicense.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewLicense.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddNewLicense.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewLicense.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewLicense.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewLicense.Image")));
-            this.btnAddNewLicense.ImageSize = new System.Drawing.Size(60, 50);
-            this.btnAddNewLicense.Location = new System.Drawing.Point(1165, 230);
-            this.btnAddNewLicense.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnAddNewLicense.Name = "btnAddNewLicense";
-            this.btnAddNewLicense.Size = new System.Drawing.Size(82, 62);
-            this.btnAddNewLicense.TabIndex = 24;
-            this.btnAddNewLicense.Click += new System.EventHandler(this.btnAddNewLicense_Click);
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(194, 6);
-            // 
-            // ChangePasswordStripMenuItem1
-            // 
-            this.ChangePasswordStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ChangePasswordStripMenuItem1.Image")));
-            this.ChangePasswordStripMenuItem1.Name = "ChangePasswordStripMenuItem1";
-            this.ChangePasswordStripMenuItem1.Size = new System.Drawing.Size(197, 26);
-            this.ChangePasswordStripMenuItem1.Text = "Change Password";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(194, 6);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(320, 6);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(194, 6);
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(320, 6);
             // 
             // guna2ContextMenuStrip1
             // 
+            this.guna2ContextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDetailsToolStripMenuItem,
             this.toolStripSeparator1,
-            this.editToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.ChangePasswordStripMenuItem1,
-            this.toolStripSeparator5,
             this.deleteToolStripMenuItem,
             this.toolStripSeparator3,
-            this.sendEmailToolStripMenuItem,
+            this.cancelToolStripMenuItem,
             this.toolStripSeparator4,
-            this.phoneToolStripMenuItem});
+            this.takeTestsToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.issueToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.showLicenseToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.showPersonLicenseHistoryToolStripMenuItem});
             this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
             this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -268,39 +174,54 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(198, 190);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(324, 313);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(194, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(320, 6);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(320, 6);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(320, 6);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(320, 6);
             // 
             // dgvLicenses
             // 
             this.dgvLicenses.AllowUserToAddRows = false;
             this.dgvLicenses.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvLicenses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvLicenses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLicenses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLicenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLicenses.ColumnHeadersHeight = 20;
             this.dgvLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvLicenses.ContextMenuStrip = this.guna2ContextMenuStrip1;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLicenses.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLicenses.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLicenses.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvLicenses.Location = new System.Drawing.Point(36, 310);
             this.dgvLicenses.Margin = new System.Windows.Forms.Padding(4);
@@ -331,6 +252,7 @@
             this.dgvLicenses.ThemeStyle.RowsStyle.Height = 22;
             this.dgvLicenses.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvLicenses.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvLicenses.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvLicenses_MouseClick);
             // 
             // label1
             // 
@@ -344,7 +266,146 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Local Driving Licenses Application";
             // 
-            // frmListLocalDrivingLicenses
+            // btnClearTxt
+            // 
+            this.btnClearTxt.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearTxt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearTxt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClearTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClearTxt.FillColor = System.Drawing.Color.Transparent;
+            this.btnClearTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClearTxt.ForeColor = System.Drawing.Color.White;
+            this.btnClearTxt.Image = ((System.Drawing.Image)(resources.GetObject("btnClearTxt.Image")));
+            this.btnClearTxt.Location = new System.Drawing.Point(687, 247);
+            this.btnClearTxt.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnClearTxt.Name = "btnClearTxt";
+            this.btnClearTxt.Size = new System.Drawing.Size(20, 27);
+            this.btnClearTxt.TabIndex = 26;
+            this.btnClearTxt.UseTransparentBackground = true;
+            this.btnClearTxt.Visible = false;
+            this.btnClearTxt.Click += new System.EventHandler(this.btnClearTxt_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(531, 29);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(218, 130);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 17;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // btnAddNewLicense
+            // 
+            this.btnAddNewLicense.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewLicense.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewLicense.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewLicense.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewLicense.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddNewLicense.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewLicense.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewLicense.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewLicense.Image")));
+            this.btnAddNewLicense.ImageSize = new System.Drawing.Size(60, 50);
+            this.btnAddNewLicense.Location = new System.Drawing.Point(1165, 230);
+            this.btnAddNewLicense.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnAddNewLicense.Name = "btnAddNewLicense";
+            this.btnAddNewLicense.Size = new System.Drawing.Size(82, 62);
+            this.btnAddNewLicense.TabIndex = 24;
+            this.btnAddNewLicense.Click += new System.EventHandler(this.btnAddNewLicense_Click);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.showDetailsToolStripMenuItem.AutoSize = false;
+            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.showDetailsToolStripMenuItem.Text = "Show Application Details";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.deleteToolStripMenuItem.AutoSize = false;
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.deleteToolStripMenuItem.Text = "Delete Application";
+            // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.cancelToolStripMenuItem.AutoSize = false;
+            this.cancelToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cancelToolStripMenuItem.Image")));
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.cancelToolStripMenuItem.Text = "Cancel Application";
+            // 
+            // takeTestsToolStripMenuItem
+            // 
+            this.takeTestsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.takeTestsToolStripMenuItem.AutoSize = false;
+            this.takeTestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visionTestToolStripMenuItem,
+            this.writtenTestToolStripMenuItem,
+            this.streetTestToolStripMenuItem});
+            this.takeTestsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("takeTestsToolStripMenuItem.Image")));
+            this.takeTestsToolStripMenuItem.Name = "takeTestsToolStripMenuItem";
+            this.takeTestsToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.takeTestsToolStripMenuItem.Text = "Take Tests";
+            // 
+            // visionTestToolStripMenuItem
+            // 
+            this.visionTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("visionTestToolStripMenuItem.Image")));
+            this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
+            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.visionTestToolStripMenuItem.Text = "Vision Test";
+            this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
+            // 
+            // writtenTestToolStripMenuItem
+            // 
+            this.writtenTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("writtenTestToolStripMenuItem.Image")));
+            this.writtenTestToolStripMenuItem.Name = "writtenTestToolStripMenuItem";
+            this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.writtenTestToolStripMenuItem.Text = "Written Test";
+            // 
+            // streetTestToolStripMenuItem
+            // 
+            this.streetTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("streetTestToolStripMenuItem.Image")));
+            this.streetTestToolStripMenuItem.Name = "streetTestToolStripMenuItem";
+            this.streetTestToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.streetTestToolStripMenuItem.Text = "Street Test";
+            // 
+            // issueToolStripMenuItem
+            // 
+            this.issueToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.issueToolStripMenuItem.AutoSize = false;
+            this.issueToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("issueToolStripMenuItem.Image")));
+            this.issueToolStripMenuItem.Name = "issueToolStripMenuItem";
+            this.issueToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.issueToolStripMenuItem.Text = "Issue Driving License (first time)";
+            // 
+            // showLicenseToolStripMenuItem
+            // 
+            this.showLicenseToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.showLicenseToolStripMenuItem.AutoSize = false;
+            this.showLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showLicenseToolStripMenuItem.Image")));
+            this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
+            this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.showLicenseToolStripMenuItem.Text = "Show License";
+            // 
+            // showPersonLicenseHistoryToolStripMenuItem
+            // 
+            this.showPersonLicenseHistoryToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.showPersonLicenseHistoryToolStripMenuItem.AutoSize = false;
+            this.showPersonLicenseHistoryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonLicenseHistoryToolStripMenuItem.Image")));
+            this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
+            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
+            this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
+            // 
+            // frmManageLocalDrivingLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,12 +421,12 @@
             this.Controls.Add(this.dgvLicenses);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmListLocalDrivingLicenses";
+            this.Name = "frmManageLocalDrivingLicenses";
             this.Text = "Manage Local Driving Licenses Application";
             this.Load += new System.EventHandler(this.frmListLocalDrivingLicenses_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2ContextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLicenses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,20 +440,25 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbFilter;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem phoneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private Guna.UI2.WinForms.Guna2Button btnAddNewLicense;
-        private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem ChangePasswordStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvLicenses;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem takeTestsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem showLicenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem showPersonLicenseHistoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visionTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem writtenTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem streetTestToolStripMenuItem;
     }
 }

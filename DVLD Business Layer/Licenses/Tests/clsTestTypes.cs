@@ -23,6 +23,13 @@ namespace DVLD_Business_Layer.Tests
             this.TestTypeFees = 0;
         }
 
+        public enum TestsType
+        {
+            VisionTest = 1,
+            WrittenTest,
+            StreetTest
+        }
+
         private clsTestTypes(int testTypeID, string testTypeTitle, string testTypeDescription, float testTypeFees)
         {
             TestTypeID = testTypeID;
@@ -52,6 +59,11 @@ namespace DVLD_Business_Layer.Tests
                 return new clsTestTypes(testTypeID, testTypeTitle, testTypeDescription, testTypeFees);
 
             return null;
+        }
+
+        public static float GetTestFees(int testTypeID)
+        {
+            return clsTestTypesDB.GetTestFees(testTypeID);
         }
     }
 }

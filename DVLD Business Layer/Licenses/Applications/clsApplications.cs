@@ -1,6 +1,7 @@
 ﻿using DVLD_Database_Layer.Licenses.Applications;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,12 @@ namespace DVLD_Business_Layer.Licenses.Applications
 
             return ApplicationID != -1;
         }
-        
+
+        public static DataTable GetApplicationInfo(int applicationID)
+        {
+            return clsApplicationsDB.GetApplicationInfo(applicationID); 
+        }
+
+
     }
 }

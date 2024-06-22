@@ -133,9 +133,39 @@ namespace DVLD_Presentation_layer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap street_light {
+            get {
+                object obj = ResourceManager.GetObject("street-light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap taxi_driver {
             get {
                 object obj = ResourceManager.GetObject("taxi-driver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vision {
+            get {
+                object obj = ResourceManager.GetObject("vision", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap written {
+            get {
+                object obj = ResourceManager.GetObject("written", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

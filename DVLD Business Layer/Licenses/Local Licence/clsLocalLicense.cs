@@ -78,5 +78,10 @@ namespace DVLD_Business_Layer.Licenses.Local_License
         {
             return clsLocalLicenseDB.GetLocalDrivingLicenses();
         }
+
+        public static DataTable GetLocalDrivingLicense(int localDrivingAppID)
+        {
+            return clsLocalLicenseDB.GetLocalDrivingLicense(localDrivingAppID);
+        }
     }
 }

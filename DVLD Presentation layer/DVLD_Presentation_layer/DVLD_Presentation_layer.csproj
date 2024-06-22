@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Licenses\Applications\ucApplicationFullInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Applications\ucApplicationFullInfo.Designer.cs">
+      <DependentUpon>ucApplicationFullInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\ApplicationTypes\frmApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     <Compile Include="Licenses\Local License\frmManageLocalDrivingLicenses.Designer.cs">
       <DependentUpon>frmManageLocalDrivingLicenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Tests\ScheduleTest\frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Tests\ScheduleTest\frmScheduleTest.Designer.cs">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Tests\TestTypes\frmTestType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Licenses\Tests\TestTypes\frmUpdateTestType.Designer.cs">
       <DependentUpon>frmUpdateTestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\Tests\VisionTest\frmVisionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Tests\VisionTest\frmVisionTest.Designer.cs">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
@@ -176,6 +194,9 @@
       <DependentUpon>ucChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\clsPublicUtilities.cs" />
+    <EmbeddedResource Include="Licenses\Applications\ucApplicationFullInfo.resx">
+      <DependentUpon>ucApplicationFullInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ApplicationTypes\frmApplicationTypes.resx">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,11 +209,17 @@
     <EmbeddedResource Include="Licenses\Local License\frmManageLocalDrivingLicenses.resx">
       <DependentUpon>frmManageLocalDrivingLicenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Tests\ScheduleTest\frmScheduleTest.resx">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Tests\TestTypes\frmTestType.resx">
       <DependentUpon>frmTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Tests\TestTypes\frmUpdateTestType.resx">
       <DependentUpon>frmUpdateTestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Tests\VisionTest\frmVisionTest.resx">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -288,6 +315,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\vision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\written.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\street-light.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

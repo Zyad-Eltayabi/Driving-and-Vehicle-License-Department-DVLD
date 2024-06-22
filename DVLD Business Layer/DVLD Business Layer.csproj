@@ -45,10 +45,12 @@
     <Compile Include="Licenses\Applications\clsApplications.cs" />
     <Compile Include="Licenses\ApplicationTypes\clsApplicationTypes.cs" />
     <Compile Include="Licenses\Local Licence\clsLocalLicense.cs" />
+    <Compile Include="Licenses\Tests\clsTestAppointments.cs" />
+    <Compile Include="Licenses\Tests\clsTests.cs" />
     <Compile Include="Login\clsLogin.cs" />
     <Compile Include="People\clsPeople.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\clsTestTypes.cs" />
+    <Compile Include="Licenses\Tests\clsTestTypes.cs" />
     <Compile Include="Users\clsUsers.cs" />
   </ItemGroup>
   <ItemGroup>
