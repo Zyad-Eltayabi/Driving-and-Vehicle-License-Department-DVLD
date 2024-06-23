@@ -70,6 +70,23 @@ namespace DVLD_Presentation_layer.Licenses.Tests.VisionTest
             GetAppointmentsDetails();
         }
 
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int testAppointmentID = int.Parse(dgvAppointments.SelectedRows[0].Cells["TestAppointmentID"].Value.ToString());
+            DateTime testDate = DateTime.Parse(dgvAppointments.SelectedRows[0].Cells["AppointmentDate"].Value.ToString());
+            bool isLocked = Boolean.Parse(dgvAppointments.SelectedRows[0].Cells["IsLocked"].Value.ToString());
+
+            frmScheduleTest scheduleTest = new frmScheduleTest(localDrivingAppID, clsTestTypes.TestsType.VisionTest,
+                testAppointmentID, testDate, isLocked);
+            scheduleTest.ShowDialog();
+            GetAppointmentsDetails();
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GetAppointmentsDetails();
+        }
+
         public frmVisionTest(int localDrivingAppID, int applicationID)
         {
             InitializeComponent();

@@ -43,7 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gbLicenseInfo = new Guna.UI2.WinForms.Guna2GroupBox();
             this.date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
-            this.guna2GroupBox1.SuspendLayout();
+            this.gbLicenseInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -255,33 +255,33 @@
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // guna2GroupBox1
+            // gbLicenseInfo
             // 
-            this.guna2GroupBox1.Controls.Add(this.date);
-            this.guna2GroupBox1.Controls.Add(this.label5);
-            this.guna2GroupBox1.Controls.Add(this.label4);
-            this.guna2GroupBox1.Controls.Add(this.guna2PictureBox5);
-            this.guna2GroupBox1.Controls.Add(this.guna2PictureBox4);
-            this.guna2GroupBox1.Controls.Add(this.guna2PictureBox6);
-            this.guna2GroupBox1.Controls.Add(this.lbtrials);
-            this.guna2GroupBox1.Controls.Add(this.lbFees);
-            this.guna2GroupBox1.Controls.Add(this.label7);
-            this.guna2GroupBox1.Controls.Add(this.guna2PictureBox8);
-            this.guna2GroupBox1.Controls.Add(this.lbFullName);
-            this.guna2GroupBox1.Controls.Add(this.label9);
-            this.guna2GroupBox1.Controls.Add(this.guna2PictureBox2);
-            this.guna2GroupBox1.Controls.Add(this.guna2PictureBox3);
-            this.guna2GroupBox1.Controls.Add(this.label2);
-            this.guna2GroupBox1.Controls.Add(this.lbClass);
-            this.guna2GroupBox1.Controls.Add(this.lbID);
-            this.guna2GroupBox1.Controls.Add(this.label3);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 136);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(515, 257);
-            this.guna2GroupBox1.TabIndex = 40;
-            this.guna2GroupBox1.Text = "License Info";
+            this.gbLicenseInfo.Controls.Add(this.date);
+            this.gbLicenseInfo.Controls.Add(this.label5);
+            this.gbLicenseInfo.Controls.Add(this.label4);
+            this.gbLicenseInfo.Controls.Add(this.guna2PictureBox5);
+            this.gbLicenseInfo.Controls.Add(this.guna2PictureBox4);
+            this.gbLicenseInfo.Controls.Add(this.guna2PictureBox6);
+            this.gbLicenseInfo.Controls.Add(this.lbtrials);
+            this.gbLicenseInfo.Controls.Add(this.lbFees);
+            this.gbLicenseInfo.Controls.Add(this.label7);
+            this.gbLicenseInfo.Controls.Add(this.guna2PictureBox8);
+            this.gbLicenseInfo.Controls.Add(this.lbFullName);
+            this.gbLicenseInfo.Controls.Add(this.label9);
+            this.gbLicenseInfo.Controls.Add(this.guna2PictureBox2);
+            this.gbLicenseInfo.Controls.Add(this.guna2PictureBox3);
+            this.gbLicenseInfo.Controls.Add(this.label2);
+            this.gbLicenseInfo.Controls.Add(this.lbClass);
+            this.gbLicenseInfo.Controls.Add(this.lbID);
+            this.gbLicenseInfo.Controls.Add(this.label3);
+            this.gbLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gbLicenseInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gbLicenseInfo.Location = new System.Drawing.Point(12, 136);
+            this.gbLicenseInfo.Name = "gbLicenseInfo";
+            this.gbLicenseInfo.Size = new System.Drawing.Size(515, 257);
+            this.gbLicenseInfo.TabIndex = 40;
+            this.gbLicenseInfo.Text = "License Info";
             // 
             // date
             // 
@@ -502,7 +502,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 696);
-            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.gbLicenseInfo);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.gbRetake);
@@ -518,8 +518,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox1.PerformLayout();
+            this.gbLicenseInfo.ResumeLayout(false);
+            this.gbLicenseInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -547,7 +547,7 @@
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnClose;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox gbLicenseInfo;
         private Guna.UI2.WinForms.Guna2DateTimePicker date;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

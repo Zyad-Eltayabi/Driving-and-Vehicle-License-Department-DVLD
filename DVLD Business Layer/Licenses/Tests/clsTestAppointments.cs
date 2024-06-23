@@ -71,5 +71,10 @@ namespace DVLD_Business_Layer.Licenses.Tests
             return clsTestAppointmentsDB.GetAppointmentFullDetails(localDrivingAppID, testTypeID);  
         }
 
+        public static bool UpdateDate(int appointmentID, DateTime appointmentDate)
+        {
+            return clsTestAppointmentsDB.UpdateDate(appointmentID, appointmentDate);
+        }
+
     }
 }

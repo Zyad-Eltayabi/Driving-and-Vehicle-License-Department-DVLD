@@ -23,12 +23,32 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
     {
         private int localDrivingAppID;
         private clsTestTypes.TestsType enTestType { get; set; }
+
+        private bool editMode = false;
+        private bool isLocked = false;
+        private int testAppointmentID { get; set; }
+        private DateTime testDate { get; set; }
+
         public frmScheduleTest(int localDrivingAppID, clsTestTypes.TestsType enTestType)
         {
             InitializeComponent();
             clsPublicUtilities.CenterForm(this);
             this.localDrivingAppID = localDrivingAppID;
             this.enTestType = enTestType;
+        }
+
+        public frmScheduleTest(int localDrivingAppID, clsTestTypes.TestsType enTestType,
+            int testAppointmentID, DateTime testDate, bool isLocked)
+        {
+            InitializeComponent();
+            clsPublicUtilities.CenterForm(this);
+            this.localDrivingAppID = localDrivingAppID;
+            this.enTestType = enTestType;
+
+            this.editMode = true;
+            this.testAppointmentID = testAppointmentID;
+            this.isLocked = isLocked;
+            this.testDate = testDate;
         }
 
         private void frmScheduleTest_Load(object sender, EventArgs e)
@@ -43,6 +63,28 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
             SetLicenseInfo();
             SetTestInfo();
             SetRetakeTestInfo();
+            CheckEditMode();
+        }
+
+        private void LockTest()
+        {
+            lbTestTitle.Text = "Edit Test Date";
+            gbLicenseInfo.Enabled = false;
+            gbRetake.Enabled = false;
+            btnSave.Enabled = false;
+            clsPublicUtilities.WarningMessage("this person already taken this test , you can not edit it");
+        }
+        private void CheckEditMode()
+        {
+            if (editMode)
+            {
+                date.Value = this.testDate;
+
+                if (this.isLocked)
+                    LockTest();
+                else
+                    gbRetake.Enabled = false;
+            }
         }
 
         private void SetTestHeader()
@@ -85,7 +127,7 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
 
         private void SetRetakeTestInfo()
         {
-            if (frmVisionTest.trials > 0)
+            if (frmVisionTest.trials > 0 && !editMode)
             {
                 gbRetake.Enabled = true;
                 float retakeTestFees = clsApplicationTypes.GetFees(clsApplications.ApplicationTypes.RetakeTest);
@@ -135,15 +177,31 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
             SetTestAppointment(ref test);
             SetTest(ref test);
 
-            if(test.SaveTest())
+            if (test.SaveTest())
             {
                 frmVisionTest.trials++;
                 clsPublicUtilities.InformationMessage("Data Saved Successfully");
             }
         }
 
+        private void UpdateAppointmentDate()
+        {
+            this.testDate = date.Value;
+            if (clsTestAppointments.UpdateDate(this.testAppointmentID, this.testDate))
+            {
+                clsPublicUtilities.InformationMessage("Date updated successfully");
+            }
+            else
+                clsPublicUtilities.ErrorMessage(@"Date didn't updated successfully");
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (editMode)
+            {
+                UpdateAppointmentDate();
+                return;
+            }
             AddNewTest();
         }
 

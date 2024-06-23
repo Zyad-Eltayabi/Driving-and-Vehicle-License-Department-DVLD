@@ -142,6 +142,37 @@ namespace DVLD_Database_Layer.Licenses.Tests
             return appointment;
         }
 
+        public static bool UpdateDate(int appointmentID, DateTime appointmentDate)
+        {
+            int rowsAffected = 0;
+            string query = @"USE [DVLD]
+                             update TestAppointments 
+                            set AppointmentDate = @AppointmentDate
+                            where TestAppointmentID = @TestAppointmentID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("AppointmentDate", appointmentDate);
+                        sqlCommand.Parameters.AddWithValue("TestAppointmentID", appointmentID);
+
+                        rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return rowsAffected > 0;
+        }
+
+
     }
 
 
