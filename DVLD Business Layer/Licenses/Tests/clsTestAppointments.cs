@@ -61,9 +61,9 @@ namespace DVLD_Business_Layer.Licenses.Tests
         }
 
 
-        public static DataTable GetAppointmentDetails(int localDrivingAppID)
+        public static DataTable GetAppointmentDetails(int localDrivingAppID,int testTypeID)
         {
-            return clsTestAppointmentsDB.GetAppointmentDetails(localDrivingAppID);
+            return clsTestAppointmentsDB.GetAppointmentDetails(localDrivingAppID,testTypeID);
         }
 
         public static DataTable GetAppointmentFullDetails(int localDrivingAppID, int testTypeID)
@@ -75,6 +75,15 @@ namespace DVLD_Business_Layer.Licenses.Tests
         {
             return clsTestAppointmentsDB.UpdateDate(appointmentID, appointmentDate);
         }
+
+        public static bool LockTestAppointment(int appointmentID)
+        {
+            return clsTestAppointmentsDB.LockTestAppointment(appointmentID);
+        }
+
+
+
+
 
     }
 }

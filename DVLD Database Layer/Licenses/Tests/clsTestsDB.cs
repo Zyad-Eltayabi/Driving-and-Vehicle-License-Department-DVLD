@@ -35,9 +35,9 @@ namespace DVLD_Database_Layer.Licenses.Tests
                         sqlCommand.Parameters.AddWithValue("TestAppointmentID", testAppointmentID);
                         sqlCommand.Parameters.AddWithValue("TestResult", testResult);
                         sqlCommand.Parameters.AddWithValue("CreatedByUserID", createdByUserID);
-                        
 
-                        if (string.IsNullOrEmpty(notes)) 
+
+                        if (string.IsNullOrEmpty(notes))
                             sqlCommand.Parameters.AddWithValue("Notes", System.DBNull.Value);
                         else
                             sqlCommand.Parameters.AddWithValue("Notes", notes);
@@ -56,5 +56,41 @@ namespace DVLD_Database_Layer.Licenses.Tests
 
             return testID;
         }
+
+        public static bool UpdateTest(int appointmentID, bool testResult, string notes)
+        {
+            int rowsAffected = 0;
+            string query = @"USE [DVLD]
+                              update Tests 
+                                set TestResult = @TestResult , Notes = @Notes
+                                 where TestAppointmentID = @TestAppointmentID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("TestAppointmentID", appointmentID);
+                        sqlCommand.Parameters.AddWithValue("TestResult", testResult);
+
+                        if (string.IsNullOrEmpty(notes))
+                            sqlCommand.Parameters.AddWithValue("Notes", System.DBNull.Value);
+                        else
+                            sqlCommand.Parameters.AddWithValue("Notes", notes);
+
+                        rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return rowsAffected > 0;
+        }
+
     }
 }

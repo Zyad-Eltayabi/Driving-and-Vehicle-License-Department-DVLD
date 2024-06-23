@@ -67,13 +67,14 @@ namespace DVLD_Database_Layer.Licenses.Tests
             return testAppointmentID;
         }
 
-        public static DataTable GetAppointmentDetails(int localDrivingAppID)
+        public static DataTable GetAppointmentDetails(int localDrivingAppID, int testType)
         {
             DataTable appointment = new DataTable();
 
             string query = @"SELECT      TestAppointmentID, AppointmentDate, PaidFees, IsLocked
                                         FROM          TestAppointments 
-                                        where TestAppointments.LocalDrivingLicenseApplicationID =@LocalDrivingAppID";
+                                        where TestAppointments.LocalDrivingLicenseApplicationID =@LocalDrivingAppID
+                                         and TestTypeID = @TestTypeID";
 
             try
             {
@@ -84,6 +85,7 @@ namespace DVLD_Database_Layer.Licenses.Tests
                     {
 
                         sqlCommand.Parameters.AddWithValue("@LocalDrivingAppID", localDrivingAppID);
+                        sqlCommand.Parameters.AddWithValue("@TestTypeID", testType);
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
@@ -158,6 +160,35 @@ namespace DVLD_Database_Layer.Licenses.Tests
                     using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("AppointmentDate", appointmentDate);
+                        sqlCommand.Parameters.AddWithValue("TestAppointmentID", appointmentID);
+
+                        rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return rowsAffected > 0;
+        }
+
+        public static bool LockTestAppointment(int appointmentID)
+        {
+            int rowsAffected = 0;
+            string query = @"USE [DVLD]
+                             update TestAppointments 
+                            set IsLocked = 1
+                            where TestAppointmentID = @TestAppointmentID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
                         sqlCommand.Parameters.AddWithValue("TestAppointmentID", appointmentID);
 
                         rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());

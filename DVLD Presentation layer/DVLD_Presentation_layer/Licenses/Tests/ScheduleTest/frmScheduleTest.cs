@@ -119,15 +119,16 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
 
         private void SetTestInfo()
         {
-            date.MinDate = DateTime.Now;
-            lbtrials.Text = frmVisionTest.trials.ToString();
+            if(!editMode)
+                date.MinDate = DateTime.Now;
+            lbtrials.Text = frmTest.trials.ToString();
             float testFees = clsTestTypes.GetTestFees((int)enTestType);
             lbFees.Text = testFees.ToString();
         }
 
         private void SetRetakeTestInfo()
         {
-            if (frmVisionTest.trials > 0 && !editMode)
+            if (frmTest.trials > 0 && !editMode)
             {
                 gbRetake.Enabled = true;
                 float retakeTestFees = clsApplicationTypes.GetFees(clsApplications.ApplicationTypes.RetakeTest);
@@ -179,7 +180,7 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
 
             if (test.SaveTest())
             {
-                frmVisionTest.trials++;
+                frmTest.trials++;
                 clsPublicUtilities.InformationMessage("Data Saved Successfully");
             }
         }

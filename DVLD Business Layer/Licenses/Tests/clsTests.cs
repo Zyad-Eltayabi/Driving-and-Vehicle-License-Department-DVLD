@@ -36,7 +36,7 @@ namespace DVLD_Business_Layer.Licenses.Tests
         {
             if (this.appointments.SaveAppointment())
             {
-                this.TestID = clsTestsDB.AddNewTest(this.appointments.TestAppointmentID,CreatedByUserID,TestResult,Notes);
+                this.TestID = clsTestsDB.AddNewTest(this.appointments.TestAppointmentID, CreatedByUserID, TestResult, Notes);
                 return this.TestID != -1;
             }
             return false;
@@ -52,6 +52,11 @@ namespace DVLD_Business_Layer.Licenses.Tests
                 default:
                     return false;
             }
+        }
+
+        public static bool UpdateTest(int appointmentID, bool testResult, string notes)
+        {
+            return clsTestsDB.UpdateTest(appointmentID, testResult, notes);
         }
     }
 }

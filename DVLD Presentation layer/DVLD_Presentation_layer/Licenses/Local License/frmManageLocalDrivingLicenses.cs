@@ -1,4 +1,5 @@
 ﻿using DVLD_Business_Layer.Licenses.Local_License;
+using DVLD_Business_Layer.Tests;
 using DVLD_Business_Layer.Users;
 using DVLD_Presentation_layer.Licenses.Tests.VisionTest;
 using DVLD_Presentation_layer.Utilities;
@@ -211,8 +212,26 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
             int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
 
-            frmVisionTest visionTest = new frmVisionTest(localDrivingAppID, applicationID);
+            frmTest visionTest = new frmTest(localDrivingAppID, applicationID,clsTestTypes.TestsType.VisionTest);
             visionTest.ShowDialog();
+        }
+
+        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+
+            frmTest writtenTest = new frmTest(localDrivingAppID, applicationID, clsTestTypes.TestsType.WrittenTest);
+            writtenTest.ShowDialog();
+        }
+
+        private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+
+            frmTest streetTest = new frmTest(localDrivingAppID, applicationID, clsTestTypes.TestsType.StreetTest);
+            streetTest.ShowDialog();
         }
     }
 }

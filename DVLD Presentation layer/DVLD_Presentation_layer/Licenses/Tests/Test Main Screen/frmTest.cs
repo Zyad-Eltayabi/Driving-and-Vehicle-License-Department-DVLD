@@ -1,6 +1,8 @@
 ﻿using DVLD_Business_Layer.Licenses.Tests;
 using DVLD_Business_Layer.Tests;
 using DVLD_Presentation_layer.Licenses.Tests.ScheduleTest;
+using DVLD_Presentation_layer.Licenses.Tests.Take_Test;
+using DVLD_Presentation_layer.Properties;
 using DVLD_Presentation_layer.Utilities;
 using System;
 using System.Collections.Generic;
@@ -14,20 +16,46 @@ using System.Windows.Forms;
 
 namespace DVLD_Presentation_layer.Licenses.Tests.VisionTest
 {
-    public partial class frmVisionTest : Form
+    public partial class frmTest : Form
     {
         private int localDrivingAppID, applicationID;
         public static int trials = 0;
+        clsTestTypes.TestsType enTestType { get; set; }
+
         private void frmVisionTest_Load(object sender, EventArgs e)
         {
+            LoadTestInformation();
+        }
+
+        private void LoadTestInformation()
+        {
+            SetTestName();
             ucApplicationFullInfo1.LoadTestData(localDrivingAppID, applicationID);
             GetAppointmentsDetails();
         }
 
+        private void SetTestName()
+        {
+            switch (enTestType)
+            {
+                case clsTestTypes.TestsType.VisionTest:
+                    this.Text = lbTestTitle.Text = "Vision Test";
+                    picTest.Image = Resources.vision;
+                    break;
+                case clsTestTypes.TestsType.WrittenTest:
+                    this.Text = lbTestTitle.Text = "Written Test";
+                    picTest.Image = Resources.written;
+                    break;
+                case clsTestTypes.TestsType.StreetTest:
+                    this.Text = lbTestTitle.Text = "Street Test";
+                    picTest.Image = Resources.street_light;
+                    break;
+            }
+        }
 
         private void GetAppointmentsDetails()
         {
-            dgvAppointments.DataSource = clsTestAppointments.GetAppointmentDetails(this.localDrivingAppID);
+            dgvAppointments.DataSource = clsTestAppointments.GetAppointmentDetails(this.localDrivingAppID, (int)enTestType);
             lbRecords.Text = dgvAppointments.RowCount.ToString();
             trials = int.Parse(dgvAppointments.RowCount.ToString());
         }
@@ -84,15 +112,26 @@ namespace DVLD_Presentation_layer.Licenses.Tests.VisionTest
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int testAppointmentID = int.Parse(dgvAppointments.SelectedRows[0].Cells["TestAppointmentID"].Value.ToString());
+            frmTakeTest takeTest = new frmTakeTest(localDrivingAppID, testAppointmentID, enTestType);
+
+            bool isLocked = Boolean.Parse(dgvAppointments.SelectedRows[0].Cells["IsLocked"].Value.ToString());
+
+            if (!isLocked)
+                takeTest.ShowDialog();
+            else
+                clsPublicUtilities.ErrorMessage("This test has been locked");
+
             GetAppointmentsDetails();
         }
 
-        public frmVisionTest(int localDrivingAppID, int applicationID)
+        public frmTest(int localDrivingAppID, int applicationID, clsTestTypes.TestsType enTestType)
         {
             InitializeComponent();
             this.localDrivingAppID = localDrivingAppID;
             this.applicationID = applicationID;
             clsPublicUtilities.CenterForm(this);
+            this.enTestType = enTestType;
         }
     }
 }

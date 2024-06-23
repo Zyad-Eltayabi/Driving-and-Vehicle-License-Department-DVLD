@@ -89,6 +89,12 @@
     <Compile Include="Licenses\Tests\ScheduleTest\frmScheduleTest.Designer.cs">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Tests\Take Test\frmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Tests\Take Test\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Tests\TestTypes\frmTestType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +107,11 @@
     <Compile Include="Licenses\Tests\TestTypes\frmUpdateTestType.Designer.cs">
       <DependentUpon>frmUpdateTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\Tests\VisionTest\frmVisionTest.cs">
+    <Compile Include="Licenses\Tests\Test Main Screen\frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\Tests\VisionTest\frmVisionTest.Designer.cs">
-      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    <Compile Include="Licenses\Tests\Test Main Screen\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
@@ -212,14 +218,17 @@
     <EmbeddedResource Include="Licenses\Tests\ScheduleTest\frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Tests\Take Test\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Tests\TestTypes\frmTestType.resx">
       <DependentUpon>frmTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Tests\TestTypes\frmUpdateTestType.resx">
       <DependentUpon>frmUpdateTestType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\Tests\VisionTest\frmVisionTest.resx">
-      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    <EmbeddedResource Include="Licenses\Tests\Test Main Screen\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
