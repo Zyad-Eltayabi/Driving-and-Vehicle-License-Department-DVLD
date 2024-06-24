@@ -96,6 +96,37 @@ namespace DVLD_Database_Layer.Licenses.Applications
             return application;
         }
 
+        public static bool UpdateApplicationStatus(int applicationID, int applicationStatus)
+        {
+            int rowsAffected = 0;
+            string query = @"USE [DVLD]
+                                        update Applications
+                                        set ApplicationStatus = @ApplicationStatus, LastStatusDate = @LastStatusDate
+                                        where ApplicationID = @ApplicationID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("ApplicationStatus", applicationStatus);
+                        sqlCommand.Parameters.AddWithValue("LastStatusDate", DateTime.Now);
+                        sqlCommand.Parameters.AddWithValue("ApplicationID", applicationID);
+
+                        rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return rowsAffected > 0;
+        }
+
+
     }
 
 

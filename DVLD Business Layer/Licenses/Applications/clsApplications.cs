@@ -84,5 +84,12 @@ namespace DVLD_Business_Layer.Licenses.Applications
             }
         }
 
+
+        public static bool UpdateApplicationStatus(int applicationID, int applicationStatus)
+        {
+            return clsApplicationsDB.UpdateApplicationStatus(applicationID, applicationStatus);
+        }
+
+
     }
 }

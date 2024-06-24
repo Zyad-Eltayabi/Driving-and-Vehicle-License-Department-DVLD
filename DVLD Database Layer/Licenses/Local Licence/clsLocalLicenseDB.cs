@@ -207,6 +207,95 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             return ApplicantPersonID;
         }
 
+        public static int GetLicenseClassID(int localDrivingAppID)
+        {
+            int licenseClassID = -1;
 
+            string query = @"USE [DVLD]
+                                select LocalDrivingLicenseApplications.LicenseClassID from LocalDrivingLicenseApplications
+					            where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingAppID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            licenseClassID = int.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return licenseClassID;
+        }
+
+        public static int GetDefaultValidityLength(int licenseClassID)
+        {
+            int defaultValidityLength = -1;
+
+            string query = @"USE [DVLD]
+                                select DefaultValidityLength from LicenseClasses where LicenseClassID = @LicenseClassID;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@LicenseClassID", licenseClassID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            defaultValidityLength = int.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return defaultValidityLength;
+        }
+
+        public static float GetClassFees(int licenseClassID)
+        {
+            float classFees = -1;
+
+            string query = @"USE [DVLD]
+                                select LicenseClasses.ClassFees from LicenseClasses where LicenseClassID = @LicenseClassID;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@LicenseClassID", licenseClassID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            classFees = float.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return classFees;
+        }
     }
 }

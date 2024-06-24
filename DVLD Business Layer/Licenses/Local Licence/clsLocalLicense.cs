@@ -20,7 +20,7 @@ namespace DVLD_Business_Layer.Licenses.Local_License
         {
             LocalDrivingLicenseApplicationID = 0;
             LicenseClassID = 1;
-           // enMode = Mode.New;
+            // enMode = Mode.New;
         }
 
         public enum ClassName
@@ -33,11 +33,11 @@ namespace DVLD_Business_Layer.Licenses.Local_License
             Class6,
             Class7,
         }
-       /* public enum Mode
-        {
-            New = 1,
-            Update
-        }*/
+        /* public enum Mode
+         {
+             New = 1,
+             Update
+         }*/
         private bool AddNewLocalLicense()
         {
             bool saveApplicationInGeneralTable = base.AddNewApplication();
@@ -88,5 +88,21 @@ namespace DVLD_Business_Layer.Licenses.Local_License
         {
             return clsLocalLicenseDB.GetApplicantPersonID(localDrivingAppID);
         }
+
+        public static int GetLicenseClassID(int localDrivingAppID)
+        {
+            return clsLocalLicenseDB.GetLicenseClassID(localDrivingAppID);
+        }
+
+        public static int GetDefaultValidityLength(int licenseClassID)
+        {
+            return clsLocalLicenseDB.GetDefaultValidityLength(licenseClassID);
+        }
+
+        public static float GetClassFees(int licenseClassID)
+        {
+            return clsLocalLicenseDB.GetClassFees(licenseClassID);
+        }
+
     }
 }

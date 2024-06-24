@@ -174,7 +174,7 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(324, 313);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(324, 285);
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -258,6 +258,7 @@
             this.issueToolStripMenuItem.Name = "issueToolStripMenuItem";
             this.issueToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
             this.issueToolStripMenuItem.Text = "Issue Driving License (first time)";
+            this.issueToolStripMenuItem.Click += new System.EventHandler(this.issueToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 

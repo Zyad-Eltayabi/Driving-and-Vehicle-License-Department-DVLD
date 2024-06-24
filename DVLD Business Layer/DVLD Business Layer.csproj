@@ -44,6 +44,8 @@
     <Compile Include="Countries\clsCountries.cs" />
     <Compile Include="Licenses\Applications\clsApplications.cs" />
     <Compile Include="Licenses\ApplicationTypes\clsApplicationTypes.cs" />
+    <Compile Include="Licenses\Drivers\clsDrivers.cs" />
+    <Compile Include="Licenses\Local Licence\clsLicenses.cs" />
     <Compile Include="Licenses\Local Licence\clsLocalLicense.cs" />
     <Compile Include="Licenses\Tests\clsTestAppointments.cs" />
     <Compile Include="Licenses\Tests\clsTests.cs" />
