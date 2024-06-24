@@ -9,7 +9,7 @@ using static DVLD_Business_Layer.Licenses.Applications.clsApplications;
 
 namespace DVLD_Business_Layer.Licenses.Applications
 {
-    public class  clsApplications
+    public class clsApplications
     {
         public clsApplications()
         {
@@ -21,6 +21,7 @@ namespace DVLD_Business_Layer.Licenses.Applications
             PaidFees = 0;
             ApplicationDate = DateTime.Now;
             LastStatusDate = DateTime.Now;
+            enMode = Mode.New;
         }
 
         public int ApplicationID { get; set; }
@@ -31,7 +32,13 @@ namespace DVLD_Business_Layer.Licenses.Applications
         public float PaidFees { get; set; }
         public DateTime ApplicationDate { get; set; }
         public DateTime LastStatusDate { get; set; }
+        public Mode enMode { get; set; }
 
+        public enum Mode
+        {
+            New = 1,
+            Update
+        }
 
         public enum ApplicationTypes
         {
@@ -51,9 +58,9 @@ namespace DVLD_Business_Layer.Licenses.Applications
             Completed
         }
 
-       
-        
-        protected bool AddNewApplication()
+
+
+        public bool AddNewApplication()
         {
             this.ApplicationID = clsApplicationsDB.AddNewApplication(ApplicantPersonID, ApplicationTypeID, ApplicationStatus,
              CreatedByUserID, PaidFees);
@@ -63,9 +70,19 @@ namespace DVLD_Business_Layer.Licenses.Applications
 
         public static DataTable GetApplicationInfo(int applicationID)
         {
-            return clsApplicationsDB.GetApplicationInfo(applicationID); 
+            return clsApplicationsDB.GetApplicationInfo(applicationID);
         }
 
+        public bool SaveApplication()
+        {
+            switch (enMode)
+            {
+                case Mode.New:
+                    return AddNewApplication();
+                default:
+                    return false;
+            }
+        }
 
     }
 }

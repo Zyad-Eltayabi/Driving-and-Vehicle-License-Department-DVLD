@@ -214,6 +214,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
 
             frmTest visionTest = new frmTest(localDrivingAppID, applicationID,clsTestTypes.TestsType.VisionTest);
             visionTest.ShowDialog();
+            GetLocalLicenses();
         }
 
         private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -223,6 +224,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
 
             frmTest writtenTest = new frmTest(localDrivingAppID, applicationID, clsTestTypes.TestsType.WrittenTest);
             writtenTest.ShowDialog();
+            GetLocalLicenses();
         }
 
         private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -232,6 +234,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
 
             frmTest streetTest = new frmTest(localDrivingAppID, applicationID, clsTestTypes.TestsType.StreetTest);
             streetTest.ShowDialog();
+            GetLocalLicenses();
         }
     }
 }

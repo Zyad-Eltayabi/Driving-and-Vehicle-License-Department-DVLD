@@ -174,6 +174,38 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             return localDrivingLicense;
         }
 
+        public static int GetApplicantPersonID(int localDrivingAppID)
+        {
+            int ApplicantPersonID = -1;
+
+            string query = @"USE [DVLD]
+                                SELECT   Applications.ApplicantPersonID
+                                FROM          Applications INNER JOIN
+                                LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+					            where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingAppID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            ApplicantPersonID = int.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return ApplicantPersonID;
+        }
 
 
     }

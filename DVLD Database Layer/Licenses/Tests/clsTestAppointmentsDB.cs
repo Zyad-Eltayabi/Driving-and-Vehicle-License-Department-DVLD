@@ -50,7 +50,7 @@ namespace DVLD_Database_Layer.Licenses.Tests
                         if (retakeTestApplicationID == 0) // it is a new appointment 
                             sqlCommand.Parameters.AddWithValue("RetakeTestApplicationID", System.DBNull.Value);
                         else
-                            sqlCommand.Parameters.AddWithValue("IsLocked", retakeTestApplicationID);
+                            sqlCommand.Parameters.AddWithValue("RetakeTestApplicationID", retakeTestApplicationID);
 
 
                         object result = sqlCommand.ExecuteScalar();

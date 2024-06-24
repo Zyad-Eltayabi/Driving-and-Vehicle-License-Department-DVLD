@@ -63,7 +63,7 @@ namespace DVLD_Presentation_layer.Licenses.Tests.VisionTest
         private bool CheckPreviousTest()
         {
             DataTable appointment = clsTestAppointments.GetAppointmentFullDetails(localDrivingAppID,
-                (int)clsTestTypes.TestsType.VisionTest);
+                (int)enTestType);
 
             if (appointment.Rows.Count == 0)
                 return true;
@@ -93,7 +93,7 @@ namespace DVLD_Presentation_layer.Licenses.Tests.VisionTest
             if (!CheckPreviousTest())
                 return;
 
-            frmScheduleTest scheduleTest = new frmScheduleTest(localDrivingAppID, clsTestTypes.TestsType.VisionTest);
+            frmScheduleTest scheduleTest = new frmScheduleTest(localDrivingAppID, enTestType);
             scheduleTest.ShowDialog();
             GetAppointmentsDetails();
         }

@@ -16,6 +16,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLD_Business_Layer.Licenses.Applications.clsApplications;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
 {
@@ -119,7 +121,7 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
 
         private void SetTestInfo()
         {
-            if(!editMode)
+            if (!editMode)
                 date.MinDate = DateTime.Now;
             lbtrials.Text = frmTest.trials.ToString();
             float testFees = clsTestTypes.GetTestFees((int)enTestType);
@@ -156,6 +158,20 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
             this.Close();
         }
 
+        private int SaveRetakeApplication()
+        {
+            clsApplications application = new clsApplications();
+            application.ApplicationTypeID = (int)clsApplications.ApplicationTypes.RetakeTest;
+            application.ApplicationStatus = (int)clsApplications.ApplicationsStatus.Completed;
+            application.CreatedByUserID = clsLogin.userID;
+            application.ApplicantPersonID = clsLocalLicense.GetApplicantPersonID(this.localDrivingAppID);
+            application.PaidFees = clsApplicationTypes.GetFees(clsApplications.ApplicationTypes.RetakeTest);
+
+            if(application.SaveApplication())
+                return application.ApplicationID;
+
+            return 0;
+        }
         private void SetTestAppointment(ref clsTests test)
         {
             test.appointments.TestTypeID = (int)enTestType;
@@ -164,6 +180,11 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
             test.appointments.PaidFees = float.Parse(lbFees.Text.ToString());
             test.appointments.CreatedByUserID = clsLogin.userID;
             test.appointments.IsLocked = false;
+
+            if (frmTest.trials > 0)
+            {
+                test.appointments.RetakeTestApplicationID = SaveRetakeApplication();
+            }
         }
 
         private void SetTest(ref clsTests test)
@@ -182,6 +203,9 @@ namespace DVLD_Presentation_layer.Licenses.Tests.ScheduleTest
             {
                 frmTest.trials++;
                 clsPublicUtilities.InformationMessage("Data Saved Successfully");
+
+                if (frmTest.trials > 0)
+                    lbRetakeID.Text = test.appointments.RetakeTestApplicationID.ToString();
             }
         }
 
