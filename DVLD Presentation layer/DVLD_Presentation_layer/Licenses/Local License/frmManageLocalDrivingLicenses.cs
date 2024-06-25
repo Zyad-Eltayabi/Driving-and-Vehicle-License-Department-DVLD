@@ -244,6 +244,15 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             frmIssuinglicense issuinglicense = new frmIssuinglicense(localDrivingAppID, applicationID);
             issuinglicense.ShowDialog();
         }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            int AppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+            int personID = clsLocalLicense.GetApplicantPersonID(localDrivingAppID);
+            frmShowLicense showLicense = new frmShowLicense(AppID, personID);
+            showLicense.ShowDialog();
+        }
     }
 }
 

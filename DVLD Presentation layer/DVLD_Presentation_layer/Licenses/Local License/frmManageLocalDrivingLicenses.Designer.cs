@@ -174,7 +174,7 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(324, 285);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(324, 313);
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -225,7 +225,7 @@
             // 
             this.visionTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("visionTestToolStripMenuItem.Image")));
             this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
-            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.visionTestToolStripMenuItem.Text = "Vision Test";
             this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
             // 
@@ -233,7 +233,7 @@
             // 
             this.writtenTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("writtenTestToolStripMenuItem.Image")));
             this.writtenTestToolStripMenuItem.Name = "writtenTestToolStripMenuItem";
-            this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.writtenTestToolStripMenuItem.Text = "Written Test";
             this.writtenTestToolStripMenuItem.Click += new System.EventHandler(this.writtenTestToolStripMenuItem_Click);
             // 
@@ -241,7 +241,7 @@
             // 
             this.streetTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("streetTestToolStripMenuItem.Image")));
             this.streetTestToolStripMenuItem.Name = "streetTestToolStripMenuItem";
-            this.streetTestToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.streetTestToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.streetTestToolStripMenuItem.Text = "Street Test";
             this.streetTestToolStripMenuItem.Click += new System.EventHandler(this.streetTestToolStripMenuItem_Click);
             // 
@@ -273,6 +273,7 @@
             this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
             this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
             this.showLicenseToolStripMenuItem.Text = "Show License";
+            this.showLicenseToolStripMenuItem.Click += new System.EventHandler(this.showLicenseToolStripMenuItem_Click);
             // 
             // toolStripSeparator7
             // 

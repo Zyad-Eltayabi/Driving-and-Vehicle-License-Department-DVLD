@@ -1,6 +1,7 @@
 ﻿using DVLD_Database_Layer.Connections;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -52,7 +53,7 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
                         sqlCommand.Parameters.AddWithValue("IssueDate", DateTime.Now);
                         sqlCommand.Parameters.AddWithValue("ExpirationDate", expirationDate);
 
-                        if(string.IsNullOrEmpty(notes))
+                        if (string.IsNullOrEmpty(notes))
                             sqlCommand.Parameters.AddWithValue("Notes", System.DBNull.Value);
                         else
                             sqlCommand.Parameters.AddWithValue("Notes", notes);
@@ -75,6 +76,39 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
 
             return licenseID;
         }
+
+        public static DataTable GetLicense(int localDrivingAppID)
+        {
+            DataTable localDrivingLicense = new DataTable();
+
+            string query = @"select * from  LicenseBasicInfo where LicenseBasicInfo.ApplicationID = @LocalDrivingAppID ";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+
+                        sqlCommand.Parameters.AddWithValue("@LocalDrivingAppID", localDrivingAppID);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            localDrivingLicense.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return localDrivingLicense;
+        }
+
 
     }
 }

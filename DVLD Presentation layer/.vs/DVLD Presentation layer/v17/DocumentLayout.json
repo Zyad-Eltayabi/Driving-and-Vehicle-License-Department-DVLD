@@ -3,51 +3,69 @@
   "WorkspaceRootPath": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmissuinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmissuinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\ucshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\ucshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\ucshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\ucshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\detained licenses\\clsdetainedlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\applications\\clsapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\applications\\clsapplicationsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\users\\clsusersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\local licence\\clslicensesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\detained licenses\\clsdetainedlicensesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\local licence\\clslocallicensedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\local licence\\clslicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\local licence\\clslocallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\local licence\\clslicensesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\drivers\\clsdriversdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmissuinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmissuinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\licenses\\applications\\clsapplicationsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\dvld_presentation_layer\\mainscreen\\main screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\mainscreen\\main screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmmanagelocaldrivinglicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmmanagelocaldrivinglicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\local licence\\clslocallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmmanagelocaldrivinglicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmmanagelocaldrivinglicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmshowlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\local licence\\clslicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17E63248-48F2-4F00-B36D-D6E388080922}|..\\DVLD Database Layer\\DVLD Database Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld database layer\\users\\clsusersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9918210F-EE3F-4C32-97B4-509B35D7E087}|..\\DVLD Business Layer\\DVLD Business Layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld business layer\\licenses\\drivers\\clsdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|d:\\programming\\roadmap\\projects\\driving \u0026 vehicle license department project\\dvld presentation layer\\dvld_presentation_layer\\licenses\\local license\\frmmanagelocaldrivinglicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\licenses\\local license\\frmmanagelocaldrivinglicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\dvld_presentation_layer\\mainscreen\\main screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\mainscreen\\main screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\dvld_presentation_layer\\mainscreen\\main screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F9E6F790-C241-4841-A4EE-CE27735CEE2D}|DVLD_Presentation_layer\\DVLD_Presentation_layer.csproj|solutionrelative:dvld_presentation_layer\\mainscreen\\main screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,11 +75,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "clsUsersDB.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Users\\clsUsersDB.cs",
               "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Users\\clsUsersDB.cs",
@@ -70,20 +88,32 @@
               "ViewState": "AQIAAA0AAAAAAAAAAIBGwHUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-15T05:59:42.613Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "clsApplicationsDB.cs",
-              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs",
-              "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs",
-              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs*",
-              "RelativeToolTip": "..\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs*",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAwwGIAAAAAAAAA",
+              "Title": "clsDetainedLicenses.cs",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Detained Licenses\\clsDetainedLicenses.cs",
+              "RelativeDocumentMoniker": "..\\DVLD Business Layer\\Licenses\\Detained Licenses\\clsDetainedLicenses.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Detained Licenses\\clsDetainedLicenses.cs",
+              "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Detained Licenses\\clsDetainedLicenses.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T16:31:29.519Z",
+              "WhenOpened": "2024-06-25T16:42:45.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsDetainedLicensesDB.cs",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Detained Licenses\\clsDetainedLicensesDB.cs",
+              "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Licenses\\Detained Licenses\\clsDetainedLicensesDB.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Detained Licenses\\clsDetainedLicensesDB.cs",
+              "RelativeToolTip": "..\\DVLD Database Layer\\Licenses\\Detained Licenses\\clsDetainedLicensesDB.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAzwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T16:36:52.88Z",
               "EditorCaption": ""
             },
             {
@@ -100,33 +130,108 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
+              "Title": "frmManageLocalDrivingLicenses.cs [Design]",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs",
+              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs [Design]",
+              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T16:28:04.662Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmShowLicense.cs",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs",
+              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs",
+              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAjwBMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T16:26:07.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ucShowLicense.cs",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs",
+              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs",
+              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAIA1wCoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T16:00:05.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ucShowLicense.cs [Design]",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs",
+              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs [Design]",
+              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\ucShowLicense.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:43:40.022Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmShowLicense.cs [Design]",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs",
+              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs [Design]",
+              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\frmShowLicense.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:36:02.085Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsApplicationsDB.cs",
+              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs",
+              "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs",
+              "RelativeToolTip": "..\\DVLD Database Layer\\Licenses\\Applications\\clsApplicationsDB.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGIAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T16:31:29.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "clsLicensesDB.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Local Licence\\clsLicensesDB.cs",
               "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Licenses\\Local Licence\\clsLicensesDB.cs",
               "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Local Licence\\clsLicensesDB.cs",
               "RelativeToolTip": "..\\DVLD Database Layer\\Licenses\\Local Licence\\clsLicensesDB.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAA0wA0AAAAoAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAIwE8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T15:42:10.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "clsLicenses.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Local Licence\\clsLicenses.cs",
               "RelativeDocumentMoniker": "..\\DVLD Business Layer\\Licenses\\Local Licence\\clsLicenses.cs",
-              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Local Licence\\clsLicenses.cs*",
-              "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Local Licence\\clsLicenses.cs*",
-              "ViewState": "AQIAACAAAAAAAAAAAAAQwC8AAAAeAAAA",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Local Licence\\clsLicenses.cs",
+              "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Local Licence\\clsLicenses.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAIA/wEgAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T15:41:55.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "clsDriversDB.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Drivers\\clsDriversDB.cs",
               "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Licenses\\Drivers\\clsDriversDB.cs",
@@ -139,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "clsDrivers.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Drivers\\clsDrivers.cs",
               "RelativeDocumentMoniker": "..\\DVLD Business Layer\\Licenses\\Drivers\\clsDrivers.cs",
@@ -147,33 +252,7 @@
               "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Drivers\\clsDrivers.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAA6wA8AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T13:07:09.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmIssuinglicense.cs",
-              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs",
-              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs",
-              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs*",
-              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs*",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAewFoAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T12:55:25.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmIssuinglicense.cs [Design]",
-              "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs",
-              "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs",
-              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs [Design]*",
-              "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\frmIssuinglicense.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T12:48:02.397Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-24T13:07:09.497Z"
             },
             {
               "$type": "Document",
@@ -183,20 +262,20 @@
               "RelativeDocumentMoniker": "DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs",
               "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs",
               "RelativeToolTip": "DVLD_Presentation_layer\\Licenses\\Local License\\frmManageLocalDrivingLicenses.cs",
-              "ViewState": "AQIAAOcAAAAAAAAAAAA9wPQAAAAMAAAA",
+              "ViewState": "AQIAAO0AAAAAAAAAAAAqwP0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T11:17:57.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "clsApplications.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Applications\\clsApplications.cs",
               "RelativeDocumentMoniker": "..\\DVLD Business Layer\\Licenses\\Applications\\clsApplications.cs",
-              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Applications\\clsApplications.cs*",
-              "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Applications\\clsApplications.cs*",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAjwFcAAAAyAAAA",
+              "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Applications\\clsApplications.cs",
+              "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Applications\\clsApplications.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAD4v1cAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T16:23:57.315Z",
               "EditorCaption": ""
@@ -209,27 +288,27 @@
               "RelativeDocumentMoniker": "..\\DVLD Database Layer\\Licenses\\Local Licence\\clsLocalLicenseDB.cs",
               "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Database Layer\\Licenses\\Local Licence\\clsLocalLicenseDB.cs",
               "RelativeToolTip": "..\\DVLD Database Layer\\Licenses\\Local Licence\\clsLocalLicenseDB.cs",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAzwA4BAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAxwHIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T20:19:45.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "clsLocalLicense.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Local Licence\\clsLocalLicense.cs",
               "RelativeDocumentMoniker": "..\\DVLD Business Layer\\Licenses\\Local Licence\\clsLocalLicense.cs",
               "ToolTip": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Business Layer\\Licenses\\Local Licence\\clsLocalLicense.cs",
               "RelativeToolTip": "..\\DVLD Business Layer\\Licenses\\Local Licence\\clsLocalLicense.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAywGUAAAAoAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAywFkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T18:33:14.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "Main Screen.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\MainScreen\\Main Screen.cs",
               "RelativeDocumentMoniker": "DVLD_Presentation_layer\\MainScreen\\Main Screen.cs",
@@ -241,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "Main Screen.cs",
               "DocumentMoniker": "D:\\Programming\\RoadMap\\Projects\\Driving \u0026 Vehicle License Department Project\\DVLD Presentation layer\\DVLD_Presentation_layer\\MainScreen\\Main Screen.cs",
               "RelativeDocumentMoniker": "DVLD_Presentation_layer\\MainScreen\\Main Screen.cs",

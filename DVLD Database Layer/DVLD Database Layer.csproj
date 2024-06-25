@@ -45,6 +45,7 @@
     <Compile Include="Countries\clsCountriesDB.cs" />
     <Compile Include="Licenses\Applications\clsApplicationsDB.cs" />
     <Compile Include="Licenses\ApplicationTypes\clsApplicationTypesDB.cs" />
+    <Compile Include="Licenses\Detained Licenses\clsDetainedLicensesDB.cs" />
     <Compile Include="Licenses\Drivers\clsDriversDB.cs" />
     <Compile Include="Licenses\Local Licence\clsLicensesDB.cs" />
     <Compile Include="Licenses\Local Licence\clsLocalLicenseDB.cs" />

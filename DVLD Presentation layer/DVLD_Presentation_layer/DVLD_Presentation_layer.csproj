@@ -89,6 +89,18 @@
     <Compile Include="Licenses\Local License\frmManageLocalDrivingLicenses.Designer.cs">
       <DependentUpon>frmManageLocalDrivingLicenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Local License\frmShowLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local License\frmShowLicense.Designer.cs">
+      <DependentUpon>frmShowLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\Local License\ucShowLicense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local License\ucShowLicense.Designer.cs">
+      <DependentUpon>ucShowLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Tests\ScheduleTest\frmScheduleTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +235,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local License\frmManageLocalDrivingLicenses.resx">
       <DependentUpon>frmManageLocalDrivingLicenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local License\frmShowLicense.resx">
+      <DependentUpon>frmShowLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local License\ucShowLicense.resx">
+      <DependentUpon>ucShowLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Tests\ScheduleTest\frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>

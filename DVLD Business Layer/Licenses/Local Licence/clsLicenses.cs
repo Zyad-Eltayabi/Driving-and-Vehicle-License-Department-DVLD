@@ -2,6 +2,7 @@
 using DVLD_Database_Layer.Licenses.Local_Licence;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,11 @@ namespace DVLD_Business_Layer.Licenses.Local_Licence
                 default:
                     return false;
             }
+        }
+
+        public static DataTable GetLicense(int localDrivingAppID)
+        {
+            return clsLicensesDB.GetLicense(localDrivingAppID);
         }
     }
 }
