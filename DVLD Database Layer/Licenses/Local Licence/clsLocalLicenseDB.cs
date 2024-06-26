@@ -297,5 +297,32 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             }
             return classFees;
         }
+
+        public static bool DeleteLocalApplication(int localDrivingAppID)
+        {
+            int rowsAffected = 0;
+            string query = @"delete from LocalDrivingLicenseApplications
+                                where LocalDrivingLicenseApplicationID =@LocalDrivingLicenseApplicationID ";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingAppID);
+
+                        rowsAffected = int.Parse(sqlCommand.ExecuteNonQuery().ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+            return rowsAffected > 0;
+        }
+
     }
 }

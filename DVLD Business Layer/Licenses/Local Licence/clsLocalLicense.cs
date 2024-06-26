@@ -104,5 +104,10 @@ namespace DVLD_Business_Layer.Licenses.Local_License
             return clsLocalLicenseDB.GetClassFees(licenseClassID);
         }
 
+        public static bool DeleteLocalApplication(int localDrivingAppID)
+        {
+            return clsLocalLicenseDB.DeleteLocalApplication(localDrivingAppID);
+        }
+
     }
 }

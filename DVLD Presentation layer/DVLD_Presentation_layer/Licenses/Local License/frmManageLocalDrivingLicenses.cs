@@ -29,6 +29,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         {
             frmLocalDrivingLicenseApplication licenseApplication = new frmLocalDrivingLicenseApplication();
             licenseApplication.ShowDialog();
+            GetLocalLicenses(); 
         }
 
         private void frmListLocalDrivingLicenses_Load(object sender, EventArgs e)
@@ -165,7 +166,8 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
                     break;
                 case "new":
                     showLicenseToolStripMenuItem.Enabled = false;
-                    deleteToolStripMenuItem.Enabled = true;
+                    if(TestResult != "0")
+                        deleteToolStripMenuItem.Enabled = false;
                     cancelToolStripMenuItem.Enabled = true;
 
                     if (TestResult == "3")
@@ -280,6 +282,25 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             CancelApplication();
             GetLocalLicenses();
         }
+
+        private void DeleteLocalApplication()
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            if (clsLocalLicense.DeleteLocalApplication(localDrivingAppID))
+            {
+                clsPublicUtilities.InformationMessage("Successful operation");
+                return;
+            }
+            clsPublicUtilities.ErrorMessage("Failed operation");
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteLocalApplication();
+            GetLocalLicenses();
+        }
     }
+
+
 }
 
