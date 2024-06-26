@@ -1,6 +1,7 @@
 ﻿using DVLD_Business_Layer.Licenses.Local_License;
 using DVLD_Business_Layer.Tests;
 using DVLD_Business_Layer.Users;
+using DVLD_Presentation_layer.Licenses.Applications;
 using DVLD_Presentation_layer.Licenses.Tests.VisionTest;
 using DVLD_Presentation_layer.Utilities;
 using System;
@@ -252,6 +253,14 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             int personID = clsLocalLicense.GetApplicantPersonID(localDrivingAppID);
             frmShowLicense showLicense = new frmShowLicense(AppID, personID);
             showLicense.ShowDialog();
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+            frmShowApplicationDetails showApplicationDetails = new frmShowApplicationDetails(localDrivingAppID,applicationID);
+            showApplicationDetails.ShowDialog();
         }
     }
 }

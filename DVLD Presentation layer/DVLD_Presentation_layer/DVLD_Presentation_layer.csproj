@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Licenses\Applications\frmShowApplicationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Applications\frmShowApplicationDetails.Designer.cs">
+      <DependentUpon>frmShowApplicationDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Applications\ucApplicationFullInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +224,9 @@
       <DependentUpon>ucChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\clsPublicUtilities.cs" />
+    <EmbeddedResource Include="Licenses\Applications\frmShowApplicationDetails.resx">
+      <DependentUpon>frmShowApplicationDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Applications\ucApplicationFullInfo.resx">
       <DependentUpon>ucApplicationFullInfo.cs</DependentUpon>
     </EmbeddedResource>
