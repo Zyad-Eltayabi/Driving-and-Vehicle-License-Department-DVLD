@@ -1,4 +1,5 @@
-﻿using DVLD_Business_Layer.Licenses.Local_License;
+﻿using DVLD_Business_Layer.Licenses.Applications;
+using DVLD_Business_Layer.Licenses.Local_License;
 using DVLD_Business_Layer.Tests;
 using DVLD_Business_Layer.Users;
 using DVLD_Presentation_layer.Licenses.Applications;
@@ -261,6 +262,23 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
             frmShowApplicationDetails showApplicationDetails = new frmShowApplicationDetails(localDrivingAppID,applicationID);
             showApplicationDetails.ShowDialog();
+        }
+
+        private void CancelApplication()
+        {
+            int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+            if (clsApplications.UpdateApplicationStatus(applicationID,(int)clsApplications.ApplicationsStatus.Cancelled))
+            {
+                clsPublicUtilities.InformationMessage("Successful operation");
+                return;
+            }
+            clsPublicUtilities.ErrorMessage("Failed operation");
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CancelApplication();
+            GetLocalLicenses();
         }
     }
 }

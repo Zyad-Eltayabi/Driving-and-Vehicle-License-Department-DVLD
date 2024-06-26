@@ -208,6 +208,7 @@
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(323, 35);
             this.cancelToolStripMenuItem.Text = "Cancel Application";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // takeTestsToolStripMenuItem
             // 
