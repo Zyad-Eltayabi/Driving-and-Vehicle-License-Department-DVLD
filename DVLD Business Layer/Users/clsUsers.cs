@@ -78,6 +78,11 @@ namespace DVLD_Business_Layer.Users
             return clsUsersDB.DeleteUser(userID);
         }
 
+        public static string GetUserName(int userID)
+        {
+            return clsUsersDB.GetUserName(userID);
+        }
+
         public bool Save()
         {
             switch (enMode)

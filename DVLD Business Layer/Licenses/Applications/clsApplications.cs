@@ -90,6 +90,10 @@ namespace DVLD_Business_Layer.Licenses.Applications
             return clsApplicationsDB.UpdateApplicationStatus(applicationID, applicationStatus);
         }
 
+        public static int GetCreatedByUserID(int applicationID)
+        {
+            return clsApplicationsDB.GetCreatedByUserID(applicationID);
+        }
 
     }
 }

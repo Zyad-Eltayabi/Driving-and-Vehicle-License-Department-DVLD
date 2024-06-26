@@ -126,6 +126,34 @@ namespace DVLD_Database_Layer.Licenses.Applications
             return rowsAffected > 0;
         }
 
+        public static int GetCreatedByUserID(int applicationID)
+        {
+            int createdByUserID = -1;
+
+            string query = @"select Applications.CreatedByUserID from Applications where ApplicationID = @ApplicationID;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@ApplicationID", applicationID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            createdByUserID = int.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return createdByUserID;
+        }
 
     }
 

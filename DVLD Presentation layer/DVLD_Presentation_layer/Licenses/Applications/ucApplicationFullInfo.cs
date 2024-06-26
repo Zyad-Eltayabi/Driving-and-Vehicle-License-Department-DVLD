@@ -1,6 +1,7 @@
 ﻿using DVLD_Business_Layer.Licenses.Applications;
 using DVLD_Business_Layer.Licenses.Local_License;
 using DVLD_Business_Layer.Login;
+using DVLD_Business_Layer.Users;
 using DVLD_Presentation_layer.People;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,12 @@ namespace DVLD_Presentation_layer.Licenses.Applications
             }
         }
 
+       private string GetUserName(int applicationID)
+        {
+            int userID = clsApplications.GetCreatedByUserID(applicationID);
+            return clsUsers.GetUserName(userID);
+        }
+
         private void LoadApplicationData(int applicationID)
         {
             DataTable application = clsApplications.GetApplicationInfo(applicationID);
@@ -44,7 +51,7 @@ namespace DVLD_Presentation_layer.Licenses.Applications
                 lbStatus.Text = application.Rows[0]["ApplicationStatus"].ToString();
                 lbFullName.Text = application.Rows[0]["FullName"].ToString();
                 lbDate.Text = application.Rows[0]["ApplicationDate"].ToString();
-                lbUserName.Text = clsLogin.userName;
+                lbUserName.Text = GetUserName(applicationID);
                 personID = int.Parse(application.Rows[0]["ApplicantPersonID"].ToString());
             }
         }

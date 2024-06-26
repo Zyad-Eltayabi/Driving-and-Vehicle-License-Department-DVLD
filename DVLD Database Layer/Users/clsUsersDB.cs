@@ -209,5 +209,34 @@ namespace DVLD_Database_Layer.Users
             return rowsAffected > 0;
         }
 
+        public static string GetUserName(int userID)
+        {
+            string userName = "";
+
+            string query = @"select Users.UserName from Users where UserID =@UserID ;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@UserID", userID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            userName = result.ToString();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return userName;
+        }
+
     }
 }
