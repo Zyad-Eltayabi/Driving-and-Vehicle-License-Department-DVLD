@@ -178,6 +178,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
                     break;
                 default:
                     SetDefaultSettingsInContextMenu(false);
+                    showPersonLicenseHistoryToolStripMenuItem.Enabled = true;
                     showDetailsToolStripMenuItem.Enabled = true;
                     break;
             }
@@ -298,6 +299,14 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         {
             DeleteLocalApplication();
             GetLocalLicenses();
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localDrivingAppID = int.Parse(dgvLicenses.SelectedRows[0].Cells["L.D.L.AppID"].Value.ToString());
+            int personID = clsLocalLicense.GetApplicantPersonID(localDrivingAppID);
+            frmShowLicensesHistory showLicensesHistory = new frmShowLicensesHistory(personID);
+            showLicensesHistory.ShowDialog();
         }
     }
 

@@ -101,6 +101,18 @@
     <Compile Include="Licenses\Local License\frmShowLicense.Designer.cs">
       <DependentUpon>frmShowLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Local License\frmShowLicensesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local License\frmShowLicensesHistory.Designer.cs">
+      <DependentUpon>frmShowLicensesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\Local License\ucDriverLicenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local License\ucDriverLicenses.Designer.cs">
+      <DependentUpon>ucDriverLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Local License\ucShowLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local License\frmShowLicense.resx">
       <DependentUpon>frmShowLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local License\frmShowLicensesHistory.resx">
+      <DependentUpon>frmShowLicensesHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local License\ucDriverLicenses.resx">
+      <DependentUpon>ucDriverLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local License\ucShowLicense.resx">
       <DependentUpon>ucShowLicense.cs</DependentUpon>

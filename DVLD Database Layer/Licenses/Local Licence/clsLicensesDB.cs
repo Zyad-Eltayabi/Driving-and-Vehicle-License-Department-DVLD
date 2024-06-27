@@ -109,6 +109,37 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             return localDrivingLicense;
         }
 
+        public static DataTable GetLicensesByDriverID(int driverID)
+        {
+            DataTable localDrivingLicenses = new DataTable();
+
+            string query = @"select * from  LicenseBasicInfo where LicenseBasicInfo.DriverID = @DriverID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+
+                        sqlCommand.Parameters.AddWithValue("@DriverID", driverID);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            localDrivingLicenses.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return localDrivingLicenses;
+        }
 
     }
 }
