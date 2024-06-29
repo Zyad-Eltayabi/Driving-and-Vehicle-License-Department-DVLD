@@ -1,6 +1,7 @@
 ﻿using DVLD_Database_Layer.Connections;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -75,6 +76,36 @@ namespace DVLD_Database_Layer.Licenses.Drivers
 
             return driverID;
         }
+
+        public static DataTable GetDrivers()
+        {
+            DataTable drivers = new DataTable();
+
+            string query = @" select * from DriversFullInfo";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            drivers.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return drivers;
+        }
+
 
     }
 }

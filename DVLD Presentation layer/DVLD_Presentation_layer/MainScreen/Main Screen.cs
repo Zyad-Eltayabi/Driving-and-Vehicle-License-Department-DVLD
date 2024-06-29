@@ -1,4 +1,5 @@
 ﻿using DVLD_Business_Layer.Login;
+using DVLD_Presentation_layer.Drivers;
 using DVLD_Presentation_layer.Licenses.ApplicationTypes;
 using DVLD_Presentation_layer.Licenses.Local_License;
 using DVLD_Presentation_layer.Licenses.Tests;
@@ -27,8 +28,7 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            frmManageLocalDrivingLicenses frmListLocalDrivingLicenses = new frmManageLocalDrivingLicenses();
-            frmListLocalDrivingLicenses.ShowDialog();
+         
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -87,6 +87,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmManageLocalDrivingLicenses frmListLocalDrivingLicenses = new frmManageLocalDrivingLicenses();
             frmListLocalDrivingLicenses.ShowDialog();
+        }
+
+        private void tsDrivers_Click(object sender, EventArgs e)
+        {
+            frmDrivers drivers = new frmDrivers();
+            drivers.ShowDialog();
         }
     }
 }

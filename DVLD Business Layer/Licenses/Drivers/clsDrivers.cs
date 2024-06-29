@@ -1,6 +1,7 @@
 ﻿using DVLD_Database_Layer.Licenses.Drivers;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,11 @@ namespace DVLD_Business_Layer.Licenses.Drivers
         public static int GetDriverID(int personID)
         {
             return clsDriversDB.GetDriverID(personID);
+        }
+
+        public static DataTable GetDrivers()
+        {
+            return clsDriversDB.GetDrivers();
         }
 
     }

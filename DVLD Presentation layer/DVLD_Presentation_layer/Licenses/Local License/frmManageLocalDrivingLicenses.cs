@@ -55,6 +55,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
                 tbFilter.Visible = false;
             else
                 tbFilter.Visible = true;
+
         }
 
         private void tbFilter_KeyPress(object sender, KeyPressEventArgs e)

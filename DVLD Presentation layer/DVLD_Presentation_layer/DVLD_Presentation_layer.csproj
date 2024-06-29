@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drivers\frmDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drivers\frmDrivers.Designer.cs">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Applications\frmShowApplicationDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
       <DependentUpon>ucChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\clsPublicUtilities.cs" />
+    <EmbeddedResource Include="Drivers\frmDrivers.resx">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Applications\frmShowApplicationDetails.resx">
       <DependentUpon>frmShowApplicationDetails.cs</DependentUpon>
     </EmbeddedResource>
