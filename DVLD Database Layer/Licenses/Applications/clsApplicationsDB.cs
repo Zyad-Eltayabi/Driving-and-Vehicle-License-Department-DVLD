@@ -155,6 +155,36 @@ namespace DVLD_Database_Layer.Licenses.Applications
             return createdByUserID;
         }
 
+        public static int GetPersonID(int applicationID)
+        {
+            int ApplicantPersonID = -1;
+
+            string query = @"select Applications.ApplicantPersonID from Applications where ApplicationID =@ApplicationID ;";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@ApplicationID", applicationID);
+
+
+                        object result = sqlCommand.ExecuteScalar();
+
+                        if (result != null)
+                            ApplicantPersonID = int.Parse(result.ToString());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return ApplicantPersonID;
+        }
+
+
     }
 
 

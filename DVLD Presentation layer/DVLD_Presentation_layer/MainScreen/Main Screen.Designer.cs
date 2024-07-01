@@ -100,7 +100,7 @@
             this.newDrivingLicenseToolStripMenuItem});
             this.tsDrivingLicensesServices.Image = ((System.Drawing.Image)(resources.GetObject("tsDrivingLicensesServices.Image")));
             this.tsDrivingLicensesServices.Name = "tsDrivingLicensesServices";
-            this.tsDrivingLicensesServices.Size = new System.Drawing.Size(399, 36);
+            this.tsDrivingLicensesServices.Size = new System.Drawing.Size(429, 56);
             this.tsDrivingLicensesServices.Text = "Driving Licenses Services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -110,14 +110,14 @@
             this.internationalLicenseToolStripMenuItem});
             this.newDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newDrivingLicenseToolStripMenuItem.Image")));
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
-            this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(334, 36);
+            this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(364, 56);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving License";
             // 
             // localLicenseToolStripMenuItem
             // 
             this.localLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localLicenseToolStripMenuItem.Image")));
             this.localLicenseToolStripMenuItem.Name = "localLicenseToolStripMenuItem";
-            this.localLicenseToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
+            this.localLicenseToolStripMenuItem.Size = new System.Drawing.Size(367, 56);
             this.localLicenseToolStripMenuItem.Text = "Local License";
             this.localLicenseToolStripMenuItem.Click += new System.EventHandler(this.localLicenseToolStripMenuItem_Click);
             // 
@@ -125,8 +125,9 @@
             // 
             this.internationalLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("internationalLicenseToolStripMenuItem.Image")));
             this.internationalLicenseToolStripMenuItem.Name = "internationalLicenseToolStripMenuItem";
-            this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(337, 36);
+            this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(367, 56);
             this.internationalLicenseToolStripMenuItem.Text = "International License";
+            this.internationalLicenseToolStripMenuItem.Click += new System.EventHandler(this.internationalLicenseToolStripMenuItem_Click);
             // 
             // tsManageApplications
             // 
@@ -135,7 +136,7 @@
             this.internationalDrivingLicenseApplicationToolStripMenuItem});
             this.tsManageApplications.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplications.Image")));
             this.tsManageApplications.Name = "tsManageApplications";
-            this.tsManageApplications.Size = new System.Drawing.Size(399, 36);
+            this.tsManageApplications.Size = new System.Drawing.Size(429, 56);
             this.tsManageApplications.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationToolStripMenuItem
@@ -157,14 +158,14 @@
             // 
             this.tsDetainLicenses.Image = ((System.Drawing.Image)(resources.GetObject("tsDetainLicenses.Image")));
             this.tsDetainLicenses.Name = "tsDetainLicenses";
-            this.tsDetainLicenses.Size = new System.Drawing.Size(399, 36);
+            this.tsDetainLicenses.Size = new System.Drawing.Size(429, 56);
             this.tsDetainLicenses.Text = "Detain Licenses";
             // 
             // tsManageApplicationsTypes
             // 
             this.tsManageApplicationsTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageApplicationsTypes.Image")));
             this.tsManageApplicationsTypes.Name = "tsManageApplicationsTypes";
-            this.tsManageApplicationsTypes.Size = new System.Drawing.Size(399, 36);
+            this.tsManageApplicationsTypes.Size = new System.Drawing.Size(429, 56);
             this.tsManageApplicationsTypes.Text = "Manage Application Types";
             this.tsManageApplicationsTypes.Click += new System.EventHandler(this.tsManageApplicationsTypes_Click);
             // 
@@ -172,7 +173,7 @@
             // 
             this.tsManageTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("tsManageTestTypes.Image")));
             this.tsManageTestTypes.Name = "tsManageTestTypes";
-            this.tsManageTestTypes.Size = new System.Drawing.Size(399, 36);
+            this.tsManageTestTypes.Size = new System.Drawing.Size(429, 56);
             this.tsManageTestTypes.Text = "Manage Test Types";
             this.tsManageTestTypes.Click += new System.EventHandler(this.tsManageTestTypes_Click);
             // 

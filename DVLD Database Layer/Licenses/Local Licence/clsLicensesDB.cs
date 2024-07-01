@@ -77,11 +77,11 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             return licenseID;
         }
 
-        public static DataTable GetLicense(int localDrivingAppID)
+        public static DataTable GetLicenseByApplicationID(int applicationID)
         {
             DataTable localDrivingLicense = new DataTable();
 
-            string query = @"select * from  LicenseBasicInfo where LicenseBasicInfo.ApplicationID = @LocalDrivingAppID ";
+            string query = @"select * from  LicenseBasicInfo where LicenseBasicInfo.ApplicationID = @ApplicationID ";
 
             try
             {
@@ -91,7 +91,7 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
                     using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                     {
 
-                        sqlCommand.Parameters.AddWithValue("@LocalDrivingAppID", localDrivingAppID);
+                        sqlCommand.Parameters.AddWithValue("@ApplicationID", applicationID);
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
@@ -139,6 +139,38 @@ namespace DVLD_Database_Layer.Licenses.Local_Licence
             }
 
             return localDrivingLicenses;
+        }
+
+        public static DataTable GetLicenseByLicenseID(int licenseID)
+        {
+            DataTable localDrivingLicense = new DataTable();
+
+            string query = @"select * from Licenses where Licenses.LicenseID = @LicenseID ";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+
+                        sqlCommand.Parameters.AddWithValue("@LicenseID", licenseID);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            localDrivingLicense.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return localDrivingLicense;
         }
 
     }

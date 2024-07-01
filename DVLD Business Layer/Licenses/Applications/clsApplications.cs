@@ -24,6 +24,19 @@ namespace DVLD_Business_Layer.Licenses.Applications
             enMode = Mode.New;
         }
 
+        public clsApplications(int applicantPersonID, int applicationTypeID,
+            int applicationStatus, int createdByUserID, float paidFees)
+        {
+            ApplicantPersonID = applicantPersonID;
+            ApplicationTypeID = applicationTypeID;
+            ApplicationStatus = applicationStatus;
+            CreatedByUserID = createdByUserID;
+            PaidFees = paidFees;
+            ApplicationDate = DateTime.Now;
+            LastStatusDate = DateTime.Now;
+            this.enMode = Mode.New;
+        }
+
         public int ApplicationID { get; set; }
         public int ApplicantPersonID { get; set; }
         public int ApplicationTypeID { get; set; }
@@ -93,6 +106,11 @@ namespace DVLD_Business_Layer.Licenses.Applications
         public static int GetCreatedByUserID(int applicationID)
         {
             return clsApplicationsDB.GetCreatedByUserID(applicationID);
+        }
+
+        public static int GetPersonID(int applicationID)
+        {
+            return clsApplicationsDB.GetPersonID(applicationID);
         }
 
     }

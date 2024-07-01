@@ -1,6 +1,7 @@
 ﻿using DVLD_Business_Layer.Login;
 using DVLD_Presentation_layer.Drivers;
 using DVLD_Presentation_layer.Licenses.ApplicationTypes;
+using DVLD_Presentation_layer.Licenses.International_Licenses;
 using DVLD_Presentation_layer.Licenses.Local_License;
 using DVLD_Presentation_layer.Licenses.Tests;
 using DVLD_Presentation_layer.People;
@@ -28,7 +29,8 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-         
+            frmAddNewInternationalLicense addNewInternationalLicense = new frmAddNewInternationalLicense();
+            addNewInternationalLicense.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -93,6 +95,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmDrivers drivers = new frmDrivers();
             drivers.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewInternationalLicense addNewInternationalLicense = new frmAddNewInternationalLicense();
+            addNewInternationalLicense.ShowDialog();
         }
     }
 }

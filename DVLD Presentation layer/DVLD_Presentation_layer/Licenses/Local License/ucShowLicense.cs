@@ -22,7 +22,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
      
         private void GetLicenseDetails(int applicationID)
         {
-            DataTable license = clsLicenses.GetLicense(applicationID);
+            DataTable license = clsLicenses.GetLicenseByApplicationID(applicationID);
             lbLicAppID.Text = license.Rows[0]["LicenseID"].ToString();
             lbDriver.Text = license.Rows[0]["DriverID"].ToString();
             lbAppID.Text = license.Rows[0]["ApplicationID"].ToString();
@@ -41,5 +41,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
             ucPersonDetails1.LoadPersonDetails(personID);
             GetLicenseDetails(applicationID);
         }
+
+
     }
 }

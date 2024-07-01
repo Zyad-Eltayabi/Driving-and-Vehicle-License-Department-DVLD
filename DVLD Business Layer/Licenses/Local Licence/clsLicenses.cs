@@ -68,14 +68,19 @@ namespace DVLD_Business_Layer.Licenses.Local_Licence
             }
         }
 
-        public static DataTable GetLicense(int localDrivingAppID)
+        public static DataTable GetLicenseByApplicationID(int applicationID)
         {
-            return clsLicensesDB.GetLicense(localDrivingAppID);
+            return clsLicensesDB.GetLicenseByApplicationID(applicationID);
         }
 
         public static DataTable GetLicensesByDriverID(int driverID)
         {
             return clsLicensesDB.GetLicensesByDriverID(driverID);
+        }
+
+        public static DataTable GetLicenseByLicenseID(int licenseID)
+        {
+            return clsLicensesDB.GetLicenseByLicenseID(licenseID);
         }
     }
 }
