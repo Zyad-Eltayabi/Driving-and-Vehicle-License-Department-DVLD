@@ -165,9 +165,9 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
 
         private bool IsPersonHasAlreadyInternationalLicense()
         {
-            if (clsInternationalLicenses.IsPersonHasAlreadyInternationalLicense(this.localLicenseID))
+            if (clsInternationalLicenses.IsPersonHasAnActiveInternationalLicense(this.localLicenseID))
             {
-                clsPublicUtilities.WarningMessage("Sorry ,  this person has already an international license.");
+                clsPublicUtilities.WarningMessage("Sorry ,  this person has already an active international license.");
                 return false;
             }
             return true;

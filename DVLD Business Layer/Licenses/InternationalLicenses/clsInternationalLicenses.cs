@@ -65,9 +65,9 @@ namespace DVLD_Business_Layer.Licenses.InternationalLicenses
             }
         }
 
-        public static bool IsPersonHasAlreadyInternationalLicense(int localLicenseID)
+        public static bool IsPersonHasAnActiveInternationalLicense(int localLicenseID)
         {
-            return clsInternationalLicensesDB.IsPersonHasAlreadyInternationalLicense(localLicenseID);
+            return clsInternationalLicensesDB.IsPersonHasAnActiveInternationalLicense(localLicenseID);
         }
     }
 }

@@ -86,11 +86,12 @@ namespace DVLD_Database_Layer.Licenses.InternationalLicenses
             return ID;
         }
 
-        public static bool IsPersonHasAlreadyInternationalLicense(int localLicenseID)
+        public static bool IsPersonHasAnActiveInternationalLicense(int localLicenseID)
         {
             bool isPersonHasAlreadyInternationalLicense = false;
             string query = @" select InternationalLicenses.InternationalLicenseID from InternationalLicenses
-                                where IssuedUsingLocalLicenseID = @IssuedUsingLocalLicenseID";
+                                where IssuedUsingLocalLicenseID = @IssuedUsingLocalLicenseID
+                                  and InternationalLicenses.IsActive = '1'";
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
