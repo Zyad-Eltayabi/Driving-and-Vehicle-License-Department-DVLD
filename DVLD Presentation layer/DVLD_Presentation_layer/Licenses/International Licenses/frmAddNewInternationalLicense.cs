@@ -5,6 +5,7 @@ using DVLD_Business_Layer.Licenses.Local_Licence;
 using DVLD_Business_Layer.Licenses.Local_License;
 using DVLD_Business_Layer.Login;
 using DVLD_Presentation_layer.Licenses.ApplicationTypes;
+using DVLD_Presentation_layer.Licenses.Local_License;
 using DVLD_Presentation_layer.Utilities;
 using System;
 using System.Collections.Generic;
@@ -83,7 +84,7 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
             this.Close();
         }
 
-   
+
 
         private void SetApplicationInfo()
         {
@@ -123,9 +124,9 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
             float fees = clsApplicationTypes.GetFees(clsApplications.ApplicationTypes.NewInternationalLicense);
             clsApplications applications = new clsApplications(this.personID,
                 (int)clsApplications.ApplicationTypes.NewInternationalLicense,
-                (int)clsApplications.ApplicationsStatus.Completed,clsLogin.userID,fees);
+                (int)clsApplications.ApplicationsStatus.Completed, clsLogin.userID, fees);
 
-            if(applications.SaveApplication())
+            if (applications.SaveApplication())
                 lbAppID.Text = applications.ApplicationID.ToString();
 
             return applications.ApplicationID;
@@ -138,18 +139,33 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
             clsInternationalLicenses internationalLicenses = new clsInternationalLicenses(applicationID, driverID,
                  this.localLicenseID, clsLogin.userID, expDate, true);
 
-            if(internationalLicenses.SaveInternationalLicense())
+            if (internationalLicenses.SaveInternationalLicense())
             {
                 lbInternationalID.Text = internationalLicenses.InternationalLicenseID.ToString();
                 clsPublicUtilities.InformationMessage("Data saved successfully");
+                lkShowLicenseInfo.Visible = true;
                 return;
             }
             clsPublicUtilities.ErrorMessage("Sorry,operation was failed");
         }
 
+        private void lkShowLicensesHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (btnIssue.Enabled)
+            {
+                frmShowLicensesHistory showLicensesHistory = new frmShowLicensesHistory(this.personID);
+                showLicensesHistory.ShowDialog();
+            }
+        }
+
+        private void lkShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
         private bool IsPersonHasAlreadyInternationalLicense()
         {
-            if(clsInternationalLicenses.IsPersonHasAlreadyInternationalLicense(this.localLicenseID))
+            if (clsInternationalLicenses.IsPersonHasAlreadyInternationalLicense(this.localLicenseID))
             {
                 clsPublicUtilities.WarningMessage("Sorry ,  this person has already an international license.");
                 return false;
@@ -159,12 +175,12 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
 
         private void SaveNewInternationalLicense()
         {
-            if(!IsPersonHasAlreadyInternationalLicense())
+            if (!IsPersonHasAlreadyInternationalLicense())
                 return;
 
             int applicationID = SaveNewApplication();
 
-            if(applicationID == -1)
+            if (applicationID == -1)
                 return;
 
 
