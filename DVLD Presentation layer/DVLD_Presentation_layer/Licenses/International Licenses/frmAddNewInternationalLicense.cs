@@ -151,12 +151,6 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
             clsPublicUtilities.ErrorMessage("Sorry,operation was failed");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmShowInternationalLicenseInfo showInternationalLicenseInfo = new frmShowInternationalLicenseInfo(16);
-            showInternationalLicenseInfo.ShowDialog();
-        }
-
         private void lkShowLicensesHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (btnIssue.Enabled)

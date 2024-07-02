@@ -148,5 +148,29 @@ namespace DVLD_Database_Layer.Licenses.InternationalLicenses
             return internationalLicense;
         }
 
+        public static DataTable GetInternationalLicenses()
+        {
+            DataTable internationalLicenses = new DataTable();
+
+            string query = @"select * from InternationalLicensesFullInfo";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            internationalLicenses.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return internationalLicenses;
+        }
     }
 }

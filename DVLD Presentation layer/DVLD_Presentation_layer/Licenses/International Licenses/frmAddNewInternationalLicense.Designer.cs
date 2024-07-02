@@ -68,7 +68,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ucShowLicense1 = new DVLD_Presentation_layer.Licenses.Local_License.ucShowLicense();
-            this.button1 = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -176,7 +175,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.lkShowLicenseInfo);
             this.tabPage2.Controls.Add(this.lkShowLicensesHistory);
             this.tabPage2.Controls.Add(this.btnClose);
@@ -569,16 +567,6 @@
             this.ucShowLicense1.Size = new System.Drawing.Size(1100, 695);
             this.ucShowLicense1.TabIndex = 25;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(127, 96);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmAddNewInternationalLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -654,6 +642,5 @@
         private Local_License.ucShowLicense ucShowLicense1;
         private System.Windows.Forms.LinkLabel lkShowLicenseInfo;
         private System.Windows.Forms.LinkLabel lkShowLicensesHistory;
-        private System.Windows.Forms.Button button1;
     }
 }

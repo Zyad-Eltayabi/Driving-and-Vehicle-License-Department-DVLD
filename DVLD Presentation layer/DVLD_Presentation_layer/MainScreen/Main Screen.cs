@@ -29,8 +29,8 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            frmAddNewInternationalLicense addNewInternationalLicense = new frmAddNewInternationalLicense();
-            addNewInternationalLicense.ShowDialog();
+            frmManageInternationalLicenses manageInternationalLicenses = new frmManageInternationalLicenses();
+            manageInternationalLicenses.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -101,6 +101,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmAddNewInternationalLicense addNewInternationalLicense = new frmAddNewInternationalLicense();
             addNewInternationalLicense.ShowDialog();
+        }
+
+        private void internationalDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageInternationalLicenses manageInternationalLicenses = new frmManageInternationalLicenses();
+            manageInternationalLicenses.ShowDialog();
         }
     }
 }
