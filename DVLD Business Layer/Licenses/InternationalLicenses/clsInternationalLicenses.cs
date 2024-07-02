@@ -69,5 +69,23 @@ namespace DVLD_Business_Layer.Licenses.InternationalLicenses
         {
             return clsInternationalLicensesDB.IsPersonHasAnActiveInternationalLicense(localLicenseID);
         }
+
+        public static DataTable GetLicenseByInternationalLicenseID(int internationalLicenseID)
+        {
+            return clsInternationalLicensesDB.GetLicenseByInternationalLicenseID(internationalLicenseID);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

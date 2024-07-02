@@ -32,42 +32,43 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.ucShowLicense1 = new DVLD_Presentation_layer.Licenses.Local_License.ucShowLicense();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.btnIssue = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.lbCreatedBy = new System.Windows.Forms.Label();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lbFees = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbLocalLicense = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbApplicationDate = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbExp = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbIsuue = new System.Windows.Forms.Label();
             this.d = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbInternationalID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbAppID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lkShowLicensesHistory = new System.Windows.Forms.LinkLabel();
             this.lkShowLicenseInfo = new System.Windows.Forms.LinkLabel();
+            this.btnIssue = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ucShowLicense1 = new DVLD_Presentation_layer.Licenses.Local_License.ucShowLicense();
+            this.button1 = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -118,13 +119,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Driver Info";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // ucShowLicense1
-            // 
-            this.ucShowLicense1.Location = new System.Drawing.Point(7, 119);
-            this.ucShowLicense1.Name = "ucShowLicense1";
-            this.ucShowLicense1.Size = new System.Drawing.Size(1100, 695);
-            this.ucShowLicense1.TabIndex = 25;
             // 
             // guna2GroupBox1
             // 
@@ -182,6 +176,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.lkShowLicenseInfo);
             this.tabPage2.Controls.Add(this.lkShowLicensesHistory);
             this.tabPage2.Controls.Add(this.btnClose);
@@ -212,25 +207,6 @@
             this.btnClose.TabIndex = 29;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnIssue
-            // 
-            this.btnIssue.BorderRadius = 15;
-            this.btnIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIssue.Enabled = false;
-            this.btnIssue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssue.ForeColor = System.Drawing.Color.White;
-            this.btnIssue.Image = ((System.Drawing.Image)(resources.GetObject("btnIssue.Image")));
-            this.btnIssue.Location = new System.Drawing.Point(934, 495);
-            this.btnIssue.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnIssue.Name = "btnIssue";
-            this.btnIssue.Size = new System.Drawing.Size(125, 34);
-            this.btnIssue.TabIndex = 28;
-            this.btnIssue.Text = "Issue";
-            this.btnIssue.Click += new System.EventHandler(this.btnIssue_Click);
             // 
             // guna2GroupBox2
             // 
@@ -266,17 +242,6 @@
             this.guna2GroupBox2.TabIndex = 25;
             this.guna2GroupBox2.Text = "Application Info";
             // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(674, 194);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox6.TabIndex = 40;
-            this.guna2PictureBox6.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -298,17 +263,6 @@
             this.lbCreatedBy.Size = new System.Drawing.Size(19, 23);
             this.lbCreatedBy.TabIndex = 39;
             this.lbCreatedBy.Text = "?";
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(165, 195);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox10.TabIndex = 37;
-            this.guna2PictureBox10.TabStop = false;
             // 
             // label11
             // 
@@ -332,17 +286,6 @@
             this.lbFees.TabIndex = 36;
             this.lbFees.Text = "?";
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(174, 153);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 32;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // lbLocalLicense
             // 
             this.lbLocalLicense.AutoSize = true;
@@ -364,17 +307,6 @@
             this.label10.Size = new System.Drawing.Size(153, 20);
             this.label10.TabIndex = 33;
             this.label10.Text = "LocalLicense ID : ";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(698, 67);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 29;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // lbApplicationDate
             // 
@@ -398,17 +330,6 @@
             this.label9.TabIndex = 30;
             this.label9.Text = "Application Date";
             // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(674, 153);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 26;
-            this.guna2PictureBox5.TabStop = false;
-            // 
             // lbExp
             // 
             this.lbExp.AutoSize = true;
@@ -430,17 +351,6 @@
             this.label8.Size = new System.Drawing.Size(83, 20);
             this.label8.TabIndex = 27;
             this.label8.Text = "Exp Date";
-            // 
-            // guna2PictureBox9
-            // 
-            this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
-            this.guna2PictureBox9.ImageRotate = 0F;
-            this.guna2PictureBox9.Location = new System.Drawing.Point(674, 113);
-            this.guna2PictureBox9.Name = "guna2PictureBox9";
-            this.guna2PictureBox9.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox9.TabIndex = 23;
-            this.guna2PictureBox9.TabStop = false;
             // 
             // lbIsuue
             // 
@@ -464,17 +374,6 @@
             this.d.TabIndex = 24;
             this.d.Text = "Issue Date";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(165, 113);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 11;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // lbInternationalID
             // 
             this.lbInternationalID.AutoSize = true;
@@ -496,17 +395,6 @@
             this.label4.Size = new System.Drawing.Size(118, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "I.License ID : ";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(165, 67);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(19, 19);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 8;
-            this.guna2PictureBox4.TabStop = false;
             // 
             // lbAppID
             // 
@@ -566,6 +454,130 @@
             this.lkShowLicenseInfo.Text = "Show License Info";
             this.lkShowLicenseInfo.Visible = false;
             this.lkShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkShowLicenseInfo_LinkClicked);
+            // 
+            // btnIssue
+            // 
+            this.btnIssue.BorderRadius = 15;
+            this.btnIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIssue.Enabled = false;
+            this.btnIssue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssue.ForeColor = System.Drawing.Color.White;
+            this.btnIssue.Image = ((System.Drawing.Image)(resources.GetObject("btnIssue.Image")));
+            this.btnIssue.Location = new System.Drawing.Point(934, 495);
+            this.btnIssue.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnIssue.Name = "btnIssue";
+            this.btnIssue.Size = new System.Drawing.Size(125, 34);
+            this.btnIssue.TabIndex = 28;
+            this.btnIssue.Text = "Issue";
+            this.btnIssue.Click += new System.EventHandler(this.btnIssue_Click);
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(674, 194);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox6.TabIndex = 40;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(165, 195);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox10.TabIndex = 37;
+            this.guna2PictureBox10.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(174, 153);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 32;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(698, 67);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 29;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(674, 153);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 26;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(674, 113);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox9.TabIndex = 23;
+            this.guna2PictureBox9.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(165, 113);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 11;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(165, 67);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(19, 19);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 8;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // ucShowLicense1
+            // 
+            this.ucShowLicense1.Location = new System.Drawing.Point(7, 119);
+            this.ucShowLicense1.Name = "ucShowLicense1";
+            this.ucShowLicense1.Size = new System.Drawing.Size(1100, 695);
+            this.ucShowLicense1.TabIndex = 25;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(127, 96);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmAddNewInternationalLicense
             // 
@@ -642,5 +654,6 @@
         private Local_License.ucShowLicense ucShowLicense1;
         private System.Windows.Forms.LinkLabel lkShowLicenseInfo;
         private System.Windows.Forms.LinkLabel lkShowLicensesHistory;
+        private System.Windows.Forms.Button button1;
     }
 }

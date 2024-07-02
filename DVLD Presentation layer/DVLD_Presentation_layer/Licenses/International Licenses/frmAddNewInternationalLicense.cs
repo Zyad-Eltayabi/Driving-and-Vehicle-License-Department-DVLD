@@ -23,7 +23,7 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
     public partial class frmAddNewInternationalLicense : Form
     {
         // start local variables
-        private int localLicenseID, licenseClass, localLicenseApplicationID, personID;
+        private int localLicenseID, licenseClass, localLicenseApplicationID, personID, driverID, internationalLicenseID;
         bool isActive;
         // end local variables
 
@@ -54,6 +54,7 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
             this.licenseClass = int.Parse(localLicense.Rows[0]["LicenseClass"].ToString());
             this.isActive = Boolean.Parse(localLicense.Rows[0]["IsActive"].ToString());
             this.personID = clsApplications.GetPersonID(this.localLicenseApplicationID);
+            this.driverID = int.Parse(localLicense.Rows[0]["DriverID"].ToString());
             return true;
         }
 
@@ -144,9 +145,16 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
                 lbInternationalID.Text = internationalLicenses.InternationalLicenseID.ToString();
                 clsPublicUtilities.InformationMessage("Data saved successfully");
                 lkShowLicenseInfo.Visible = true;
+                this.internationalLicenseID = internationalLicenses.InternationalLicenseID;
                 return;
             }
             clsPublicUtilities.ErrorMessage("Sorry,operation was failed");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmShowInternationalLicenseInfo showInternationalLicenseInfo = new frmShowInternationalLicenseInfo(16);
+            showInternationalLicenseInfo.ShowDialog();
         }
 
         private void lkShowLicensesHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -160,12 +168,13 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
 
         private void lkShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmShowInternationalLicenseInfo showInternationalLicenseInfo = new frmShowInternationalLicenseInfo(this.internationalLicenseID);
+            showInternationalLicenseInfo.ShowDialog();
         }
 
         private bool IsPersonHasAlreadyInternationalLicense()
         {
-            if (clsInternationalLicenses.IsPersonHasAnActiveInternationalLicense(this.localLicenseID))
+            if (clsInternationalLicenses.IsPersonHasAnActiveInternationalLicense(this.driverID))
             {
                 clsPublicUtilities.WarningMessage("Sorry ,  this person has already an active international license.");
                 return false;

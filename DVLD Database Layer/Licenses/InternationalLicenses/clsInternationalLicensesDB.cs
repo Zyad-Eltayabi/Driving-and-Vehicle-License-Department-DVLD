@@ -15,8 +15,9 @@ namespace DVLD_Database_Layer.Licenses.InternationalLicenses
         {
             DataTable internationalLicenses = new DataTable();
 
-            string query = @"select * from InternationalLicensesBasicInfo where InternationalLicensesBasicInfo.DriverID = @DriverID";
-
+            string query = @"select  InternationalLicenseID, ApplicationID, InternationalLicenses.IssuedUsingLocalLicenseID,
+                            DriverID, IssueDate, ExpirationDate, IsActive
+                            from InternationalLicenses where InternationalLicenses.DriverID = @DriverID";
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
@@ -86,11 +87,11 @@ namespace DVLD_Database_Layer.Licenses.InternationalLicenses
             return ID;
         }
 
-        public static bool IsPersonHasAnActiveInternationalLicense(int localLicenseID)
+        public static bool IsPersonHasAnActiveInternationalLicense(int driverID)
         {
             bool isPersonHasAlreadyInternationalLicense = false;
             string query = @" select InternationalLicenses.InternationalLicenseID from InternationalLicenses
-                                where IssuedUsingLocalLicenseID = @IssuedUsingLocalLicenseID
+                                where DriverID = @DriverID
                                   and InternationalLicenses.IsActive = '1'";
             try
             {
@@ -99,7 +100,7 @@ namespace DVLD_Database_Layer.Licenses.InternationalLicenses
                     sqlConnection.Open();
                     using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                     {
-                        sqlCommand.Parameters.AddWithValue("@IssuedUsingLocalLicenseID", localLicenseID);
+                        sqlCommand.Parameters.AddWithValue("@DriverID", driverID);
 
                         object result = sqlCommand.ExecuteScalar();
 
@@ -113,6 +114,38 @@ namespace DVLD_Database_Layer.Licenses.InternationalLicenses
                
             }
             return isPersonHasAlreadyInternationalLicense;
+        }
+
+        public static DataTable GetLicenseByInternationalLicenseID(int internationalLicenseID)
+        {
+            DataTable internationalLicense = new DataTable();
+
+            string query = @"select * from InternationalLicensesFullInfo
+                            where InternationalLicenseID = @InternationalLicenseID";
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+
+                        sqlCommand.Parameters.AddWithValue("@InternationalLicenseID", internationalLicenseID);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            internationalLicense.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return internationalLicense;
         }
 
     }
