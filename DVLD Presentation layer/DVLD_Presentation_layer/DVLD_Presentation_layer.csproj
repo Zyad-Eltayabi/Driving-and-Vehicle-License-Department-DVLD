@@ -131,6 +131,12 @@
     <Compile Include="Licenses\Local License\frmRenewLocalLicense.Designer.cs">
       <DependentUpon>frmRenewLocalLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Local License\frmReplacementForDamagedOrLostLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local License\frmReplacementForDamagedOrLostLicenses.Designer.cs">
+      <DependentUpon>frmReplacementForDamagedOrLostLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Local License\frmShowLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local License\frmRenewLocalLicense.resx">
       <DependentUpon>frmRenewLocalLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local License\frmReplacementForDamagedOrLostLicenses.resx">
+      <DependentUpon>frmReplacementForDamagedOrLostLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local License\frmShowLicense.resx">
       <DependentUpon>frmShowLicense.cs</DependentUpon>

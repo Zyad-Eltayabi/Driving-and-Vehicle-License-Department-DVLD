@@ -6,6 +6,7 @@ using DVLD_Presentation_layer.Licenses.Local_License;
 using DVLD_Presentation_layer.Licenses.Tests;
 using DVLD_Presentation_layer.People;
 using DVLD_Presentation_layer.Users;
+using DVLD_Presentation_layer.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace DVLD_Presentation_layer.MainScreen
         public frmMainScreen()
         {
             InitializeComponent();
+            clsPublicUtilities.CenterForm(this);
         }
 
         private void frmMainScreen_Load(object sender, EventArgs e)
@@ -29,8 +31,8 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            frmRenewLocalLicense renewLocalLicense = new frmRenewLocalLicense();
-            renewLocalLicense.ShowDialog();
+            frmReplacementForDamagedOrLostLicenses frmReplacementForDamagedOrLostLicenses = new frmReplacementForDamagedOrLostLicenses();
+            frmReplacementForDamagedOrLostLicenses.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -113,6 +115,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmRenewLocalLicense renewLocalLicense = new frmRenewLocalLicense();
             renewLocalLicense.ShowDialog();
+        }
+
+        private void replacementForDamagedOrLostLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReplacementForDamagedOrLostLicenses frmReplacementForDamagedOrLostLicenses = new frmReplacementForDamagedOrLostLicenses();
+            frmReplacementForDamagedOrLostLicenses.ShowDialog();
         }
     }
 }
