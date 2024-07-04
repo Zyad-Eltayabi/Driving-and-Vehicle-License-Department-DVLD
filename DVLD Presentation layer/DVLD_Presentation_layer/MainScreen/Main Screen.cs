@@ -31,8 +31,8 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            frmReplacementForDamagedOrLostLicenses frmReplacementForDamagedOrLostLicenses = new frmReplacementForDamagedOrLostLicenses();
-            frmReplacementForDamagedOrLostLicenses.ShowDialog();
+            frmActiveLicensesList frmActiveLicensesList = new frmActiveLicensesList();
+            frmActiveLicensesList.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -121,6 +121,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmReplacementForDamagedOrLostLicenses frmReplacementForDamagedOrLostLicenses = new frmReplacementForDamagedOrLostLicenses();
             frmReplacementForDamagedOrLostLicenses.ShowDialog();
+        }
+
+        private void activeLocalLicensesListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmActiveLicensesList frmActiveLicensesList = new frmActiveLicensesList();
+            frmActiveLicensesList.ShowDialog();
         }
     }
 }

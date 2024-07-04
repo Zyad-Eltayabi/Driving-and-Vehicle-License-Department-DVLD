@@ -109,5 +109,10 @@ namespace DVLD_Business_Layer.Licenses.Local_License
             return clsLocalLicenseDB.DeleteLocalApplication(localDrivingAppID);
         }
 
+        public static DataTable GetActiveLicenses()
+        {
+            return clsLocalLicenseDB.GetActiveLicenses();
+        }
+
     }
 }

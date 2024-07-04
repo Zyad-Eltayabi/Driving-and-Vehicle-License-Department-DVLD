@@ -46,8 +46,8 @@ namespace DVLD_Presentation_layer.Licenses.International_Licenses
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int driverID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
-            int personID = clsApplications.GetPersonID(driverID);
+            int applicationID = int.Parse(dgvLicenses.SelectedRows[0].Cells["ApplicationID"].Value.ToString());
+            int personID = clsApplications.GetPersonID(applicationID);
             frmPersonDetails personDetails = new frmPersonDetails(personID);
             personDetails.ShowDialog();
         }
