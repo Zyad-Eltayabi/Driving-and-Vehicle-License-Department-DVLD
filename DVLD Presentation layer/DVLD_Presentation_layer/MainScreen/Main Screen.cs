@@ -31,8 +31,8 @@ namespace DVLD_Presentation_layer.MainScreen
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
 
-            frmActiveLicensesList frmActiveLicensesList = new frmActiveLicensesList();
-            frmActiveLicensesList.ShowDialog();
+            frmDetainLicense detainLicense = new frmDetainLicense();
+            detainLicense.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -127,6 +127,12 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             frmActiveLicensesList frmActiveLicensesList = new frmActiveLicensesList();
             frmActiveLicensesList.ShowDialog();
+        }
+
+        private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainLicense detainLicense = new frmDetainLicense();
+            detainLicense.ShowDialog();
         }
     }
 }
