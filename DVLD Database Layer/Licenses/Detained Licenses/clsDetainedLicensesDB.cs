@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -168,6 +169,41 @@ namespace DVLD_Database_Layer.Licenses.Detained_Licenses
             }
             return rowsAffected > 0;
         }
+
+        public static DataTable GetDetainedLicenses()
+        {
+            DataTable licenses = new DataTable();
+
+            string query = @"SELECT    dbo.People.FirstName + ' ' + dbo.People.SecondName + ' ' +
+                            ISNULL(dbo.People.ThirdName, '') + ' ' + dbo.People.LastName AS FullName  ,DetainedLicenses.*
+                            FROM          DetainedLicenses INNER JOIN   
+                                                  Licenses ON DetainedLicenses.LicenseID = Licenses.LicenseID INNER JOIN
+                                                  Drivers ON Licenses.DriverID = Drivers.DriverID INNER JOIN
+                                                  People ON Drivers.PersonID = People.PersonID";
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            licenses.Load(sqlDataReader);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            return licenses;
+        }
+
 
     }
 }

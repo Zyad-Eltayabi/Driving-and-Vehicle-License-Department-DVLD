@@ -53,3 +53,4 @@ D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVL
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.Licenses.Local_License.frmActiveLicensesList.resources
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.Licenses.Local_License.frmDetainLicense.resources
 D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.Licenses.Local_License.frmReleaseDetainedLicenses.resources
+D:\Programming\RoadMap\Projects\Driving & Vehicle License Department Project\DVLD Presentation layer\DVLD_Presentation_layer\obj\Debug\DVLD_Presentation_layer.Licenses.Local_License.frmManageDetainedLicenses.resources
