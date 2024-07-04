@@ -152,5 +152,17 @@ namespace DVLD_Presentation_layer.MainScreen
             frmManageDetainedLicenses manageDetainedLicenses = new frmManageDetainedLicenses();
             manageDetainedLicenses.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDetainLicense detainLicense = new frmDetainLicense();
+            detainLicense.ShowDialog();
+        }
+
+        private void reToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageLocalDrivingLicenses manageLocalDrivingLicenses = new frmManageLocalDrivingLicenses();
+            manageLocalDrivingLicenses.ShowDialog();
+        }
     }
 }
