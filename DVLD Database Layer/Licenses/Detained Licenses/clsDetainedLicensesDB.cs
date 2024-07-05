@@ -79,11 +79,12 @@ namespace DVLD_Database_Layer.Licenses.Detained_Licenses
 
         }
 
-        public static bool GetDetainedLicenseByLicenseID(ref int detainID,ref int licenseID, ref int createdByUserID, ref int releasedByUserID,
+        public static bool GetDetainedLicenseByLicenseID(ref int detainID, ref int licenseID, ref int createdByUserID, ref int releasedByUserID,
           ref int releaseApplicationID, ref DateTime detainDate, ref DateTime releaseDate, ref float fineFees, ref bool isReleased)
         {
             var isFound = false;
-            string query = @"select * from DetainedLicenses where LicenseID = @LicenseID";
+            string query = @"select * from DetainedLicenses where LicenseID = @LicenseID
+                            and IsReleased = '0'";
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(clsConnection.ConnectionString))
@@ -120,7 +121,7 @@ namespace DVLD_Database_Layer.Licenses.Detained_Licenses
             catch (Exception)
             {
 
-               
+
             }
             return isFound;
         }
@@ -150,7 +151,7 @@ namespace DVLD_Database_Layer.Licenses.Detained_Licenses
                     {
                         sqlCommand.Parameters.AddWithValue("@DetainID", detainID);
                         sqlCommand.Parameters.AddWithValue("@LicenseID", licenseID);
-                        sqlCommand.Parameters.AddWithValue("@DetainDate", detainDate); 
+                        sqlCommand.Parameters.AddWithValue("@DetainDate", detainDate);
                         sqlCommand.Parameters.AddWithValue("@FineFees", fineFees);
                         sqlCommand.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
                         sqlCommand.Parameters.AddWithValue("@IsReleased", isReleased);
@@ -165,7 +166,7 @@ namespace DVLD_Database_Layer.Licenses.Detained_Licenses
             catch (Exception)
             {
 
-                
+
             }
             return rowsAffected > 0;
         }

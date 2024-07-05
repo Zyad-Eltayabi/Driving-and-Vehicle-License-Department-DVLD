@@ -31,49 +31,49 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReleaseDetainedLicenses));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRelease = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbReleaseDate = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbApplicationFess = new System.Windows.Forms.Label();
+            this.lbTotalFess = new System.Windows.Forms.Label();
+            this.lbFineFees = new System.Windows.Forms.Label();
             this.lbCreatedBy = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbIocalID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbApplicationID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lbReleaseID = new System.Windows.Forms.Label();
             this.lb7 = new System.Windows.Forms.Label();
             this.ucShowLicense1 = new DVLD_Presentation_layer.Licenses.Local_License.ucShowLicense();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.tbFilter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRelease = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbFineFees = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbApplicationFess = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbTotalFess = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbApplicationID = new System.Windows.Forms.Label();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.ucShowLicense1);
             this.panel1.Controls.Add(this.lbTitle);
-            this.panel1.Controls.Add(this.guna2GroupBox1);
+            this.panel1.Controls.Add(this.gbFilter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -125,6 +125,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Release Info";
             // 
+            // btnRelease
+            // 
+            this.btnRelease.BorderRadius = 15;
+            this.btnRelease.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRelease.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRelease.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRelease.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRelease.Enabled = false;
+            this.btnRelease.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnRelease.ForeColor = System.Drawing.Color.White;
+            this.btnRelease.Image = ((System.Drawing.Image)(resources.GetObject("btnRelease.Image")));
+            this.btnRelease.Location = new System.Drawing.Point(858, 115);
+            this.btnRelease.Name = "btnRelease";
+            this.btnRelease.Size = new System.Drawing.Size(180, 45);
+            this.btnRelease.TabIndex = 60;
+            this.btnRelease.Text = "Release";
+            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
+            // 
             // btnClose
             // 
             this.btnClose.BorderRadius = 15;
@@ -140,6 +158,17 @@
             this.btnClose.TabIndex = 60;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(178, 128);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 56;
+            this.guna2PictureBox5.TabStop = false;
             // 
             // lbReleaseDate
             // 
@@ -163,6 +192,50 @@
             this.label6.TabIndex = 57;
             this.label6.Text = "Release  Date";
             // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(179, 168);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox6.TabIndex = 53;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // lbApplicationFess
+            // 
+            this.lbApplicationFess.AutoSize = true;
+            this.lbApplicationFess.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApplicationFess.ForeColor = System.Drawing.Color.Black;
+            this.lbApplicationFess.Location = new System.Drawing.Point(627, 89);
+            this.lbApplicationFess.Name = "lbApplicationFess";
+            this.lbApplicationFess.Size = new System.Drawing.Size(19, 23);
+            this.lbApplicationFess.TabIndex = 55;
+            this.lbApplicationFess.Text = "?";
+            // 
+            // lbTotalFess
+            // 
+            this.lbTotalFess.AutoSize = true;
+            this.lbTotalFess.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalFess.ForeColor = System.Drawing.Color.Black;
+            this.lbTotalFess.Location = new System.Drawing.Point(627, 168);
+            this.lbTotalFess.Name = "lbTotalFess";
+            this.lbTotalFess.Size = new System.Drawing.Size(19, 23);
+            this.lbTotalFess.TabIndex = 55;
+            this.lbTotalFess.Text = "?";
+            // 
+            // lbFineFees
+            // 
+            this.lbFineFees.AutoSize = true;
+            this.lbFineFees.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFineFees.ForeColor = System.Drawing.Color.Black;
+            this.lbFineFees.Location = new System.Drawing.Point(627, 129);
+            this.lbFineFees.Name = "lbFineFees";
+            this.lbFineFees.Size = new System.Drawing.Size(19, 23);
+            this.lbFineFees.TabIndex = 55;
+            this.lbFineFees.Text = "?";
+            // 
             // lbCreatedBy
             // 
             this.lbCreatedBy.AutoSize = true;
@@ -185,6 +258,61 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Created By";
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(598, 90);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 49;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(598, 169);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 49;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(598, 130);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox10.TabIndex = 49;
+            this.guna2PictureBox10.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(429, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 20);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Application Fess";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(429, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 20);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Total Fess";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -195,6 +323,17 @@
             this.label11.Size = new System.Drawing.Size(86, 20);
             this.label11.TabIndex = 47;
             this.label11.Text = "Fine Fess";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(178, 88);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 41;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lbIocalID
             // 
@@ -217,6 +356,50 @@
             this.label4.Size = new System.Drawing.Size(108, 20);
             this.label4.TabIndex = 42;
             this.label4.Text = "License ID : ";
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(598, 49);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 38;
+            this.guna2PictureBox7.TabStop = false;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(178, 48);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(18, 25);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 38;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // lbApplicationID
+            // 
+            this.lbApplicationID.AutoSize = true;
+            this.lbApplicationID.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApplicationID.ForeColor = System.Drawing.Color.Black;
+            this.lbApplicationID.Location = new System.Drawing.Point(627, 50);
+            this.lbApplicationID.Name = "lbApplicationID";
+            this.lbApplicationID.Size = new System.Drawing.Size(19, 23);
+            this.lbApplicationID.TabIndex = 40;
+            this.lbApplicationID.Text = "?";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(430, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 20);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Application ID";
             // 
             // lbReleaseID
             // 
@@ -258,20 +441,20 @@
             this.lbTitle.TabIndex = 28;
             this.lbTitle.Text = "Release License";
             // 
-            // guna2GroupBox1
+            // gbFilter
             // 
-            this.guna2GroupBox1.Controls.Add(this.btnSearch);
-            this.guna2GroupBox1.Controls.Add(this.tbFilter);
-            this.guna2GroupBox1.Controls.Add(this.label2);
-            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(17, 102);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(559, 96);
-            this.guna2GroupBox1.TabIndex = 27;
-            this.guna2GroupBox1.Text = "Filter";
+            this.gbFilter.Controls.Add(this.btnSearch);
+            this.gbFilter.Controls.Add(this.tbFilter);
+            this.gbFilter.Controls.Add(this.label2);
+            this.gbFilter.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.gbFilter.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.gbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gbFilter.Location = new System.Drawing.Point(17, 102);
+            this.gbFilter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(559, 96);
+            this.gbFilter.TabIndex = 27;
+            this.gbFilter.Text = "Filter";
             // 
             // btnSearch
             // 
@@ -313,189 +496,6 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "License ID :";
             // 
-            // btnRelease
-            // 
-            this.btnRelease.BorderRadius = 15;
-            this.btnRelease.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRelease.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRelease.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRelease.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRelease.Enabled = false;
-            this.btnRelease.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnRelease.ForeColor = System.Drawing.Color.White;
-            this.btnRelease.Image = ((System.Drawing.Image)(resources.GetObject("btnRelease.Image")));
-            this.btnRelease.Location = new System.Drawing.Point(858, 115);
-            this.btnRelease.Name = "btnRelease";
-            this.btnRelease.Size = new System.Drawing.Size(180, 45);
-            this.btnRelease.TabIndex = 60;
-            this.btnRelease.Text = "Release";
-            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(178, 128);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 56;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(179, 168);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox6.TabIndex = 53;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(598, 130);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox10.TabIndex = 49;
-            this.guna2PictureBox10.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(178, 88);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 41;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(178, 48);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 38;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // lbFineFees
-            // 
-            this.lbFineFees.AutoSize = true;
-            this.lbFineFees.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFineFees.ForeColor = System.Drawing.Color.Black;
-            this.lbFineFees.Location = new System.Drawing.Point(627, 129);
-            this.lbFineFees.Name = "lbFineFees";
-            this.lbFineFees.Size = new System.Drawing.Size(19, 23);
-            this.lbFineFees.TabIndex = 55;
-            this.lbFineFees.Text = "?";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(429, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 20);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Application Fess";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(598, 90);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 49;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // lbApplicationFess
-            // 
-            this.lbApplicationFess.AutoSize = true;
-            this.lbApplicationFess.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApplicationFess.ForeColor = System.Drawing.Color.Black;
-            this.lbApplicationFess.Location = new System.Drawing.Point(627, 89);
-            this.lbApplicationFess.Name = "lbApplicationFess";
-            this.lbApplicationFess.Size = new System.Drawing.Size(19, 23);
-            this.lbApplicationFess.TabIndex = 55;
-            this.lbApplicationFess.Text = "?";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(429, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 20);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Total Fess";
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(598, 169);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 49;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // lbTotalFess
-            // 
-            this.lbTotalFess.AutoSize = true;
-            this.lbTotalFess.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalFess.ForeColor = System.Drawing.Color.Black;
-            this.lbTotalFess.Location = new System.Drawing.Point(627, 168);
-            this.lbTotalFess.Name = "lbTotalFess";
-            this.lbTotalFess.Size = new System.Drawing.Size(19, 23);
-            this.lbTotalFess.TabIndex = 55;
-            this.lbTotalFess.Text = "?";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(430, 51);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 20);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Application ID";
-            // 
-            // lbApplicationID
-            // 
-            this.lbApplicationID.AutoSize = true;
-            this.lbApplicationID.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApplicationID.ForeColor = System.Drawing.Color.Black;
-            this.lbApplicationID.Location = new System.Drawing.Point(627, 50);
-            this.lbApplicationID.Name = "lbApplicationID";
-            this.lbApplicationID.Size = new System.Drawing.Size(19, 23);
-            this.lbApplicationID.TabIndex = 40;
-            this.lbApplicationID.Text = "?";
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(598, 49);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(18, 25);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 38;
-            this.guna2PictureBox7.TabStop = false;
-            // 
             // frmReleaseDetainedLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -505,20 +505,21 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmReleaseDetainedLicenses";
             this.Text = "Release Detained Licenses";
+            this.Load += new System.EventHandler(this.frmReleaseDetainedLicenses_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,7 +547,7 @@
         private System.Windows.Forms.Label lb7;
         private ucShowLicense ucShowLicense1;
         private System.Windows.Forms.Label lbTitle;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox gbFilter;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private System.Windows.Forms.TextBox tbFilter;
         private System.Windows.Forms.Label label2;

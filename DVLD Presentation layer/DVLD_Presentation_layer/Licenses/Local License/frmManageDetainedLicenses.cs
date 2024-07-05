@@ -39,12 +39,14 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         {
             frmDetainLicense detainLicense = new frmDetainLicense();
             detainLicense.ShowDialog();
+            GetDetainedLicenses();
         }
 
         private void btnRelease_Click(object sender, EventArgs e)
         {
             frmReleaseDetainedLicenses releaseDetainedLicenses = new frmReleaseDetainedLicenses();
             releaseDetainedLicenses.ShowDialog();
+            GetDetainedLicenses();
         }
 
         // Handle Filter
@@ -149,6 +151,37 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         {
             frmShowLicensesHistory showLicensesHistory = new frmShowLicensesHistory(GetPersonID());
             showLicensesHistory.ShowDialog();
+        }
+
+        private bool IsReleased()
+        {
+            if (Boolean.Parse(dgvLicenses.SelectedRows[0].Cells["IsReleased"].Value.ToString()))
+            {
+                clsPublicUtilities.WarningMessage("This license is already released");
+                return true;
+            }
+            return false;
+        }
+
+        private int GetDetainedLicenseID()
+        {
+            return int.Parse(dgvLicenses.SelectedRows[0].Cells["LicenseID"].Value.ToString());
+        }
+
+        private void OpenReleaseDetainedLicenseForm()
+        {
+            frmReleaseDetainedLicenses releaseDetainedLicenses = new frmReleaseDetainedLicenses(GetDetainedLicenseID());
+            releaseDetainedLicenses.ShowDialog();
+        }
+
+        private void releaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IsReleased())
+                return;
+
+            OpenReleaseDetainedLicenseForm();
+
+            GetDetainedLicenses();
         }
     }
 }

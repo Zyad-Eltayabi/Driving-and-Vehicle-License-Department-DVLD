@@ -21,10 +21,19 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         clsLicenses license;
         clsDetainedLicenses detainedLicense;
         clsApplications releaseApplication;
+        private bool editMode = false;
+        private int detainedLicenseID;
         public frmReleaseDetainedLicenses()
         {
             InitializeComponent();
             clsPublicUtilities.CenterForm(this);
+        }
+        public frmReleaseDetainedLicenses(int detainedLicenseID)
+        {
+            InitializeComponent();
+            clsPublicUtilities.CenterForm(this);
+            this.detainedLicenseID = detainedLicenseID;
+            editMode = true;
         }
 
         private void tbFilter_KeyPress(object sender, KeyPressEventArgs e)
@@ -157,6 +166,26 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
         private void btnRelease_Click(object sender, EventArgs e)
         {
             ReleaseLicense();
+        }
+
+        private void frmReleaseDetainedLicenses_Load(object sender, EventArgs e)
+        {
+            CheckEditMode();
+        }
+
+        private void ApplyEditMode()
+        {
+            tbFilter.Text = this.detainedLicenseID.ToString();
+            btnSearch.PerformClick();
+            gbFilter.Enabled = false;
+        }
+
+        private void CheckEditMode()
+        {
+            if(this.editMode)
+            {
+                ApplyEditMode();
+            }
         }
     }
 }
