@@ -30,9 +30,6 @@ namespace DVLD_Presentation_layer.MainScreen
         {
             this.Location = new Point(0, 1);
             this.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-
-            frmManageDetainedLicenses manageDetainedLicenses = new frmManageDetainedLicenses();
-            manageDetainedLicenses.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
