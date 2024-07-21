@@ -54,11 +54,12 @@ git clone https://github.com/Zyad-Eltayabi/Driving-and-Vehicle-License-Departmen
 
 <p>4. copy "DVLD-People-Images" folder and paste it in your c drive (you will find the folder in src folder)</p>
 
-<p>5. in the project folder update "clsConnections.cs" file with your sql server settings (user and password)</p>
+<p>5. in the project folder, update the "clsConnections.cs" file with your sql server settings (user Id and password)</p>
 
-<p>6. in login screen set ( user name : Zyad and password : 1919 ) </p>
+ <p>6. build the solution and run it </p>
+ 
+<p>7. in login screen set ( user name : Zyad and password : 1919 ) </p>
 
- <p>7. build the solution and run it </p>
   
 <h2>🔷 Technologies used in the project</h2>
 
