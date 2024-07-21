@@ -120,5 +120,7 @@ namespace DVLD_Presentation_layer.Licenses.Local_License
 
             AddNewLocalLicense();
         }
+
+        
     }
 }

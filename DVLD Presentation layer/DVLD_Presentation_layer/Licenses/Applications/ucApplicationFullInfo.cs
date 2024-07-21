@@ -26,6 +26,7 @@ namespace DVLD_Presentation_layer.Licenses.Applications
         private void LoadLicenseData(int localDrivingAppID)
         {
             DataTable localLicense = clsLocalLicense.GetLocalDrivingLicense(localDrivingAppID);
+
             if (localLicense.Rows.Count > 0)
             {
                 lbID.Text = localLicense.Rows[0]["L.D.L.AppID"].ToString();

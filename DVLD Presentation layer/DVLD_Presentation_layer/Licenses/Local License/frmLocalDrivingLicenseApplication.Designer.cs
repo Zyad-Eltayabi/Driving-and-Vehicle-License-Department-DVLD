@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocalDrivingLicenseApplication));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ucAddUserWithFilter1 = new DVLD_Presentation_layer.People.ucAddUserWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -50,7 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.ucAddUserWithFilter1 = new DVLD_Presentation_layer.People.ucAddUserWithFilter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -82,6 +82,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personal Info";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ucAddUserWithFilter1
+            // 
+            this.ucAddUserWithFilter1.Location = new System.Drawing.Point(6, 30);
+            this.ucAddUserWithFilter1.Name = "ucAddUserWithFilter1";
+            this.ucAddUserWithFilter1.Size = new System.Drawing.Size(1104, 590);
+            this.ucAddUserWithFilter1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -324,13 +331,6 @@
             this.lbTitle.Size = new System.Drawing.Size(577, 34);
             this.lbTitle.TabIndex = 3;
             this.lbTitle.Text = "New Local Driving License Application";
-            // 
-            // ucAddUserWithFilter1
-            // 
-            this.ucAddUserWithFilter1.Location = new System.Drawing.Point(6, 30);
-            this.ucAddUserWithFilter1.Name = "ucAddUserWithFilter1";
-            this.ucAddUserWithFilter1.Size = new System.Drawing.Size(1104, 590);
-            this.ucAddUserWithFilter1.TabIndex = 0;
             // 
             // frmLocalDrivingLicenseApplication
             // 
