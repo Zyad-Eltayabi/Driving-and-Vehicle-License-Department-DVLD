@@ -69,5 +69,3 @@ git clone https://github.com/Zyad-Eltayabi/Driving-and-Vehicle-License-Departmen
 *   Data Access: ADO.NET
 *   User Interface: Windows Forms
 
-<h2>🛡️ License</h2>
-This project is licensed under the This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. You may not use this project for commercial purposes or personal use without explicit permission from the author.
