@@ -12,14 +12,6 @@
 <h2>🚀 Overview</h2>
 <p id="description">The Driving License Management System is a user-friendly application that helps manage driving licenses efficiently. It simplifies the tasks of issuing, renewing, detaining, releasing, and replacing licenses, and offers additional features for better management and tracking.</p>
 
-<h2> 📷 Project Screenshots:</h2>
-
-<img src="https://github.com/user-attachments/assets/b0ece527-4145-4536-847a-5d1900b64a2a" alt="project-screenshot" width="75%" height="100%/">
-
-<img src="https://github.com/user-attachments/assets/7ea8dc48-188c-469d-a8f9-d364236ab8f0" alt="project-screenshot" width="75%" height="100%/">
-
-  
-  
 <h2>⭐ Features</h2>
 
  📝 Here're some of the project's best features:
@@ -34,8 +26,21 @@
 *   Tracking: Track the status of various requests such as license issuance renewal and replacement.
 *   User Management: Admin functionalities to manage system users .
 *   People Management: Manage detailed information of people including personal details and images.
+  
 
-<h2>🛠️ Installation Steps:</h2>
+<h2> 📷 Project Screenshots:</h2>
+
+
+<img src="https://github.com/user-attachments/assets/7ea8dc48-188c-469d-a8f9-d364236ab8f0" alt="project-screenshot" width="100%" height="100%/">
+
+
+<h2>🎬 Watch the Demo Video! </h2>
+
+<p>Take a moment to explore the demo video, where I calmly give you a simple overview of how everything works. </p>
+<p>- Watch it on Google Drive : https://drive.google.com/file/d/1LupF0LuRmVztSVMMLh-fvZ2tqOsJuejo/view?usp=sharing</p>
+
+
+  <h2>🛠️ Installation Steps:</h2>
 
 <p>
   1. Prerequisites 
