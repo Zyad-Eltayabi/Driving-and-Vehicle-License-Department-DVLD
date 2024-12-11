@@ -1,32 +1,144 @@
 <h1 align="center" id="title">Driving and Vehicle License Department (DVLD)</h1>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&amp;logo=.net&amp;logoColor=white" alt="shields">
-  <img src="https://img.shields.io/badge/3--Tier%20Architecture-008080?style=for-the-badge&amp;logo=architecture&amp;logoColor=white" alt="shields">
-  <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&amp;logo=csharp&amp;logoColor=white)" alt="shields">
-  <img src="https://img.shields.io/badge/Windows%20Forms-008080?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="shields">
-  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&amp;logo=microsoft%20sql%20server&amp;logoColor=white" alt="shields">
-  <img src="https://img.shields.io/badge/ADO.NET-512BD4?style=for-the-badge&amp;logo=dotnet&amp;logoColor=white" alt="shields">
-</p>
+
 
 <h2>🚀 Overview</h2>
-<p id="description">The Driving License Management System is a user-friendly application that helps manage driving licenses efficiently. It simplifies the tasks of issuing, renewing, detaining, releasing, and replacing licenses, and offers additional features for better management and tracking.</p>
 
-<h2>⭐ Features</h2>
+
+The **Driving & Vehicle License Department (DVLD)** is a robust full-stack desktop application that helps manage driving licenses efficiently. Its purpose is to modernize and optimize the processes associated with the issuance, renewal, and management of driver and vehicle licenses. By integrating advanced validation systems and adhering to both national and international standards, the DVLD ensures a seamless and secure licensing experience for users.
+
+
+<h2>⭐ Main Features</h2>
 
  📝 Here're some of the project's best features:
 
-*   Issuing New Licenses: Allows users to apply for a new driving license.
-*   International Licenses: Issuance of international driving licenses.
-*   License Renewal: Enables users to renew their existing driving licenses.
-*   Replacement of Lost or Damaged Licenses: Facilitates the replacement of lost or damaged licenses.
-*   Detain License: Temporarily detain a license due to violations or other reasons.
-*   Release License: Release a detained license once the requirements are met.
-*   Testing and Verification: Manage and schedule tests for vision theoretical knowledge and practical driving skills.
-*   Tracking: Track the status of various requests such as license issuance renewal and replacement.
-*   User Management: Admin functionalities to manage system users .
-*   People Management: Manage detailed information of people including personal details and images.
-  
+1. **Issuing a New Driving License:**
+   - Allows applicants to apply for a specific license category (e.g., motorbike, car, commercial vehicles).
+   - Validates eligibility requirements such as age and prior training.
+   - Ensures no duplicate license exists for the same category.
+   - Dynamically calculates and applies relevant fees based on the license category.
+
+2. **Reassessment Service:**
+   - Enables applicants to retake failed tests (vision, theoretical, or practical).
+   - Schedules a new test date upon payment of the applicable fee.
+   - Prevents scheduling multiple reassessments for the same test type concurrently.
+
+3. **Renewing a Driving License:**
+   - Allows the renewal of expired licenses upon successful completion of vision tests.
+   - Requires submission of the expired license.
+   - Calculates and applies renewal fees automatically.
+
+4. **Replacing Lost Licenses:**
+   - Processes applications for lost license replacements.
+   - Ensures the license is not under suspension or previously replaced.
+   - Logs all replacement requests with applicable fees.
+
+5. **Replacing Damaged Licenses:**
+   - Processes replacement requests for damaged licenses.
+   - Requires submission of the damaged license for verification.
+   - Records the replacement history and applies applicable fees.
+
+6. **Unblocking a Detained License:**
+   - Facilitates unblocking of licenses after penalty payments.
+   - Logs the date and reason for license unblocking.
+
+7. **Issuing an International License:**
+   - Issues international driving licenses to eligible applicants with valid domestic licenses.
+   - Restricts issuance to holders of category-three (car) licenses only.
+   - Ensures no active international license exists prior to issuing a new one.
+   - Applies a set duration and predefined fee for international licenses.
+
+
+<h2>🔆 Administrative Services</h2>
+
+1. **Application Services:**
+   - **Primary Services Provided in the System:**
+     1. Issuing a new driving license: $5 fee per application.
+     2. Reassessment services: $5 fee per application.
+     3. Renewing a driving license: $5 fee per application.
+     4. Issuing a replacement for a lost license: $5 fee per application.
+     5. Issuing a replacement for a damaged license: $5 fee per application.
+     6. Unblocking a suspended license: $5 fee per application.
+     7. Issuing an international driving license: $5 fee per application.
+        
+2. **User Management:**
+   - Add, view, update, or delete user accounts.
+   - Suspend or activate user accounts as needed.
+
+3. **Person Management:**
+   - Add, view, update, or delete individuals within the system.
+   - Ensure no duplicate records exist for the same national ID.
+
+4. **Request Management:**
+   - Search requests by request ID.
+   - Search requests by the applicant’s national ID.
+   - Display a list of all requests.
+   - View detailed information for each request, including fees.
+   - Update request information as needed.
+   - Filter requests by their status.
+
+5. **Test Management:**
+   - Configure test fees and settings for vision, theoretical, and practical exams.
+   - Schedule tests and maintain test result logs.
+   - **Test Workflow:**
+     1. **Vision Test:**
+        - Scheduled by the system upon payment of a $10 fee.
+        - Verifies applicant’s medical and visual ability.
+        - Results (pass or fail) are recorded in the system.
+        - Failing applicants must correct their vision (e.g., glasses, surgery) and reschedule the test.
+     2. **Theoretical Test:**
+        - Scheduled manually after passing the vision test and paying a $20 fee.
+        - Evaluates knowledge of traffic laws and road safety.
+        - Results (pass or fail) are recorded in the system with a score out of 100.
+        - Failing applicants can reschedule the test with a new fee payment.
+     3. **Practical Driving Test:**
+        - Scheduled manually after passing the theoretical test and paying the applicable fee (varies by license category).
+        - Assesses driving skills, vehicle control, and traffic rule adherence.
+        - Failing applicants can reschedule after paying the test fee again.
+     4. **License Issuance:**
+        - After passing all tests, a driving license is issued containing:
+          - License number
+          - Applicant photo
+          - National ID
+          - Name and birthdate
+          - License category
+          - Issuance and expiration dates
+          - Special conditions (if any)
+          - Status (e.g., New, Replacement, Renewal).
+
+6. **License Categories Management:**
+   - Adjust fees, validity periods, and age requirements for each license category.
+   - Define and update license category descriptions and associated rules.
+
+7. **License Suspension Management:**
+   - Manage license suspensions by recording reasons and suspension dates.
+   - Facilitate license reinstatements upon penalty payment.
+
+
+<h2>📄 Additional Information:</h2>
+
+#### License Application Requirements:
+- **Eligibility Criteria:**
+  - Applicants must meet the minimum age required for the desired license category.
+  - Must not already hold a license of the same category.
+- **Required Documents:**
+  - Valid identification (e.g., passport or national ID).
+  - Proof of completion of necessary training courses.
+- **Mandatory Tests:**
+  - **Vision Test:** Verifies visual ability; applicants failing the test must correct their vision and retake it.
+  - **Theoretical Test:** Assesses knowledge of traffic laws; requires a minimum passing score.
+  - **Practical Test:** Evaluates real-world driving skills; can be retaken after paying applicable fees if failed.
+#### License Categories
+| **Category**       | **Description**                | **Fees** | **Validity** | **Minimum Age** |
+|---------------------|--------------------------------|----------|--------------|------------------|
+| Motorbike (Small)   | Small motorcycles             | $15      | 5 years      | 18 years         |
+| Motorbike (Heavy)   | Large, powerful motorcycles   | $30      | 5 years      | 21 years         |
+| Car License         | Personal cars                 | $20      | 10 years     | 18 years         |
+| Commercial Vehicle  | Taxis/Limousines              | $200     | 10 years     | 21 years         |
+| Agricultural        | Tractors and farming vehicles | $50      | 10 years     | 21 years         |
+| Buses               | Small and medium buses        | $250     | 10 years     | 21 years         |
+| Trucks              | Heavy-duty trucks             | $300     | 10 years     | 21 years         |
+
 
 <h2> 📷 Project Screenshots:</h2>
 
@@ -36,12 +148,12 @@
 
 <h2>🎬 Watch the Demo Video! </h2>
 
-<p>Take a moment to explore the demo video, where I calmly give you a simple overview of how everything works. </p>
-<p>- Watch it on Google Drive : https://drive.google.com/file/d/1LupF0LuRmVztSVMMLh-fvZ2tqOsJuejo/view?usp=sharing</p>
+Take a moment to explore the demo video, where I calmly give you a simple overview of how everything works. </br>
+Please watch it on [Google Drive](https://drive.google.com/file/d/1LupF0LuRmVztSVMMLh-fvZ2tqOsJuejo/view).
 
 
-  <h2>🛠️ Installation Steps:</h2>
 
+<h2>🛠️ Installation Steps:</h2>
 <p>
   1. Prerequisites 
   <li> sql server management studio.</li>
@@ -74,3 +186,7 @@ git clone https://github.com/Zyad-Eltayabi/Driving-and-Vehicle-License-Departmen
 *   Data Access: ADO.NET
 *   User Interface: Windows Forms
 
+## 📞 Contact
+
+For inquiries or feedback:
+- **Email:** [Zyad Eltayibi](mailto:ZyadEltayibi@gmail.com)
